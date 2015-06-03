@@ -20,10 +20,18 @@ header h1 {
 	font-weight:bold;
 }
 
+header .title2 {
+	line-height:80px;
+}
+
+header .escudo2{
+	margin-top:35px;
+}
+
 footer {
 	background:#3369e8;
 	color:#000000;
-	margin-top:75px;
+	margin-top:71px;
 	margin-bottom:-10px;
 	overflow:hidden;
 }
@@ -48,6 +56,13 @@ footer h5 {
 	font-family:"Bariol Bold", "Bariol Light", "Bariol Thin";
 	font-weight:bold;
 }
+
+.title2 {
+	font-size:26px;
+	font-family:"Bariol Bold", "Bariol Light", "Bariol Thin";
+	font-weight:bold;
+	margin-top:20px;
+}
 .escudo {
 	margin-bottom:40px;
 }
@@ -69,4 +84,14 @@ input[type=text],[type=password]{
 .iniciar:hover {
 	background:#1122cc;
 	color:#FFFFFF;
+}
+
+.web2 {
+	margin-top:35px;
+	left:600px;
+}
+
+.titulo2 {
+	font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
+	font-size:20px;
 }
