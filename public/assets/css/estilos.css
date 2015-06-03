@@ -95,3 +95,39 @@ input[type=text],[type=password]{
 	font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
 	font-size:20px;
 }
+
+.barranav {
+	margin-top:-13px;
+}
+
+.dentronav{
+	margin-left:97px;
+}
+
+.colornav {
+	background:#3366cc;
+}
+
+.fuera {
+	margin-top:5px;
+	line-height:43px;
+}
+
+.fuera2 {
+	margin-bottom:12px;
+}
+
+.letras {
+	color:#000000;
+	padding:0px 20px;
+	font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
+	font-size:20px;
+	font-weight:bold;
+	display:block;
+}
+
+.letras:hover {
+	text-decoration:none;
+	color:#FFFFFF;
+	display:block;
+}
