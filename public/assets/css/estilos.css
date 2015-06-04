@@ -170,6 +170,11 @@ input[type=text],[type=password]{
 	margin-top:-10px;
 }
 
+.slides2 {
+	width:60%;
+	margin-top:10px;
+}
+
 .slides img {
 	width:100%;
 }
@@ -204,7 +209,7 @@ input[type=text],[type=password]{
 	color:#FFFFFF;
 	text-decoration:none;
 	display:inline-block;
-	padding:13.3px 20px;
+	padding:13.2px 20px;
 	float:right;
 }
 
