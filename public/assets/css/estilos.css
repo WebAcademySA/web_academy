@@ -104,6 +104,10 @@ input[type=text],[type=password]{
 	margin-left:70px;
 }
 
+.dentronav2{
+	margin-left:110px;
+}
+
 .colornav {
 	background:#3366cc;
 }
@@ -124,6 +128,29 @@ input[type=text],[type=password]{
 	font-size:20px;
 	font-weight:bold;
 	display:block;
+}
+
+.letras2 {
+	color:#FFFFFF;
+	font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
+	font-size:20px;
+	font-weight:bold;
+}
+
+.letras3 {
+	color:#000000;
+	font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
+	font-size:20px;
+	font-weight:bold;
+}
+
+.letras3:hover {
+	color:#FFFFFF;
+}
+
+
+.letras2:hover {
+	color:#000000;
 }
 
 .letras:hover {
@@ -206,8 +233,8 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-	color:#FFFFFF;
 	text-decoration:none;
+	background:6699ff;
 }
 
 nav > ul > li:hover div{
@@ -216,11 +243,41 @@ nav > ul > li:hover div{
 
 /*submenu*/
 
-nav ul li div{
-	width:250px;
+nav ul li .divsubmenu1{
+	width:180px;
 	position:absolute;
 	z-index:2;
-	left:0;
+	left:205px;
+	background:#3369e8;
+	box-sizing:border-box;
+	display:none;
+}
+
+nav ul li .divsubmenu2{
+	width:180px;
+	position:absolute;
+	z-index:2;
+	left:330px;
+	background:#3369e8;
+	box-sizing:border-box;
+	display:none;
+}
+
+nav ul li .divsubmenu3{
+	width:180px;
+	position:absolute;
+	z-index:2;
+	left:430px;
+	background:#3369e8;
+	box-sizing:border-box;
+	display:none;
+}
+
+nav ul li .divsubmenu4{
+	width:180px;
+	position:absolute;
+	z-index:2;
+	left:535px;
 	background:#3369e8;
 	box-sizing:border-box;
 	display:none;
@@ -230,4 +287,8 @@ nav ul li div ul{
 	width:20%;
 	display:table-cell;
 	box-sizing:border-box;
+}
+
+nav ul li div ul li a:hover {
+	background:6699ff;
 }
