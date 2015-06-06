@@ -13,7 +13,17 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::get('home', 'HomeController@index');
+// Route::get('home', 'HomeController@index');
+
+Route::resource('login','LoginController');
+Route::resource('horario_alumno','Horario_AlumnoController');
+Route::resource('horario_docente','Horario_DocenteController');
+Route::resource('inicio_alumno','Inicio_AlumnoController');
+Route::resource('inicio_docente','Inicio_DocenteController');
+Route::resource('notas_alumno','Notas_AlumnoController');
+Route::resource('perfil_alumno','Perfil_AlumnoController');
+Route::resource('perfil_docente','Perfil_DocenteController');
+Route::resource('subir_notas_docente','Subir_Notas_DocenteController');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
