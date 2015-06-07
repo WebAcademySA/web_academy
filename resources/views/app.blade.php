@@ -49,6 +49,12 @@
 -->
 
 	@yield('content')
+    
+<div class="allfooter">
+<footer>
+	<h6>Todos los derechos reservados 2015 © - Alex Salgado - Julio Perez</h6>
+</footer>
+</div>
 
 	<!-- Scripts -->
 	<script type="text/javascript" href="{{ asset ('js/jquery.js') }}"></script>

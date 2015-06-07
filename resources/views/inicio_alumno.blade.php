@@ -24,19 +24,30 @@
     </nav>
 </div>
 
-<div class="container">
-    <!--Slideshow--><div class="main col-xs-12 col-sm-8 col-md-6 col-lg-6">
-        <div class="slides">
-            <img src="imagenes/64_alumnos_SM_postulan_al_Colegio_Presidente_del_Per.jpg">
-            <img src="imagenes/000280330W.jpg">
-            <img src="imagenes/colegios.jpg">
-            <img src="imagenes/IMG_7713.jpg">
+<section class="container centro">
+    <div class="row">
+        <!--Slideshow--><div class="main col-xs-12 col-sm-8 col-md-7 col-lg-7">
+            <div class="slides">
+                <img src="imagenes/64_alumnos_SM_postulan_al_Colegio_Presidente_del_Per.jpg" height="300">
+                <img src="imagenes/000280330W.jpg">
+                <img src="imagenes/colegios.jpg">
+                <img src="imagenes/IMG_7713.jpg" height="350">
+            </div>
+        </div>
+        <!--Contactenos--><div class="aside2 col-xs-12 col-sm-4 col-md-5 col-lg-5">
+            <h3 class="tilaside">Contactenos</h3>
+            <article>
+                <p class="texto">Para cualquier duda o sugerencia con respecto a la plataforma contactenos a:</p>
+                <div class="iconos">
+                <a href="#" target="_blank" class="col-md-3"><img src="imagenes/Facebook_logo_64 (1).png" width="44" height="44"></a>
+                <a href="#" target="_blank" class="col-md-3"><img src="imagenes/Social_google_plus_square_button_64.png" width="44" height="44"></a>
+                <a href="#" target="_blank" class="col-md-3"><img src="imagenes/Twitter_logo_on_black_background_64.png" width="44" height="44"></a>
+                </div>
+            </article>
         </div>
     </div>
-    <!--Contactenos--><div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
-    </div>
+</section>
 
-</div>
 
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/jquery.slides.js"></script>
