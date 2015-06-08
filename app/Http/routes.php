@@ -24,6 +24,7 @@ Route::resource('notas_alumno','Notas_AlumnoController');
 Route::resource('perfil_alumno','Perfil_AlumnoController');
 Route::resource('perfil_docente','Perfil_DocenteController');
 Route::resource('subir_notas_docente','Subir_Notas_DocenteController');
+Route::resource('inicio_admin','Inicio_AdminController');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
