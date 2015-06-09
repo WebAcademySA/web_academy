@@ -25,7 +25,7 @@
 </div>
 
 <!--Titulos-->
-<div class="container row"><div class="col-md-6"><h3 class="til2">Subir Notas</h3></div><div class="col-md-6"><h3 class="til2">Informacion de la asignatura</h3></div></div><div class="col-md-12"><hr/></div>
+<div class="container row"><div class="col-md-6"><h3 class="til2">Subir Notas</h3></div><div class="col-md-6"><h3 class="til2">Ingresa la Nota por Estudiante</h3></div></div><div class="col-md-12"><hr/></div>
 
 <div class="container row">
     <div>
@@ -44,7 +44,7 @@
                 <th><strong>Nro.</strong></th>
                 <th><strong>Apellidos del estudiante</strong></th>
                 <th><strong>Nombres del estudiante</strong></th>
-                <th><strong>Notas</strong></th>
+                <th><strong>Nota</strong></th>
             </tr>
             <tr>
                 <td></td>
