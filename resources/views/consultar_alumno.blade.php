@@ -8,7 +8,7 @@
 @extends('app2')
 
 @section('content')
-	<nav class="navbar navbar-default nav_barra" role="navigation">
+<nav class="navbar navbar-default nav_barra" role="navigation">
   <!-- El logotipo y el icono que despliega el menú se agrupan
        para mostrarlos mejor en los dispositivos móviles -->
   <div class="navbar-header">
@@ -82,53 +82,87 @@
 </nav>
 
 <!--Titulos-->
-	<div class="container row"><div class="col-md-6"><h3 class="til2">Ingrese ID del docente</h3></div><div class="col-md-6"><h3 class="til2">Informacion del docente</h3></div></div><div class="col-md-12"><hr/></div>
-
+	<div class="container row"><div class="col-md-4"><h3 class="til4">Ingrese ID del alumno</h3></div><div class="col-md-4"><h3 class="til4">Datos del alumno</h3></div><div class="col-md-4"><h3 class="til4">Datos del acudiente</h3></div></div><div class="col-md-12"><hr/></div>
+    
+<!--Formularios-->
 <div class="container row">
-	<div class="col-md-6">
+<!--Formulario Buscar-->
+	<div class="col-md-4">
     	<form  class="regalum" name="regalumno" method="post" action="">
     <div class="form-inline form-group">
-        <div class="celda1 form-group"><select class="form-control" id="iddoc" type="text3" name="iddocente" pattern="[0-9]{1,16}" required><option>ID docente *</option><option value="D1">D01</option><option value="D2">D02</option><option value="D3">D03</option></select></div>
+        <div class="celda1 form-group"><select class="form-control" id="idalum" type="text3" name="idalumno" pattern="[0-9]{1,16}" required><option>No. Alumno *</option><option value="AL1">AL01</option><option value="AL2">AL02</option><option value="AL3">AL03</option></select></div>
     </div>
-    	<div><input class="btn btn-primary guardar9" type="submit" name="buscar" value="Buscar"/></div>
+    	<div><input class="btn btn-primary guardar7" type="submit" name="buscar" value="Buscar"/></div>
 		</form>
-    </div>
-<!--tabla-->
-    <div class="col-md-6">
-    	<div class="row row2">
-        	<div class="col-md-4 col-md-offset-2"><strong>No. de identificacion:</strong></div>
-            <div class="col-md-3"></div>
-            <div class="col-md-2"><strong>E-mail:</strong></div>
-            <div class="col-md-1"></div>
+     </div>
+     
+     <div class="col-md-4">
+     	<div class="row row3">
+        	<div class="col-md-7 col-md-offset-3"><strong>No. Identificacion:</strong></div>
+            <div class="col-md-2"></div>
         </div>
-        <div class="row row2">
-        	<div class="col-md-4 col-md-offset-2"><strong>Nombres:</strong></div>
-            <div class="col-md-3"></div>
-            <div class="col-md-2"><strong>Sexo:</strong></div>
-            <div class="col-md-1"></div>
+        <div class="row row3">
+        	<div class="col-md-7 col-md-offset-3"><strong>Nombres:</strong></div>
+            <div class="col-md-2"></div>
         </div>
-        <div class="row row2">
-        	<div class="col-md-4 col-md-offset-2"><strong>Apellidos:</strong></div>
-            <div class="col-md-3"></div>
-            <div class="col-md-2"><strong>Telefono:</strong></div>
-            <div class="col-md-1"></div>
+        <div class="row row3">
+        	<div class="col-md-7 col-md-offset-3"><strong>Apellidos</strong></div>
+            <div class="col-md-2"></div>
         </div>
-        <div class="row row2">
-        	<div class="col-md-4 col-md-offset-2"><strong>Direccion:</strong></div>
-            <div class="col-md-3"></div>
-            <div class="col-md-2"><strong>Nivel:</strong></div>
-            <div class="col-md-1"></div>
+        <div class="row row3">
+        	<div class="col-md-7 col-md-offset-3"><strong>Direccion:</strong></div>
+            <div class="col-md-2"></div>
         </div>
-        <div class="row row2">
-        	<div class="col-md-4 col-md-offset-2"><strong>Titulo:</strong></div>
-            <div class="col-md-3"></div>
+        <div class="row row3">
+        	<div class="col-md-7 col-md-offset-3"><strong>Sexo:</strong></div>
+            <div class="col-md-2"></div>
         </div>
-        <div class="row row2">
-        	<div class="col-md-2 col-md-offset-5"><button class="btn btn-primary boton2" type="submit">Visualizar</button></div>
+        <div class="row row3">
+        	<div class="col-md-7 col-md-offset-3"><strong>Telefono:</strong></div>
+            <div class="col-md-2"></div>
         </div>
-    </div>
-    
+        <div class="row row3">
+        	<div class="col-md-7 col-md-offset-3"><strong>E-mail:</strong></div>
+            <div class="col-md-2"></div>
+        </div>
+     </div>
+        
+     <div class="col-md-4">
+     	<div class="row row3">
+        	<div class="col-md-7 col-md-offset-3"><strong>No. Identificacion:</strong></div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row row3">
+        	<div class="col-md-7 col-md-offset-3"><strong>Nombres:</strong></div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row row3">
+        	<div class="col-md-7 col-md-offset-3"><strong>Apellidos</strong></div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row row3">
+        	<div class="col-md-7 col-md-offset-3"><strong>Direccion:</strong></div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row row3">
+        	<div class="col-md-7 col-md-offset-3"><strong>Sexo:</strong></div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row row3">
+        	<div class="col-md-7 col-md-offset-3"><strong>Telefono:</strong></div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row row3">
+        	<div class="col-md-7 col-md-offset-3"><strong>E-mail:</strong></div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row row3">
+        	<div class="col-md-7 col-md-offset-3"><strong>Parentesco:</strong></div>
+            <div class="col-md-2"></div>
+        </div>
+     </div>
 </div>
+
 @endsection
 <!--<body>
 </body>
