@@ -23,4 +23,48 @@
         </div>
     </nav>
 </div>
+
+<!--Titulos-->
+<div class="container row"><div class="col-md-6"><h3 class="til2">Subir Notas</h3></div><div class="col-md-6"><h3 class="til2">Informacion de la asignatura</h3></div></div><div class="col-md-12"><hr/></div>
+
+<div class="container row">
+    <div>
+        <form  class="regalum" name="regalumno" method="post" action="">
+            <div class="form-inline form-group">
+                <div class="celda1 form-group"><select class="form-control" id="idasig" type="text" name="idasig" pattern="[0-9]{1,16}" required><option>Grado *</option><option value="A1">1-A</option><option value="A2">1-B</option><option value="A3">1-C</option></select></div>
+            </div>
+            <div><input class="btn btn-primary guardar5" type="submit" name="buscar" value="Buscar"/></div>
+        </form>
+    </div>
+    <!--tabla-->
+    <div>
+        <div class="row">
+        <table class="table table-bordered borde tabla1">
+            <tr class="info">
+                <th><strong>Nro.</strong></th>
+                <th><strong>Apellidos del estudiante</strong></th>
+                <th><strong>Nombres del estudiante</strong></th>
+                <th><strong>Notas</strong></th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><div><form method="post" action="#"><input type="number" id="nota1" pattern="[0-9]{1}"></div></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><div><form method="post" action="#"><input type="number" id="nota1" pattern="[0-9]{1}"></div></td>
+            </tr>
+        </table>
+        </div>
+    </div>
+</div>
+<button type="submit" class="btn btn-primary bott">Guardar</button>
+</div>
+
+
+
 @endsection

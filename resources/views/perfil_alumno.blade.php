@@ -23,4 +23,63 @@
     </div>
 </nav>
 </div>
+<h3 class="til1">Mi Perfil Estudiantil</h3>
+<hr/>
+<div>
+<div class="row letraperf">
+    <div class="col-md-2 col-md-offset-4"><strong>N. Identificacion:</strong></div><div class="col-md-1"></div><div class="col-md-1"><strong>Telefono:</strong></div><div class="col-md-1"></div>
+</div>
+<div class="row letraperf">
+    <div class="col-md-2 col-md-offset-4"><strong>Nombres:</strong></div><div class="col-md-1"></div><div class="col-md-1"><strong>E-mail:</strong></div><div class="col-md-1"></div>
+</div>
+<div class="row letraperf">
+    <div class="col-md-2 col-md-offset-4"><strong>Apellidos:</strong></div><div class="col-md-1"></div><div class="col-md-1"><strong>Acudiente:</strong></div><div class="col-md-1"></div>
+</div>
+<div class="row letraperf">
+    <div class="col-md-2 col-md-offset-4"><strong>Direccion:</strong></div><div class="col-md-1"></div><div class="col-md-1"><strong>Parentesco:</strong></div><div class="col-md-1"></div>
+</div>
+<div class="row letraperf">
+    <div class="col-md-2 col-md-offset-4"><strong>Sexo:</strong></div><div class="col-md-1"></div>
+</div>
+</div>
 @endsection
+<!--
+  <div>N. Identificacion:</div><div></div><div>Telefono:</div><div></div>
+    <div>Nombres:</div><div></div><div>E-mail:</div><div></div>
+    <div>Apellidos:</div><div></div><div>Acudiente:</div><div></div>
+    <div>Direccion:</div><div></div><div>Parentesco:</div><div></div>
+
+    <div class="container table-responsive">
+    <table class="table tabla1">
+        <tr class="">
+            <td><strong>N. Identificacion:</strong></td>
+            <td></td>
+            <td><strong>Telefono:</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><strong>Nombres:</strong></td>
+            <td></td>
+            <td><strong>E-mail:</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><strong>Apellidos:</strong></td>
+            <td></td>
+            <td><strong>Acudiente:</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><strong>Direccion:</strong></td>
+            <td></td>
+            <td><strong>Parentesco:</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><strong>Sexo:</strong></td>
+            <td></td>
+        </tr>
+    </table>
+</div>
+
+-->

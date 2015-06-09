@@ -23,4 +23,23 @@
         </div>
     </nav>
 </div>
+<h3 class="til1">Mi Perfil Docente</h3>
+<hr/>
+<div>
+    <div class="row letraperf">
+        <div class="col-md-2 col-md-offset-4"><strong>N. Identificacion:</strong></div><div class="col-md-1"></div><div class="col-md-1"><strong>Telefono:</strong></div><div class="col-md-1"></div>
+    </div>
+    <div class="row letraperf">
+        <div class="col-md-2 col-md-offset-4"><strong>Nombres:</strong></div><div class="col-md-1"></div><div class="col-md-1"><strong>E-mail:</strong></div><div class="col-md-1"></div>
+    </div>
+    <div class="row letraperf">
+        <div class="col-md-2 col-md-offset-4"><strong>Apellidos:</strong></div><div class="col-md-1"></div><div class="col-md-1"><strong>Acudiente:</strong></div><div class="col-md-1"></div>
+    </div>
+    <div class="row letraperf">
+        <div class="col-md-2 col-md-offset-4"><strong>Direccion:</strong></div><div class="col-md-1"></div><div class="col-md-1"><strong>Parentesco:</strong></div><div class="col-md-1"></div>
+    </div>
+    <div class="row letraperf">
+        <div class="col-md-2 col-md-offset-4"><strong>Sexo:</strong></div><div class="col-md-1"></div>
+    </div>
+</div>
 @endsection
