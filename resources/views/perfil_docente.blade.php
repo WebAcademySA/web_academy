@@ -25,7 +25,7 @@
 </div>
 <h3 class="til1">Mi Perfil Docente</h3>
 <hr/>
-<div>
+<div class="perfilal">
     <div class="row letraperf">
         <div class="col-md-2 col-md-offset-4"><strong>N. Identificacion:</strong></div><div class="col-md-1"></div><div class="col-md-1"><strong>Telefono:</strong></div><div class="col-md-1"></div>
     </div>

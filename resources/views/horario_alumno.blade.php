@@ -26,8 +26,8 @@
 <h3 class="til1">Mi Horario de clases</h3>
 <hr/>
 <div class="container table-responsive">
-    <table class="table table-bordered">
-        <tr>
+    <table class="table table-bordered borde table-hover">
+        <tr class="info">
             <th>Horas</th>
             <th>Lunes</th>
             <th>Martes</th>
@@ -94,9 +94,8 @@
     </table>
 </div>
 
-<div class="row boton1">
-    <button class="btn btn-primary col-md-2 col-md-offset-5" type="button">Visualizar</button>
-</div>
+   <button class="btn btn-primary boton2" type="button">Visualizar</button>
+
 
 
 @endsection

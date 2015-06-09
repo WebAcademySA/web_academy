@@ -27,8 +27,8 @@
 <h3 class="til1">Mis Notas</h3>
 <hr/>
 <div class="container table-responsive">
-<table class="table table-bordered">
-    <tr>
+<table class="table table-bordered borde table-hover tabla2">
+    <tr class="info">
         <th>Asignaturas</th>
         <th>Periodo 1</th>
         <th>Periodo 2</th>

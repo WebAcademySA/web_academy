@@ -397,8 +397,21 @@ nav ul li div ul li a:hover {
 
 .borde>tbody>tr>td, .borde>tbody>tr>th {
     border:1px solid #000000;
-    font-size:15px;
+    font-size:20px;
+	font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
     text-align:center;
+}
+
+.guardar6{
+    font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+    font-size:20px;
+    background:#4787ed;
+    margin-left:102.1px;
+    margin-top:7px;
+}
+
+.guardar6:hover{
+    background:#1122cc;
 }
 
 .tabla1 {
@@ -409,6 +422,9 @@ nav ul li div ul li a:hover {
     width:60%;
 }
 
+.tabla2 {
+	margin-bottom:78px;
+}
 .boton1 {
     font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
     font-size:20px;
@@ -418,6 +434,18 @@ nav ul li div ul li a:hover {
 }
 
 .boton1:hover {
+    background:#1122cc;
+}
+
+.boton2 {
+    font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+    font-size:20px;
+    background:#4787ed;
+    margin-left:600px;
+	margin-bottom:33px;	
+}
+
+.boton2:hover {
     background:#1122cc;
 }
 
@@ -467,13 +495,13 @@ th {
     font-size: 18px;
 }
 
-.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th{
-    border: 1px solid #000000;
-}
-
 .tabla1>tbody>tr>td, .tabla1>tbody>tr>th,.tabla1>thead>tr>td, .tabla1>thead>tr>td{
     border: 1px solid #000000;
     font-size: 15px;
+}
+
+.tabla1 {
+	margin-bottom:121px;
 }
 
 .tabla3{
@@ -483,16 +511,20 @@ th {
 }
 
 .letraperf{
-    font-size: 18px;
+    font-size: 20px;
+	font-family: "Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
+	font-weight:bold;
     margin-right: 0px;
     margin-top: 7px;
 }
-.boton1{
-    margin-right:0;
+
+.perfilal {
+	margin-bottom:163px;
 }
+
 .bott{
     margin-left: 850px;
-    margin-top: -180px;
+    margin-top: -160px;
     font-family: "Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
     font-size: 20px;
 }

@@ -33,7 +33,7 @@
             <div class="form-inline form-group">
                 <div class="celda1 form-group"><select class="form-control" id="idasig" type="text" name="idasig" pattern="[0-9]{1,16}" required><option>Grado *</option><option value="A1">1-A</option><option value="A2">1-B</option><option value="A3">1-C</option></select></div>
             </div>
-            <div><input class="btn btn-primary guardar5" type="submit" name="buscar" value="Buscar"/></div>
+            <div><input class="btn btn-primary guardar6" type="submit" name="buscar" value="Buscar"/></div>
         </form>
     </div>
     <!--tabla-->
