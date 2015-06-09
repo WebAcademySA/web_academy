@@ -463,6 +463,55 @@ input[type=email]{
 	padding:0px 450px;
 }
 
+.borde>tbody>tr>td, .borde>tbody>tr>th {
+	border:1px solid #000000;
+	font-size:20px;
+	font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
+	text-align:center;	
+}
+
+.tabla1 {
+	margin-left:580px;
+	margin-top:-200px;
+	margin-bottom:211px;
+	width:60%;
+}
+
+.tabla2 {
+	margin-left:700px;
+	margin-top:-200px;
+	width:20%;
+}
+
+.boton1 {
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:20px;
+	background:#4787ed;
+	margin-left:860px;
+	margin-top:-350px;
+}
+
+.boton1:hover {
+	background:#1122cc;
+}
+
+.boton2 {
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:20px;
+	background:#4787ed;
+	margin-bottom:53px;
+}
+
+.boton2:hover {
+	background:#1122cc;
+}
+
+.row2{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:20px;
+	font-weight:bold;
+	margin-bottom:10px;
+}
 /*
 .barranav {
 	margin-top:-13px;

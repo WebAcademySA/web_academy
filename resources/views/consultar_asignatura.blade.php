@@ -9,7 +9,7 @@
 
 @section('content')
 
-	<nav class="navbar navbar-default nav_barra" role="navigation">
+<nav class="navbar navbar-default nav_barra" role="navigation">
   <!-- El logotipo y el icono que despliega el menú se agrupan
        para mostrarlos mejor en los dispositivos móviles -->
   <div class="navbar-header">
@@ -83,11 +83,9 @@
 </nav>
 
 <!--Titulos-->
-	<div class="container row"><div class="col-md-6"><h3 class="til2">Actualizar Asignatura</h3></div><div class="col-md-6"><h3 class="til2">Ingrese la nueva informacion</h3></div></div><div class="col-md-12"><hr/></div>
- 
-<!--Formularios-->
+	<div class="container row"><div class="col-md-6"><h3 class="til2">Ingrese ID de busqueda</h3></div><div class="col-md-6"><h3 class="til2">Informacion de la asignatura</h3></div></div><div class="col-md-12"><hr/></div>
+
 <div class="container row">
-<!--Formulario alumno-->
 	<div col-md-6>
     	<form  class="regalum" name="regalumno" method="post" action="">
     <div class="form-inline form-group">
@@ -96,26 +94,27 @@
     	<div><input class="btn btn-primary guardar5" type="submit" name="buscar" value="Buscar"/></div>
 		</form>
     </div>
-    
-<!--Formulario acudiente-->
-	<div col-md-6>
-    	<form  class="actuasig" name="regalumno" method="post" action="">
-	<div class="form-group" >
-    	<div class="celda1 form-group"><input class="form-control" id="idasig3" type="text" name="idasigna3" pattern="[0-9]{1,16}" placeholder="ID asignatura *" required/></div>
+<!--tabla-->
+    <div col-md-6>
+    	<table class="table table-bordered table-hover borde tabla1">
+        	<tr class="info">
+            	<th>ID asignatura</th>
+                <th>Nombre asignatura</th>
+                <th>Grado</th>
+                <th>Estado</th>
+            </tr>
+            <tr>
+            	<td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>            
+        </table>
+        <button class="btn btn-primary boton1" type="submit">Visualizar</button>
     </div>
-    <div class="form-group">
-    	<div class="celda1 form-group"><input class="form-control" id="Nombasig3" type="text" name="nombreasig3" pattern="[0-9]{1,16}" placeholder="Nombre asignatura *" required/></div>
-        </div>
-    <div class="form-group">
-    	<div class="celda1 form-group"><select class="form-control" id="Grad" type="text2" name="grado" pattern="[0-9]{1,16}" required><option>Grado *</option><option>--Primaria--</option><option value="1">Primero</option><option value="2">Segundo</option><option value="3">Tercero</option><option value="4">Cuarto</option><option value="5">Quinto</option><option>--Secundaria--</option><option value="6">Sexto</option><option value="7">Septimo</option><option value="8">Octavo</option><option value="9">Noveno</option><option value="10">Decimo</option><option value="11">Undecimo</option></select></div>
-    </div>
-		</form>
-        <div><input class="btn btn-primary guardar6" type="submit" name="guardar" value="Guardar"/></div>
-	</div>
 </div>
 
 @endsection
-
 <!--<body>
 </body>
 </html>-->
