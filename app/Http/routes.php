@@ -25,6 +25,14 @@ Route::resource('perfil_alumno','Perfil_AlumnoController');
 Route::resource('perfil_docente','Perfil_DocenteController');
 Route::resource('subir_notas_docente','Subir_Notas_DocenteController');
 Route::resource('inicio_admin','Inicio_AdminController');
+Route::resource('registrar_asignatura','Registrar_AsignaturaController');
+Route::resource('registrar_docente','Registrar_DocenteController');
+Route::resource('registrar_alumno','Registrar_AlumnoController');
+Route::resource('registrar_curso','Registrar_CursoController');
+Route::resource('registrar_horario','Registrar_HorarioController');
+Route::resource('actualizar_asignatura','Actualizar_AsignaturaController');
+Route::resource('actualizar_docente','Actualizar_DocenteController');
+Route::resource('actualizar_alumno','Actualizar_AlumnoController');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

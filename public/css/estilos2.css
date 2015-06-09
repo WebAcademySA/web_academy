@@ -10,6 +10,10 @@
 	font-weight:bold;
 	border-radius:0px;
 }
+
+.alinav{
+	margin-left:101px;
+}
 .text {
 	color:#000000;
 }
@@ -245,6 +249,220 @@ footer h6 {
     text-align:justify;
     margin-bottom:45px;
 }
+
+.regisasig{
+	margin-bottom:127px;
+}
+
+.regdocen{
+	margin-left:480px;
+	margin-bottom:103px;
+}
+
+.regalum{
+	margin-left:130px;
+	margin-bottom:103px;
+}
+
+.regalum2{
+	margin-left:702px;
+	margin-top:-285px;
+}
+
+.actuasig{
+	margin-left:702px;
+	margin-top:-200px;
+}
+
+.actuadoc{
+	margin-left:702px;
+	margin-top:-200px;
+	margin-bottom:60px;
+}
+
+.actualum{
+	margin-left:702px;
+	margin-top:-200px;
+	margin-bottom:60px;
+}
+
+.regcur{
+	margin-bottom:176px;
+}
+
+.reghorario {
+	margin-left:480px;
+	margin-bottom:191px;
+	margin-top:30px;
+}
+
+hr {
+	margin-top:-10px;
+}
+
+.til1 {
+	color:#48ccbf;
+	margin-left:550px;
+	font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
+	font-size:36px;
+	margin-bottom:30px;
+}
+
+.til2 {
+	color:#48ccbf;
+	margin-left:113px;
+	font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
+	font-size:36px;
+	margin-top:-5px;
+}
+
+.til3{
+	color:#48ccbf;
+	margin-left:250px;
+	font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
+	font-size:36px;
+	margin-top:-5px;
+}
+
+input[type=text]{
+	font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
+	font-size:22px;
+}
+
+select[type=text]{
+	font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
+	font-size:21px;
+	padding:0px 81.7px 0px 10px;
+}
+
+select[type=text]{
+	font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
+	font-size:21px;
+	padding:0px 81.7px 0px 10px;
+}
+
+select[type=text2]{
+	font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
+	font-size:21px;
+	padding:0px 51px 0px 10px;
+}
+
+select[type=text3]{
+	font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
+	font-size:21px;
+	padding:0px 65px 0px 10px;
+}
+
+select[type=text4]{
+	font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
+	font-size:21px;
+	padding:0px 48px 0px 10px;
+}
+
+input[type=email]{
+	font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
+	font-size:22px;
+}
+
+.guardar{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:20px;
+	background:#4787ed;
+	margin-left:630px;
+	margin-top:25px;
+}
+
+.guardar:hover{
+	background:#1122cc;
+}
+
+.guardar2{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:20px;
+	background:#4787ed;
+	margin-left:105px;
+}
+
+.guardar2:hover{
+	background:#1122cc;
+}
+
+.guardar3{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:20px;
+	background:#4787ed;
+	margin-left:580px;
+	margin-top:20px;
+	margin-bottom:38px;
+}
+
+.guardar3:hover{
+	background:#1122cc;
+}
+
+.guardar4{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:20px;
+	background:#4787ed;
+	margin-left:599px;
+	margin-top:10px;
+}
+
+.guardar4:hover{
+	background:#1122cc;
+}
+
+.guardar5{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:20px;
+	background:#4787ed;
+	margin-left:158px;
+	margin-top:7px;
+}
+
+.guardar5:hover{
+	background:#1122cc;
+}
+
+.guardar6{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:20px;
+	background:#4787ed;
+	margin-left:870px;
+	margin-top:7px;
+	margin-bottom:98px;
+}
+
+.guardar6:hover{
+	background:#1122cc;
+}
+
+.guardar7{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:20px;
+	background:#4787ed;
+	margin-left:123px;
+	margin-top:3px;
+}
+
+.guardar7:hover{
+	background:#1122cc;
+}
+
+.guardar8{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:20px;
+	background:#4787ed;
+	margin-left:150px;
+}
+
+.guarda8:hover{
+	background:#1122cc;
+}
+.celda {
+	padding:0px 450px;
+}
+
 /*
 .barranav {
 	margin-top:-13px;
