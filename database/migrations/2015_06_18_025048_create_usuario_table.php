@@ -16,7 +16,7 @@ class CreateUsuarioTable extends Migration {
 		{
 			$table->integer('idusuario');
             $table->primary('idusuario');
-            $table->integer('cotraseña');
+            $table->string('contrasenia');
             $table->string('tipo')->default('usuario');
 			$table->timestamps();
 

@@ -14,10 +14,9 @@ class CreateMatriculaTable extends Migration {
 	{
 		Schema::create('matricula', function(Blueprint $table)
 		{
-			$table->integer('id_matricula');
-			$table->primary('id_matricula');
-			$table->integer('idcursofor');			
-			$table->integer('idalumnofor');			
+			$table->increments('id_matricula');
+			$table->string('idcursofor');
+			$table->integer('idalumnofor');
 			$table->timestamps('fecha_matricula');
 			$table->boolean('estadomatricula');
 

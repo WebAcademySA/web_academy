@@ -17,7 +17,7 @@ class CreateNotasTable extends Migration {
 			$table->integer('idnotas');
             $table->primary('idnotas');
             $table->integer('idinsnotasfor');
-            $table->integer('calificacion');
+            $table->float('calificacion');
             $table->integer('periodo');
 			$table->timestamps();
 

@@ -18,8 +18,8 @@ class CreateInscritoTable extends Migration {
             $table->primary('idinscrito');
             $table->integer('idestuinscritofor');
             $table->integer('idasiginscritofor');
-            $table->integer('horainicio');
-            $table->integer('horafin');
+            $table->time('horainicio');
+            $table->time('horafin');
 			$table->timestamps();
 
             $table->foreign('idestuinscritofor')->references('nid')->on('alumno')->onDelete('cascade');
