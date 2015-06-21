@@ -1,9 +1,15 @@
 <?php namespace App\Http\Controllers;
 
+use App\Alumno;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
+use Illuminate\Support\Facades\Redirect;
+
+//use Illuminate\Support\Facades\Request;
 
 class Registrar_AlumnoController extends Controller {
 
@@ -32,9 +38,22 @@ class Registrar_AlumnoController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		//
+        //dd($request->all());
+        $alumno = new Alumno($request->all());
+
+        $dad = ($alumno->save());
+
+        if($dad!=true){
+
+
+        }
+        else{
+            return Redirect::to('registrar_alumno')->with('notice','El alumno ha sido creado con exito');
+        }
+
+        //return view('registrar_alumno')->with('mensaje',$mensaje);
 	}
 
 	/**

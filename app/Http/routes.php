@@ -12,7 +12,6 @@
 */
 
 Route::resource('prueba','prueba');
-//Route::resource('auth/login','prueba');
 Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');

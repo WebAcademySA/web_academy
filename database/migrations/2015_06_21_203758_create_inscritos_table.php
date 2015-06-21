@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateInscritoTable extends Migration {
+class CreateInscritosTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,18 +12,19 @@ class CreateInscritoTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('inscrito', function(Blueprint $table)
+		Schema::create('inscritos', function(Blueprint $table)
 		{
-			$table->integer('idinscrito');
+            $table->integer('idinscrito');
             $table->primary('idinscrito');
             $table->integer('idestuinscritofor');
             $table->integer('idasiginscritofor');
             $table->time('horainicio');
             $table->time('horafin');
-			$table->timestamps();
+            $table->rememberToken();
+            $table->timestamps();
 
-            $table->foreign('idestuinscritofor')->references('nid')->on('alumno')->onDelete('cascade');
-            $table->foreign('idasiginscritofor')->references('idasignatura')->on('asignatura')->onDelete('cascade');
+            $table->foreign('idestuinscritofor')->references('nid')->on('alumnos')->onDelete('cascade');
+            $table->foreign('idasiginscritofor')->references('idasignatura')->on('asignaturas')->onDelete('cascade');
 		});
 	}
 
@@ -34,7 +35,7 @@ class CreateInscritoTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('inscrito');
+		Schema::drop('inscritos');
 	}
 
 }

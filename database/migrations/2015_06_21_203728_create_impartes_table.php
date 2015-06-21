@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateImparteTable extends Migration {
+class CreateImpartesTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,19 +12,19 @@ class CreateImparteTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('imparte', function(Blueprint $table)
+		Schema::create('impartes', function(Blueprint $table)
 		{
-			$table->integer('idimparte');
+            $table->integer('idimparte');
             $table->primary('idimparte');
             $table->integer('idasigimpartefor');
             $table->integer('iddoceimpartefor');
             $table->integer('año');
             $table->boolean('estadoimparte')->default(true);
-			$table->timestamps();
+            $table->rememberToken();
+            $table->timestamps();
 
-            $table->foreign('iddoceimpartefor')->references('iddocente')->on('docente')->onDelete('cascade');
-            $table->foreign('idasigimpartefor')->references('idasignatura')->on('asignatura')->onDelete('cascade');
-
+            $table->foreign('iddoceimpartefor')->references('iddocente')->on('docentes')->onDelete('cascade');
+            $table->foreign('idasigimpartefor')->references('idasignatura')->on('asignaturas')->onDelete('cascade');
 		});
 	}
 
@@ -35,7 +35,7 @@ class CreateImparteTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('imparte');
+		Schema::drop('impartes');
 	}
 
 }

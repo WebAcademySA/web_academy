@@ -75,11 +75,11 @@ class AuthController extends Controller {
         {
 
             if($this->auth->user()){
-                return redirect('inicio_docente');
-
+                    return redirect('inicio_docente');
             }
 
         }
+
 
         return redirect('auth/login')->withErrors([
             'usuario' => 'Los datos ingresados son incorrectos, Vuelve a intentarlo',

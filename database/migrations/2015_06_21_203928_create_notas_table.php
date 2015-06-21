@@ -14,14 +14,15 @@ class CreateNotasTable extends Migration {
 	{
 		Schema::create('notas', function(Blueprint $table)
 		{
-			$table->integer('idnotas');
+            $table->integer('idnotas');
             $table->primary('idnotas');
             $table->integer('idinsnotasfor');
             $table->float('calificacion');
             $table->integer('periodo');
-			$table->timestamps();
+            $table->rememberToken();
+            $table->timestamps();
 
-            $table->foreign('idinsnotasfor')->references('idinscrito')->on('inscrito')->onDelete('cascade');
+            $table->foreign('idinsnotasfor')->references('idinscrito')->on('inscritos')->onDelete('cascade');
 		});
 	}
 

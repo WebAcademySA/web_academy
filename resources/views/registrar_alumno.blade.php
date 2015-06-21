@@ -8,7 +8,10 @@
 @extends('app2')
 
 @section('content')
-<nav class="navbar navbar-default nav_barra" role="navigation">
+    @if(Session::has('notice'))
+        <p><strong>{{ Session::get('notice') }}</strong></p>
+    @endif
+<nav class="navbar navbar-default nav_barra" role="navigation" xmlns="http://www.w3.org/1999/html">
   <!-- El logotipo y el icono que despliega el menú se agrupan
        para mostrarlos mejor en los dispositivos móviles -->
   <div class="navbar-header">
@@ -88,28 +91,29 @@
 <div class="container row">
 <!--Formulario alumno-->
 	<div col-md-6>
-    	<form  class="regalum" name="regalumno" method="post" action="">
-	<div class="form-inline form-group" >
-    	<div class="celda1 form-group"><input class="form-control" id="Noid2" type="text" name="idasigna2" pattern="[0-9]{1,16}" placeholder="No. Identificacion *" required/></div>
-        <div class="celda1 form-group"><input class="form-control" id="Tele2" type="text" name="telfono2" pattern="[0-9]{1,16}" placeholder="Telefono " /></div>
-    </div>
-    <div class="form-inline form-group">
-    	<div class="celda1 form-group"><input class="form-control" id="Nomb2" type="text" name="nombre2" pattern="[0-9]{1,16}" placeholder="Nombres *" required/></div>
-        <div class="celda1 form-group"><input class="form-control" id="Email2" type="email" name="email2" pattern="[0-9]{1,16}" placeholder="E-mail " /></div>
-        </div>
-    <div class="form-inline form-group">
-    	<div class="celda1 form-group"><input class="form-control" id="Apel2" type="text" name="apellido2" pattern="[0-9]{1,16}" placeholder="Apellidos *" required/></div>
-        <div class="celda1 form-group"><select class="form-control" id="Grad" type="text2" name="grado" pattern="[0-9]{1,16}" required><option>Grado *</option><option>--Primaria--</option><option value="1">Primero</option><option value="2">Segundo</option><option value="3">Tercero</option><option value="4">Cuarto</option><option value="5">Quinto</option><option>--Secundaria--</option><option value="6">Sexto</option><option value="7">Septimo</option><option value="8">Octavo</option><option value="9">Noveno</option><option value="10">Decimo</option><option value="11">Undecimo</option></select></div>
-    </div>
-    <div class="form-inline form-group" >
-    	<div class="celda1 form-group"><select class="form-control" id="sex2" type="text" name="sexo2" pattern="[0-9]{1,16}" required><option>Sexo *</option><option value="M">Masculino</option><option value="F">Femenino</option></select></div>
-        <div class="celda1 form-group"><input class="form-control" id="Dir2" type="text" name="direc2" pattern="[0-9]{1,16}" placeholder="Direccion *" required /></div>
-    </div>
+    	<form  class="regalum" name="regalumno" method="post" action="{{ route('registrar_alumno.store') }}">
+            <div class="form-inline form-group" >
+                <div class="celda1 form-group"><input class="form-control" id="Noid2" type="text" name="nid" pattern="[0-9]{1,16}" placeholder="No. Identificacion *" required/></div>
+                <div class="celda1 form-group"><input class="form-control" id="Tele2" type="text" name="telefono" pattern="[0-9]{1,16}" placeholder="Telefono " /></div>
+            </div>
+            <div class="form-inline form-group">
+                <div class="celda1 form-group"><input class="form-control" id="Nomb2" type="text" name="primer_nombre" pattern="[A-Za-z]+" placeholder="Primer Nombre *" required/></div>
+                <div class="celda1 form-group"><input class="form-control" id="Nombseg" type="text" name="segundo_nombre" pattern="[A-Za-z]+" placeholder="Segundo Nombre *" /></div>
+            </div>
+            <div class="form-inline form-group">
+                <div class="celda1 form-group"><input class="form-control" id="primapel" type="text" name="primer_apellido" pattern="[A-Za-z]+" placeholder="Primer Apellido *" required/></div>
+                <div class="celda1 form-group"><input class="form-control" id="segunapel" type="text" name="segundo_apellido" pattern="[A-Za-z]+" placeholder="Segundo Apellido *" required/></div>
+            </div>
+            <div class="form-inline form-group" >
+                <div class="celda1 form-group"><select class="form-control" id="sex2" type="text" name="sexo" required><option>Sexo *</option><option value="M">Masculino</option><option value="F">Femenino</option></select></div>
+                <div class="celda1 form-group"><input class="form-control" id="Dir2" type="text" name="direccion" pattern="[[A-Za-z0-9]+" placeholder="Direccion *" required /><input type="hidden" name="_token" value="{{ csrf_token() }}"></div>
+            </div>
+            <div><button class="btn btn-primary guardar3" type="submit"/>Guardar</button>
 		</form>
     </div>
     
 <!--Formulario acudiente-->
-	<div col-md-6>
+	<!--<div col-md-6>
     	<form  class="regalum2" name="regalumno" method="post" action="">
 	<div class="form-inline form-group" >
     	<div class="celda1 form-group"><input class="form-control" id="Noid3" type="text" name="idasigna" pattern="[0-9]{1,16}" placeholder="No. Identificacion *" required/></div>
@@ -129,7 +133,7 @@
     </div>
 		</form>
         <div><input class="btn btn-primary guardar3" type="submit" name="guardar" value="Guardar"/></div>
-	</div>
+	</div>-->
 </div>
 @endsection
 
