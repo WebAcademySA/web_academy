@@ -1,29 +1,20 @@
 <?php namespace App\Http\Controllers;
 
-use Closure;
-use Illuminate\Contracts\Auth\Guard;
-
-namespace App\Http\Controllers;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class Inicio_DocenteController extends Controller {
+class prueba extends Controller {
 
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
-    public function _construct(){
-        $this->middleware('auth');
-    }
-
 	public function index()
 	{
-		return view('inicio_docente');
+		return view('prueba');
 	}
 
 	/**

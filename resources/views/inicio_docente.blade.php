@@ -17,7 +17,7 @@
                     <li><div class="fuera"><a href="#" class="letras">Subir Notas</a></div></li>
                     <li><div class="fuera"><a href="#" class="letras">Mi Horario</a></div></li>
                     <li><div class="fuera"><a href="#" class="letras">Mi Perfil</a></div></li>
-                    <li><div class="fuera"><a href="#" class="letras">Cerrar Sesion</a></div></li>
+                    <li><div class="fuera"><a href="{{ url('/auth/logout') }}" class="letras">Cerrar Sesion</a></div></li>
                 </ul>
             </div>
         </div>

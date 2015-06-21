@@ -12,15 +12,17 @@ class CreateUsuarioTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('usuario', function(Blueprint $table)
+		Schema::create('users', function(Blueprint $table)
 		{
-			$table->integer('idusuario');
-            $table->primary('idusuario');
-            $table->string('contrasenia');
+			$table->integer('id');
+            $table->primary('id');
+            $table->string('usuario')->unique();
+            $table->string('password');
+            $table->string('remember_token');
             $table->string('tipo')->default('usuario');
 			$table->timestamps();
 
-            $table->foreign('idusuario')->references('iddocente')->on('docente')->onDelete('cascade');
+            $table->foreign('id')->references('iddocente')->on('docente')->onDelete('cascade');
 		});
 	}
 
