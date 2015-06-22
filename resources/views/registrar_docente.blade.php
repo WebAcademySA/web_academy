@@ -85,27 +85,29 @@
 <hr/>
 <form  class="regdocen" name="regdoc" method="post" action="">
 	<div class="form-inline form-group" >
-    	<div class="celda1 form-group"><input class="form-control" id="Noid" type="text" name="idasigna" pattern="[0-9]{1,16}" placeholder="No. Identificacion *" required/></div>
-        <div class="celda1 form-group"><input class="form-control" id="Dir" type="text" name="direc" pattern="[0-9]{1,16}" placeholder="Direccion *" required/></div>
+    	<div class="celda1 form-group"><input class="form-control" id="Noid" type="text" name="iddocente" pattern="[0-9]{1,16}" placeholder="No. Identificacion *" required/></div>
+        <div class="celda1 form-group"><input class="form-control" id="Dir" type="text" name="direccion" pattern="[A-Za-z]+" placeholder="Direccion *" required/></div>
     </div>
     <div class="form-inline form-group">
-    	<div class="celda1 form-group"><input class="form-control" id="Nomb" type="text" name="nombre" pattern="[0-9]{1,16}" placeholder="Nombres *" required/></div>
-        <div class="celda1 form-group"><input class="form-control" id="Tel" type="text" name="telefono" pattern="[0-9]{1,16}" placeholder="Telefono " /></div>
+    	<div class="celda1 form-group"><input class="form-control" id="Nomb" type="text" name="primer_nombre" pattern="[A-Za-z]+" placeholder="Primer Nombre *" required/></div>
+        <div class="celda1 form-group"><input class="form-control" id="Tel" type="text" name="telefono" pattern="[A-Za-z]+" placeholder="Segundo Nombre *" /></div>
         </div>
     <div class="form-inline form-group">
-    	<div class="celda1 form-group"><input class="form-control" id="Apel" type="text" name="apellido" pattern="[0-9]{1,16}" placeholder="Apellidos *" required/></div>
-        <div class="celda1 form-group"><select class="form-control" id="sex" type="text" name="sexo" pattern="[0-9]{1,16}" placeholder="Sexo *" required><option>Sexo *</option><option value="M">Masculino</option><option value="F">Femenino</option></select></div>
+    	<div class="celda1 form-group"><input class="form-control" id="Apel" type="text" name="primer_apellido" pattern="[A-Za-z]+" placeholder="Primer Apellido *" required/></div>
+       <div class="celda1 form-group"><input class="form-control" id="Apel" type="text" name="segundo_apellido" pattern="[A-Za-z]+" placeholder="Segundo Apellido *" required/></div> 
     </div>
     <div class="form-inline form-group">
-    	<div class="celda1 form-group"><input class="form-control" id="titu" type="text" name="titul" pattern="[0-9]{1,16}" placeholder="Titulo *" required/></div>
+    	<div class="celda1 form-group"><input class="form-control" id="titu" type="text" name="titul0" pattern="[0-9]{1,16}" placeholder="Titulo *" required/></div>
         <div class="celda1 form-group"><input class="form-control" id="email" type="email" name="email" pattern="[0-9]{1,16}" placeholder="E-mail " /></div>
         </div>
      <div class="form-inline form-group">
     	<div class="celda1 form-group"><input class="form-control" id="niv" type="text" name="nivel" pattern="[0-9]{1,16}" placeholder="Nivel *" required/></div>
-        <div class="celda1 form-group"><input class="btn btn-primary guardar2" type="submit" name="guardar" value="Guardar"/></div>
+      <div class="celda1 form-group"><select class="form-control" id="sex" type="text" name="sexo" pattern="[0-9]{1,16}" placeholder="Sexo *" required><option>Sexo *</option><option value="M">Masculino</option><option value="F">Femenino</option></select></div>
         </div>
+      <div class="celda1 form-group"><button class="btn btn-primary guardar2" type="submit" name="guardar" value="Guardar">Guardar</button></div>
 </form>
 @endsection
 <!--<body>
 </body>
 </html>-->
+

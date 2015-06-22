@@ -13,10 +13,10 @@
             </div>
             <div class="collapse navbar-collapse letras" id="navbar-1">
                 <ul class="nav navbar-nav dentronav">
-                    <li><div class="fuera"><a href="#" class="letras">Inicio</a></div></li>
-                    <li><div class="fuera"><a href="#" class="letras">Subir Notas</a></div></li>
-                    <li><div class="fuera"><a href="#" class="letras">Mi Horario</a></div></li>
-                    <li><div class="fuera"><a href="#" class="letras">Mi Perfil</a></div></li>
+                    <li><div class="fuera"><a href="inicio_docente" class="letras">Inicio</a></div></li>
+                    <li><div class="fuera"><a href="subir_notas_docente" class="letras">Subir Notas</a></div></li>
+                    <li><div class="fuera"><a href="horario_docente" class="letras">Mi Horario</a></div></li>
+                    <li><div class="fuera"><a href="perfil_docente" class="letras">Mi Perfil</a></div></li>
                     <li><div class="fuera"><a href="#" class="letras">Cerrar Sesion</a></div></li>
                 </ul>
             </div>

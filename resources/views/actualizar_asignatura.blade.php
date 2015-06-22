@@ -32,11 +32,11 @@
           Asignatura <b class="caret"></b></div>
         </a>
         <ul class="dropdown-menu">
-          <div op1><li><a href="#"><div class="text2">Registrar</div></a></li></div>
+          <div op1><li><a href="registrar_asignatura"><div class="text2">Registrar</div></a></li></div>
           <li class="divider"></li>
-          <div op1><li><a href="#"><div class="text2">Actualizar</div></a></li></div>
+          <div op1><li><a href="actualizar_asignatura"><div class="text2">Actualizar</div></a></li></div>
           <li class="divider"></li>
-          <div op1><li><a href="#"><div class="text2">Consultar</div></a></li></div>
+          <div op1><li><a href="consultar_asignatura"><div class="text2">Consultar</div></a></li></div>
         </ul>
       </li></div>
       <div class="drop2"><li class="dropdown">
@@ -44,11 +44,11 @@
           Docente <b class="caret"></b></div>
         </a>
         <ul class="dropdown-menu">
-          <div op1><li><a href="#"><div class="text2">Registrar</div></a></li></div>
+          <div op1><li><a href="registrar_docente"><div class="text2">Registrar</div></a></li></div>
           <li class="divider"></li>
-          <div op1><li><a href="#"><div class="text2">Actualizar</div></a></li></div>
+          <div op1><li><a href="actualizar_docente"><div class="text2">Actualizar</div></a></li></div>
           <li class="divider"></li>
-          <div op1><li><a href="#"><div class="text2">Consultar</div></a></li></div>
+          <div op1><li><a href="consultar_docente"><div class="text2">Consultar</div></a></li></div>
         </ul>
       </li></div>
       <div class="drop3"><li class="dropdown">
@@ -56,11 +56,11 @@
           Alumno <b class="caret"></b></div>
         </a>
         <ul class="dropdown-menu">
-          <div op1><li><a href="#"><div class="text2">Registrar</div></a></li></div>
+          <div op1><li><a href="registrar_alumno"><div class="text2">Registrar</div></a></li></div>
           <li class="divider"></li>
-          <div op1><li><a href="#"><div class="text2">Actualizar</div></a></li></div>
+          <div op1><li><a href="actualizar_alumno"><div class="text2">Actualizar</div></a></li></div>
           <li class="divider"></li>
-          <div op1><li><a href="#"><div class="text2">Consultar</div></a></li></div>
+          <div op1><li><a href="consultar_alumno"><div class="text2">Consultar</div></a></li></div>
         </ul>
       </li></div>
       <div class="drop4"><li class="dropdown">
@@ -68,13 +68,13 @@
           Curso <b class="caret"></b></div>
         </a>
         <ul class="dropdown-menu">
-          <div op1><li><a href="#"><div class="text2">Registrar Curso</div></a></li></div>
+          <div op1><li><a href="registrar_curso"><div class="text2">Registrar Curso</div></a></li></div>
           <div class="linea"><li class="divider"></li></div>
-          <div op1><li><a href="#"><div class="text2">Crear Horario</div></a></li></div>
+          <div op1><li><a href="registrar_horario"><div class="text2">Crear Horario</div></a></li></div>
           <li class="divider"></li>
-          <div op1><li><a href="#"><div class="text2">Consultar Horario</div></a></li></div>
+          <div op1><li><a href="consultar_horario"><div class="text2">Consultar Horario</div></a></li></div>
           <li class="divider"></li>
-          <div op1><li><a href="#"><div class="text2">Consultar Curso</div></a></li></div>
+          <div op1><li><a href="consultar_curso"><div class="text2">Consultar Curso</div></a></li></div>
         </ul>
       </li></div>
        <li class="drop5"><a href="#"><div class="text">Cerrar Sesion</div></a></li></div>

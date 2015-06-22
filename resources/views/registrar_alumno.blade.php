@@ -8,9 +8,6 @@
 @extends('app2')
 
 @section('content')
-    @if(Session::has('notice'))
-        <p><strong>{{ Session::get('notice') }}</strong></p>
-    @endif
 <nav class="navbar navbar-default nav_barra" role="navigation" xmlns="http://www.w3.org/1999/html">
   <!-- El logotipo y el icono que despliega el menú se agrupan
        para mostrarlos mejor en los dispositivos móviles -->
@@ -85,8 +82,11 @@
 </nav>
 
 <!--Titulos-->
-<div class="container row"><div class="col-md-6"><h3 class="til2">Registrar alumno</h3></div><div class="col-md-6"><h3 class="til3">Datos del acudiente</h3></div></div><div class="col-md-12"><hr/></div>
+<div class="container row"><div><h3 class="til2">Registrar alumno</h3></div></div><div class="col-md-12"><hr/></div>
 
+@if(Session::has('notice'))
+        <div class="msj"><p><strong>{{ Session::get('notice') }}</strong></p></div>
+    @endif
 <!--Formularios-->
 <div class="container row">
 <!--Formulario alumno-->
@@ -108,7 +108,7 @@
                 <div class="celda1 form-group"><select class="form-control" id="sex2" type="text" name="sexo" required><option>Sexo *</option><option value="M">Masculino</option><option value="F">Femenino</option></select></div>
                 <div class="celda1 form-group"><input class="form-control" id="Dir2" type="text" name="direccion" pattern="[[A-Za-z0-9]+" placeholder="Direccion *" required /><input type="hidden" name="_token" value="{{ csrf_token() }}"></div>
             </div>
-            <div><button class="btn btn-primary guardar3" type="submit"/>Guardar</button>
+            <button class="btn btn-primary guardar3" type="submit"/>Guardar</button>
 		</form>
     </div>
     
