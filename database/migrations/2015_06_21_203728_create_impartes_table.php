@@ -14,8 +14,7 @@ class CreateImpartesTable extends Migration {
 	{
 		Schema::create('impartes', function(Blueprint $table)
 		{
-            $table->integer('idimparte');
-            $table->primary('idimparte');
+            $table->increments('idimparte');
             $table->integer('idasigimpartefor');
             $table->integer('iddoceimpartefor');
             $table->integer('año');

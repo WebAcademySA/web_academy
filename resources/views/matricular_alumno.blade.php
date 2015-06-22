@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>Documento sin título</title>
 </head>-->
+
 @extends('app2')
 
 @section('content')
@@ -84,55 +85,32 @@
     </nav>
 
 
-<h3 class="til1">Registrar docente</h3>
-@if($errors->any())
-    <div class="alert alert-danger" role="alert">
-        <p>Por favor corriga los siguientes Errores</p>
-        <ul>
-            @foreach($errors->all() as $error)
-                <li>{{ $error }}</li>
+    <h3 class="til1">Matricular Alumno</h3>
+    <hr/>
+    @if($errors->any())
+        <div class="alert alert-danger" role="alert">
+            <p>Por favor corriga los siguientes Errores</p>
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
 
-            @endforeach
-        </ul>
-    </div>
-@endif
-@if(Session::has('notice'))
-    <div class="alert alert-success" role="alert">
-        <p>{{ Session::get('notice') }}</p>
-    </div>
-@endif
-
-<hr/>
-<form  class="regdocen" name="regdoc" method="post" action="{{ route('registrar_docente.store') }}">
-	<div class="form-inline form-group" >
-    	<div class="celda1 form-group"><input class="form-control" id="Noid" type="text" name="iddocente" pattern="[0-9]{1,16}" placeholder="No. Identificacion *" required/></div>
-        <div class="celda1 form-group"><input class="form-control" id="Dir" type="text" name="direccion" pattern="[A-Za-z]+" placeholder="Direccion *" required/></div>
-    </div>
-    <div class="form-inline form-group">
-    	<div class="celda1 form-group"><input class="form-control" id="Nomb" type="text" name="primer_nombre" pattern="[A-Za-z]+" placeholder="Primer Nombre *" required/></div>
-        <div class="celda1 form-group"><input class="form-control" id="Tel" type="text" name="segundo_nombre" pattern="[A-Za-z]+" placeholder="Segundo Nombre *" /></div>
+                @endforeach
+            </ul>
         </div>
-    <div class="form-inline form-group">
-    	<div class="celda1 form-group"><input class="form-control" id="Apel" type="text" name="primer_apellido" pattern="[A-Za-z]+" placeholder="Primer Apellido *" required/></div>
-       <div class="celda1 form-group"><input class="form-control" id="Apel" type="text" name="segundo_apellido" pattern="[A-Za-z]+" placeholder="Segundo Apellido *" required/></div> 
-    </div>
-    <div class="form-inline form-group">
-    	<div class="celda1 form-group"><input class="form-control" id="titu" type="text" name="titulo" pattern="[A-Za-z]+" placeholder="Titulo *" required/></div>
-        <div class="celda1 form-group"><input class="form-control" id="email" type="email" name="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" placeholder="E-mail " /></div>
+    @endif
+    @if(Session::has('notice'))
+        <div class="alert alert-success" role="alert">
+            <p>{{ Session::get('notice') }}</p>
         </div>
-     <div class="form-inline form-group">
-    	<div class="celda1 form-group"><input class="form-control" id="niv" type="text" name="nivel" pattern="[A-Za-z0-9]+" placeholder="Nivel *" required/></div>
-      <div class="celda1 form-group"><select class="form-control" id="sex" type="text" name="sexo" pattern="[A-Za-z]+" placeholder="Sexo *" required><option>Sexo *</option><option value="M">Masculino</option><option value="F">Femenino</option></select></div><input type="hidden" name="_token" value="{{ csrf_token() }}"></div>
-        </div>
-    <div class="form-inline form-group">
-        <div class="celda1 form-group"><input class="form-control" id="niv" type="text" name="telefono" pattern="[0-9]+" placeholder="Telefono *" required/></div>
+    @endif
+    <form class="regcur" name="regcurso" method="post" action="{{ route('matricular_alumno.store') }}">
+        <div class="celda form-group"><input class="form-control" id="Grad2" type="text" name="idalumnofor" pattern="[0-9]+" placeholder="Nro. identificacion Alumno" required/></div>
+        <div class="celda form-group"><input class="form-control" id="salo" type="text" name="idcursofor" pattern="^[0-9]+-[a-Z]+" placeholder="Grado *" required/></div><div><input type="hidden" name="_token" value="{{ csrf_token() }}"></div>
+        <button class="btn btn-primary iniciar guardar" type="submit"/>Guardar</button>
+    </form>
 
-    </div>
-        <button class="btn btn-primary guardar2" type="submit"/>Guardar</button>
+    @endsection
 
-</form>
-@endsection
-<!--<body>
+            <!--<body>
 </body>
 </html>-->
-

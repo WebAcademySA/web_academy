@@ -1,13 +1,13 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Requests\CreateAsignaturaRequest;
-use App\Asignatura;
+use App\Http\Requests\CreateInscritoRequest;
+use App\Inscrito;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class Registrar_AsignaturaController extends Controller {
+class Inscribir_AsignaturaController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -16,7 +16,7 @@ class Registrar_AsignaturaController extends Controller {
 	 */
 	public function index()
 	{
-		return view('registrar_asignatura');
+		return view('inscribir_asignatura');
 	}
 
 	/**
@@ -34,10 +34,10 @@ class Registrar_AsignaturaController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store(CreateAsignaturaRequest $request)
+	public function store(CreateInscritoRequest $request)
 	{
-        $asignatura = Asignatura::create($request->all());
-        return redirect()->route('registrar_asignatura.index')->with('notice','Asignatura Creada con Exito');
+		$inscrito = Inscrito::create($request->all());
+        return redirect()->route('inscribir_asignatura.index')->with('notice','El Alumno ha sido inscrito a la Asignatura');
 	}
 
 	/**

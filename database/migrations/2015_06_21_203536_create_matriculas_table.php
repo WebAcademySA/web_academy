@@ -17,8 +17,8 @@ class CreateMatriculasTable extends Migration {
             $table->increments('id_matricula');
             $table->string('idcursofor');
             $table->integer('idalumnofor');
-            $table->timestamps('fecha_matricula');
-            $table->boolean('estadomatricula');
+            $table->timestamps();
+            $table->boolean('estadomatricula')->default(true);
             $table->rememberToken();
 
             $table->foreign('idcursofor')->references('grado')->on('cursos')->onDelete('cascade');

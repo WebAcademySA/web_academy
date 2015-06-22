@@ -4,6 +4,7 @@ use App\Alumno;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Http\Requests\CreateAlumnoRequest;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
@@ -38,9 +39,11 @@ class Registrar_AlumnoController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store(Request $request)
+	public function store(CreateAlumnoRequest $request)
 	{
-        //dd($request->all());
+        $alumno = Alumno::create($request->all());
+        return redirect()->route('registrar_alumno.index')->with('notice','Alumno Creado con Exito');
+        /*dd($request->all());
         $alumno = new Alumno($request->all());
 
         $dad = ($alumno->save());
@@ -53,7 +56,7 @@ class Registrar_AlumnoController extends Controller {
             return Redirect::to('registrar_alumno')->with('notice','El alumno ha sido creado con exito');
         }
 
-        //return view('registrar_alumno')->with('mensaje',$mensaje);
+        return view('registrar_alumno')->with('mensaje',$mensaje);*/
 	}
 
 	/**

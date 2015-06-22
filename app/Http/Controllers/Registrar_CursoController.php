@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateCursoRequest;
+use App\Curso;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -32,9 +34,10 @@ class Registrar_CursoController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateCursoRequest $request)
 	{
-		//
+        $curso = Curso::create($request->all());
+        return redirect()->route('registrar_curso.index')->with('notice','Curso Creado con Exito');
 	}
 
 	/**

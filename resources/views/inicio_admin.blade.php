@@ -36,17 +36,18 @@
        otro elemento que se pueda ocultar al minimizar la barra -->
   <div class="collapse navbar-collapse navbar-ex1-collapse alinav">
     <ul class="nav navbar-nav">
-      <li><a href="#"><div class="text">Inicio</div></a></li>
+      <li><a href="{{ route('inicio_admin.index') }}"><div class="text">Inicio</div></a></li>
       <div class="drop1"><li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
           Asignatura <b class="caret"></b></div>
         </a>
         <ul class="dropdown-menu">
-          <div op1><li><a href=""><div class="text2">Registrar</div></a></li></div>
+          <div op1><li><a href="{{ route('registrar_asignatura.index') }}"><div class="text2">Registrar</div></a></li></div>
           <li class="divider"></li>
           <div op1><li><a href="#"><div class="text2">Actualizar</div></a></li></div>
           <li class="divider"></li>
           <div op1><li><a href="#"><div class="text2">Consultar</div></a></li></div>
+
         </ul>
       </li></div>
       <div class="drop2"><li class="dropdown">
@@ -54,7 +55,7 @@
           Docente <b class="caret"></b></div>
         </a>
         <ul class="dropdown-menu">
-          <div op1><li><a href=""><div class="text2">Registrar</div></a></li></div>
+          <div op1><li><a href="{{ route('registrar_docente.index') }}"><div class="text2">Registrar</div></a></li></div>
           <li class="divider"></li>
           <div op1><li><a href="#"><div class="text2">Actualizar</div></a></li></div>
           <li class="divider"></li>
@@ -78,13 +79,13 @@
           Curso <b class="caret"></b></div>
         </a>
         <ul class="dropdown-menu">
-          <div op1><li><a href="#"><div class="text2">Registrar Curso</div></a></li></div>
+          <div op1><li><a href="{{ route('registrar_curso.index') }}"><div class="text2">Registrar Curso</div></a></li></div>
           <div class="linea"><li class="divider"></li></div>
-          <div op1><li><a href="#"><div class="text2">Crear Horario</div></a></li></div>
+          <div op1><li><a href="{{ route('matricular_alumno.index') }}"><div class="text2">Matricular Alumno</div></a></li></div>
           <li class="divider"></li>
-          <div op1><li><a href="#"><div class="text2">Consultar Horario</div></a></li></div>
+          <div op1><li><a href="{{ route('imparte_docente.index') }}"><div class="text2">Asignar Docente</div></a></li></div>
           <li class="divider"></li>
-          <div op1><li><a href="#"><div class="text2">Consultar Curso</div></a></li></div>
+          <div op1><li><a href="{{ route('inscribir_asignatura.index') }}"><div class="text2">Inscribir Clase</div></a></li></div>
         </ul>
       </li></div>
        <li class="drop5"><a href="#"><div class="text">Cerrar Sesion</div></a></li></div>

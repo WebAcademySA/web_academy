@@ -1,13 +1,13 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Requests\CreateAsignaturaRequest;
-use App\Asignatura;
+use App\Http\Requests\CreateMatriculaRequest;
+use App\Matricula;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class Registrar_AsignaturaController extends Controller {
+class Matricular_AlumnoController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -16,7 +16,7 @@ class Registrar_AsignaturaController extends Controller {
 	 */
 	public function index()
 	{
-		return view('registrar_asignatura');
+        return view('matricular_alumno');
 	}
 
 	/**
@@ -34,10 +34,10 @@ class Registrar_AsignaturaController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store(CreateAsignaturaRequest $request)
+	public function store(CreateMatriculaRequest $request)
 	{
-        $asignatura = Asignatura::create($request->all());
-        return redirect()->route('registrar_asignatura.index')->with('notice','Asignatura Creada con Exito');
+		$matricula = Matricula::create($request->all());
+        return redirect()->route('matricular_alumno.index')->with('notice','Matricula Realizada con Exito');
 	}
 
 	/**

@@ -1,13 +1,13 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Requests\CreateAsignaturaRequest;
-use App\Asignatura;
+use App\Http\Requests\CreateImparteRequest;
+use App\Imparte;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class Registrar_AsignaturaController extends Controller {
+class Imparte_DocenteController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -16,7 +16,7 @@ class Registrar_AsignaturaController extends Controller {
 	 */
 	public function index()
 	{
-		return view('registrar_asignatura');
+		return view('imparte_docente');
 	}
 
 	/**
@@ -34,10 +34,10 @@ class Registrar_AsignaturaController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store(CreateAsignaturaRequest $request)
+	public function store(CreateImparteRequest $request)
 	{
-        $asignatura = Asignatura::create($request->all());
-        return redirect()->route('registrar_asignatura.index')->with('notice','Asignatura Creada con Exito');
+        $imparte = Imparte::create($request->all());
+        return redirect()->route('imparte_docente.index')->with('notice','Asignacion hecha con Exito');
 	}
 
 	/**

@@ -18,6 +18,7 @@ class CreateCursosTable extends Migration {
             $table->primary('grado');
             $table->integer('aula');
             $table->rememberToken();
+            $table->timestamps();
 		});
 	}
 

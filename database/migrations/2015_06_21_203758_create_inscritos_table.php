@@ -20,6 +20,7 @@ class CreateInscritosTable extends Migration {
             $table->integer('idasiginscritofor');
             $table->time('horainicio');
             $table->time('horafin');
+            $table->string('diasemana');
             $table->rememberToken();
             $table->timestamps();
 

@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateDocenteRequest;
+use App\Docente;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -32,9 +34,10 @@ class Registrar_DocenteController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateDocenteRequest $request)
 	{
-		//
+        $docente = Docente::create($request->all());
+        return redirect()->route('registrar_docente.index')->with('notice','Docente Creado con Exito');
 	}
 
 	/**

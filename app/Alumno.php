@@ -23,4 +23,12 @@ class Alumno extends Model {
      */
     protected $hidden = ['remember_token'];
 
+    public function matricula(){
+        return $this->hasMany('App\Matricula','idalumnofor','nid');
+    }
+
+    public function inscrito(){
+        return $this->hasMany('App\Inscrito','idestuinscritofor','nid');
+    }
+
 }

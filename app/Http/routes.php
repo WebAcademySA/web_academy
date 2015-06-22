@@ -39,6 +39,9 @@ Route::resource('consultar_docente','Consultar_DocenteController');
 Route::resource('consultar_alumno','Consultar_AlumnoController');
 Route::resource('consultar_horario','Consultar_HorarioController');
 Route::resource('consultar_curso','Consultar_CursoController');
+Route::resource('matricular_alumno','Matricular_AlumnoController');
+Route::resource('imparte_docente','Imparte_DocenteController');
+Route::resource('inscribir_asignatura','Inscribir_AsignaturaController');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
