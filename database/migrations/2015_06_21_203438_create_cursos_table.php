@@ -14,8 +14,10 @@ class CreateCursosTable extends Migration {
 	{
 		Schema::create('cursos', function(Blueprint $table)
 		{
-            $table->string('grado');
-            $table->primary('grado');
+            $table->integer('idcurso');
+            $table->primary('idcurso');
+            $table->integer('grado');
+            $table->integer('grupo');
             $table->integer('aula');
             $table->rememberToken();
             $table->timestamps();

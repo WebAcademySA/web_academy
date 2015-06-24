@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Curso;
 use App\Alumno;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -41,7 +42,48 @@ class Registrar_AlumnoController extends Controller {
 	 */
 	public function store(CreateAlumnoRequest $request)
 	{
-        $alumno = Alumno::create($request->all());
+        /*$alumno = Alumno::create($request->all());
+        return redirect()->route('registrar_alumno.index')->with('notice','Alumno Creado con Exito');
+        */
+
+
+        //$alumno = alumno::create($request->all());
+
+       // $fecha = date("y/m/d");
+        $id=0;
+
+        $cursos=Curso::all();
+
+        foreach ($cursos as $curso) {
+            if($curso->grado==$request->grado && $curso->grupo==$request->grupo ){
+                $id=$curso->idcurso;
+            }
+        }
+
+        \DB::table('alumnos')->insert(array(
+            array(
+                'nid' => $request->nid,
+                'primer_nombre' => $request->primer_nombre,
+                'segundo_nombre' => $request->segundo_nombre,
+                'primer_apellido'  =>	$request->primer_apellido,
+                'segundo_apellido'  =>	$request->segundo_apellido,
+                'direccion' => $request->direccion,
+                'telefono' => $request->telefono,
+                'sexo' => $request->sexo,
+            )
+        ));
+
+
+        \DB::table('matriculas')->insert(array(
+            array(
+                'idcursofor' => $id,
+                'idalumnofor' => $request->nid,
+            )
+        ));
+
+
+
+        //$mensaje='Alumno Registrado con exito';
         return redirect()->route('registrar_alumno.index')->with('notice','Alumno Creado con Exito');
         /*dd($request->all());
         $alumno = new Alumno($request->all());

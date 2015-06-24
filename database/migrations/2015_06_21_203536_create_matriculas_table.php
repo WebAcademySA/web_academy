@@ -15,13 +15,13 @@ class CreateMatriculasTable extends Migration {
 		Schema::create('matriculas', function(Blueprint $table)
 		{
             $table->increments('id_matricula');
-            $table->string('idcursofor');
+            $table->integer('idcursofor');
             $table->integer('idalumnofor');
             $table->timestamps();
             $table->boolean('estadomatricula')->default(true);
             $table->rememberToken();
 
-            $table->foreign('idcursofor')->references('grado')->on('cursos')->onDelete('cascade');
+            $table->foreign('idcursofor')->references('idcurso')->on('cursos')->onDelete('cascade');
             $table->foreign('idalumnofor')->references('nid')->on('alumnos')->onDelete('cascade');
 
 		});

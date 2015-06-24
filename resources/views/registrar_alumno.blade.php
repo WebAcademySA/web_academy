@@ -69,9 +69,9 @@
                                 Curso <b class="caret"></b></div>
                         </a>
                         <ul class="dropdown-menu">
-                            <div op1><li><a href="{{ route('registrar_curso.index') }}"><div class="text2">Registrar Curso</div></a></li></div>
+                            <div op1><li><a href=""><div class="text2">Registrar Curso</div></a></li></div>
                             <div class="linea"><li class="divider"></li></div>
-                            <div op1><li><a href="{{ route('matricular_alumno.index') }}"><div class="text2">Matricular Alumno</div></a></li></div>
+                            <div op1><li><a href=""><div class="text2">Matricular Alumno</div></a></li></div>
                             <li class="divider"></li>
                             <div op1><li><a href="{{ route('imparte_docente.index') }}"><div class="text2">Asignar Docente</div></a></li></div>
                             <li class="divider"></li>
@@ -125,6 +125,10 @@
                 <div class="celda1 form-group"><select class="form-control" id="sex2" type="text" name="sexo" required><option>Sexo *</option><option value="M">Masculino</option><option value="F">Femenino</option></select></div>
                 <div class="celda1 form-group"><input class="form-control" id="Dir2" type="text" name="direccion" pattern="[[A-Za-z0-9]+" placeholder="Direccion *" required /><input type="hidden" name="_token" value="{{ csrf_token() }}"></div>
             </div>
+                <div class="form-inline form-group" >
+                <div class="celda1 form-group"><select class="form-control" id="sex2" type="text" name="grado" required><option>Grado *</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option></select></div>
+                <div class="celda1 form-group"><select class="form-control" id="sex2" type="text" name="grupo" required><option>Grupo *</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></div>
+                </div>
             <button class="btn btn-primary guardar3" type="submit"/>Guardar</button>
 		</form>
     </div>

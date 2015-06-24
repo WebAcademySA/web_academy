@@ -79,9 +79,9 @@
           Curso <b class="caret"></b></div>
         </a>
         <ul class="dropdown-menu">
-          <div op1><li><a href="{{ route('registrar_curso.index') }}"><div class="text2">Registrar Curso</div></a></li></div>
+          <div op1><li><a href=""><div class="text2">Registrar Curso</div></a></li></div>
           <div class="linea"><li class="divider"></li></div>
-          <div op1><li><a href="{{ route('matricular_alumno.index') }}"><div class="text2">Matricular Alumno</div></a></li></div>
+          <div op1><li><a href=""><div class="text2">Matricular Alumno</div></a></li></div>
           <li class="divider"></li>
           <div op1><li><a href="{{ route('imparte_docente.index') }}"><div class="text2">Asignar Docente</div></a></li></div>
           <li class="divider"></li>
