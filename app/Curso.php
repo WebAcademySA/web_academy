@@ -16,4 +16,8 @@ class Curso extends Model {
         return $this->hasMany('App\Matricula','idcursofor','idcurso');
     }
 
+    public function inscrito(){
+        return $this->hasMany('App\Inscrito','idcurinscritofor','idcurso');
+    }
+
 }

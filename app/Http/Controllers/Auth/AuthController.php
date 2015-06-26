@@ -75,7 +75,7 @@ class AuthController extends Controller {
         {
 
             if($this->auth->user()){
-                    return redirect('inicio_docente');
+                    return redirect('inicio_admin');
             }
 
         }

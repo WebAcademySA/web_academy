@@ -2,7 +2,7 @@
 
         echo "insertando un nuevo usuario";
 
-        DB::table('docente')->insert($iddocen = array(
+        DB::table('docentes')->insert($iddocen = array(
                 'iddocente' => 12345,
                 'primer_nombre' => 'Alex',
                 'segundo_nombre' => 'Dario',

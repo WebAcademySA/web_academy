@@ -16,7 +16,8 @@ class CreateNotasTable extends Migration {
 		{
             $table->integer('idnotas');
             $table->primary('idnotas');
-            $table->integer('idinsnotasfor');
+            $table->integer('idasigfor');
+            $table->integer('idalumfor');
             $table->float('periodo1')->nullable();
             $table->float('periodo2')->nullable();
             $table->float('periodo3')->nullable();
@@ -24,7 +25,8 @@ class CreateNotasTable extends Migration {
             $table->rememberToken();
             $table->timestamps();
 
-            $table->foreign('idinsnotasfor')->references('idinscrito')->on('inscritos')->onDelete('cascade');
+            $table->foreign('idasigfor')->references('idasignatura')->on('asignaturas')->onDelete('cascade');
+            $table->foreign('idalumfor')->references('nid')->on('alumnos')->onDelete('cascade');
 		});
 	}
 

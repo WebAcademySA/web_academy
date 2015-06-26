@@ -16,6 +16,10 @@ class Asignatura extends Model {
         return $this->hasMany('App\Imparte', 'idasigimpartefor', 'idasignatura');
     }
 
+    public function notas(){
+        return $this->hasMany('App\Nota','idasigfor','idasignatura');
+    }
+
     public function inscrito(){
         return $this->hasMany('App\Inscrito','idasiginscritofor','idasignatura');
     }

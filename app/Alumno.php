@@ -27,8 +27,7 @@ class Alumno extends Model {
         return $this->hasMany('App\Matricula','idalumnofor','nid');
     }
 
-    public function inscrito(){
-        return $this->hasMany('App\Inscrito','idestuinscritofor','nid');
+    public function notas(){
+        return $this->hasMany('App\Nota','idasigfor','nid');
     }
-
 }

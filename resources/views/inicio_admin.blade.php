@@ -85,7 +85,7 @@
           <li class="divider"></li>
           <div op1><li><a href="{{ route('imparte_docente.index') }}"><div class="text2">Asignar Docente</div></a></li></div>
           <li class="divider"></li>
-          <div op1><li><a href="{{ route('inscribir_asignatura.index') }}"><div class="text2">Inscribir Clase</div></a></li></div>
+          <div op1><li><a href=""><div class="text2">Inscribir Clase</div></a></li></div>
         </ul>
       </li></div>
        <li class="drop5"><a href="#"><div class="text">Cerrar Sesion</div></a></li></div>

@@ -75,7 +75,7 @@
                             <li class="divider"></li>
                             <div op1><li><a href="{{ route('imparte_docente.index') }}"><div class="text2">Asignar Docente</div></a></li></div>
                             <li class="divider"></li>
-                            <div op1><li><a href="{{ route('inscribir_asignatura.index') }}"><div class="text2">Inscribir Clase</div></a></li></div>
+                            <div op1><li><a href=""><div class="text2">Inscribir Clase</div></a></li></div>
                         </ul>
                     </li></div>
                 <li class="drop5"><a href="#"><div class="text">Cerrar Sesion</div></a></li></div>
@@ -105,6 +105,8 @@
 	<form class="regisasig" name="regasig" method="post" action="{{ route('registrar_asignatura.store') }}">
     	<div class="celda form-group"><input class="form-control" id="IDasig" type="text" name="idasignatura" pattern="[0-9]{1,16}" placeholder="ID Asignatura *" required/></div>
         <div class="celda form-group"><input class="form-control" id="Nasig" type="text" name="nombreasig" pattern="[A-Za-z]+" placeholder="Nombre Asignatura *" required/></div><input type="hidden" name="_token" value="{{ csrf_token() }}"></div>
+        <div class="celda form-group"><select class="form-control" id="sex2" type="text" name="grado" required><option>Grado *</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option></select></div>
+        <div class="celda form-group"><input class="form-control" id="IDasig" type="text" name="año" pattern="[0-9]{4}" placeholder="Año *" required/></div>
         <button class="btn btn-primary iniciar guardar" type="submit"/>Guardar</button>
 	</form>
 

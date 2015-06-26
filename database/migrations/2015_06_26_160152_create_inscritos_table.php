@@ -14,17 +14,14 @@ class CreateInscritosTable extends Migration {
 	{
 		Schema::create('inscritos', function(Blueprint $table)
 		{
-            $table->integer('idinscrito');
-            $table->primary('idinscrito');
-            $table->integer('idestuinscritofor');
+			$table->increments('idinscrito');
+            $table->integer('idcurinscritofor');
             $table->integer('idasiginscritofor');
-            $table->time('horainicio');
-            $table->time('horafin');
-            $table->string('diasemana');
+            $table->integer('añoinscrito');
             $table->rememberToken();
-            $table->timestamps();
+			$table->timestamps();
 
-            $table->foreign('idestuinscritofor')->references('nid')->on('alumnos')->onDelete('cascade');
+            $table->foreign('idcurinscritofor')->references('idcurso')->on('cursos')->onDelete('cascade');
             $table->foreign('idasiginscritofor')->references('idasignatura')->on('asignaturas')->onDelete('cascade');
 		});
 	}

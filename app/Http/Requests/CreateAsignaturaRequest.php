@@ -23,7 +23,9 @@ class CreateAsignaturaRequest extends Request {
 	{
 		return [
             'idasignatura' => 'required|unique:asignaturas,idasignatura',
-            'nombreasig' => 'required'
+            'nombreasig' => 'required',
+            'grado' => 'required|numeric|between:1,11',
+            'año' => 'required|numeric|digits_between:4,4'
 		];
 	}
 

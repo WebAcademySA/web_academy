@@ -8,12 +8,8 @@ class Inscrito extends Model {
 
     protected $primaryKey = 'idinscrito';
 
-    protected $fillable = ['idinscrito','idestuinscritofor','idasiginscritofor','horainicio','horafin','diasemana'];
+    protected $fillable = ['idcurinscritofor','idasiginscritofor','añoinscrito'];
 
     protected $hidden = ['remember_token'];
-
-    public function nota(){
-        return $this->hasMany('App\Nota','idinsnotasfor','idinscrito');
-    }
 
 }

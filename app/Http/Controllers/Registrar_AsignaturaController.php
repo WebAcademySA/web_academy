@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateAsignaturaRequest;
+use App\Curso;
 use App\Asignatura;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -36,7 +37,29 @@ class Registrar_AsignaturaController extends Controller {
 	 */
 	public function store(CreateAsignaturaRequest $request)
 	{
-        $asignatura = Asignatura::create($request->all());
+
+        \DB::table('asignaturas')->insert(array(
+            array(
+                'idasignatura' => $request->idasignatura,
+                'nombreasig' => $request->nombreasig
+            )
+        ));
+
+        $id=0;
+
+        $cursos=Curso::all();
+
+        foreach ($cursos as $curso) {
+            if($curso->grado==$request->grado){
+                $id=$curso->idcurso;
+                \DB::table('inscritos')->insert(array(
+                    'idcurinscritofor' => $id,
+                    'idasiginscritofor' => $request->idasignatura,
+                    'añoinscrito' => $request->año
+                ));
+            }
+        }
+
         return redirect()->route('registrar_asignatura.index')->with('notice','Asignatura Creada con Exito');
 	}
 

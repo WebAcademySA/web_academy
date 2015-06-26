@@ -19,7 +19,6 @@ class CreateUsuariosTable extends Migration {
             $table->string('usuario')->unique();
             $table->string('password');
             $table->rememberToken();
-            $table->string('tipo')->default('usuario');
             $table->timestamps();
 
             $table->foreign('id')->references('iddocente')->on('docentes')->onDelete('cascade');
