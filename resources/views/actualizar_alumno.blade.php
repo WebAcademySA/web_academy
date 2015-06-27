@@ -89,26 +89,26 @@
     	<!--Formulario alumno-->
     <div class="container row">
         <!--Formulario alumno-->
-        {!! Form::model($alumno , ['route' => ['actualizar_alumno.update'], 'method' => 'PATCH']) !!}
-            <div class="celda1 form-group">
-                {!! Form::text('id' , null , ['class' => 'form-inline form-group', 'hidden']) !!}
-                {!! Form::text('telefono' , null , ['class' => 'form-inline form-group']) !!}
+        {!! Form::model($alumno , ['route' => ['actualizar_alumno.update'], 'method' => 'PATCH', 'class' => 'regalum']) !!}
+            <div class="form-inline form-group">
+                <div class="form-group">{!! Form::text('id' , null , ['class' => 'form-inline form-control', 'disabled']) !!}</div>
+                <div class="form-group">{!! Form::text('telefono' , null , ['class' => 'form-control']) !!}</div>
             </div>
-            <div class="celda1 form-group">
-                {!! Form::text('primer_nombre' , null , ['class' => 'form-inline form-group']) !!}
-                {!! Form::text('segundo_nombre' , null , ['class' => 'form-inline form-group']) !!}
+            <div class="form-inline form-group">
+                <div class="form-group">{!! Form::text('primer_nombre' , null , ['class' => 'form-control']) !!}</div>
+                <div class="form-group">{!! Form::text('segundo_nombre' , null , ['class' => 'form-control']) !!}</div>
             </div>
-            <div class="celda1 form-group">
-                {!! Form::text('primer_apellido' , null , ['class' => 'form-inline form-group']) !!}
-                {!! Form::text('segundo_apellido' , null , ['class' => 'form-inline form-group']) !!}
+            <div class="form-inline form-group">
+                <div class="form-group">{!! Form::text('primer_apellido' , null , ['class' => 'form-control']) !!}</div>
+                <div class="form-group">{!! Form::text('segundo_apellido' , null , ['class' => 'form-control']) !!}</div>
 
             </div>
-            <div class="celda1 form-group">
-                {!! Form::text('sexo' , null , ['class' => 'form-inline form-group']) !!}
-                {!! Form::text('direccion' , null , ['class' => 'form-inline form-group']) !!}
+            <div class="form-inline form-group">
+                <div class="form-group">{!! Form::text('sexo' , null , ['class' => 'form-control']) !!}</div>
+                <div class="form-group">{!! Form::text('direccion' , null , ['class' => 'form-control']) !!}</div>
 
             </div>
-                {!! Form::submit('Actualizar', ['class' => 'btn btn-primary']) !!}
+                {!! Form::submit('Actualizar', ['class' => 'btn btn-primary guardar3']) !!}
             {!! Form::close() !!}
         </div>
 
