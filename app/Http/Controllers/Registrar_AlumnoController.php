@@ -79,9 +79,6 @@ class Registrar_AlumnoController extends Controller {
             )
         ));
 
-
-
-        //$mensaje='Alumno Registrado con exito';
         return redirect()->route('registrar_alumno.index')->with('notice','Alumno Creado con Exito');
         /*dd($request->all());
         $alumno = new Alumno($request->all());

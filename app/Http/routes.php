@@ -11,7 +11,7 @@
 |
 */
 
-Route::resource('prueba','prueba');
+//Route::resource('prueba','prueba');
 Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
@@ -30,6 +30,7 @@ Route::resource('consultar_docente','Consultar_DocenteController');
 Route::resource('consultar_alumno','Consultar_AlumnoController');
 Route::resource('matricular_alumno','Matricular_AlumnoController');
 Route::resource('imparte_docente','Imparte_DocenteController');
+Route::resource('visualizar_alumno','VisualizarAlumnosController');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

@@ -21,7 +21,7 @@ class CreateAlumnosTable extends Migration {
             $table->string('primer_apellido', 20);
             $table->string('segundo_apellido', 20);
             $table->integer('telefono');
-            $table->string('sexo', 1);
+            $table->string('sexo');
             $table->string('direccion', 30);
             $table->rememberToken();
             $table->boolean('estado')->default(true);

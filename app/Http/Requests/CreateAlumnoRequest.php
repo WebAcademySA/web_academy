@@ -27,7 +27,7 @@ class CreateAlumnoRequest extends Request {
             'segundo_nombre' => 'required',
             'primer_apellido' => 'required',
             'segundo_apellido' => 'required',
-            'telefono' => 'required',
+            'telefono' => 'required|numeric',
             'sexo' => 'required',
             'direccion' => 'required'
 		];

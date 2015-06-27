@@ -89,9 +89,9 @@
     	<!--Formulario alumno-->
     <div class="container row">
         <!--Formulario alumno-->
-        {!! Form::model($alumno , ['route' => ['actualizar_alumno.update'], 'method' => 'PATCH', 'class' => 'regalum']) !!}
+        {!! Form::model($alumno , ['route' => ['actualizar_alumno.update' , $alumno->id] , 'method' => 'PUT' , 'class' => 'regalum']) !!}
             <div class="form-inline form-group">
-                <div class="form-group">{!! Form::text('id' , null , ['class' => 'form-inline form-control', 'disabled']) !!}</div>
+                <div class="form-group">{!! Form::text('id' , null , ['class' => 'form-control', 'disabled']) !!}</div>
                 <div class="form-group">{!! Form::text('telefono' , null , ['class' => 'form-control']) !!}</div>
             </div>
             <div class="form-inline form-group">
@@ -104,7 +104,7 @@
 
             </div>
             <div class="form-inline form-group">
-                <div class="form-group">{!! Form::text('sexo' , null , ['class' => 'form-control']) !!}</div>
+                <div class="form-group">{!! Form::select('sexo', ['Masculino' => 'Masculino', 'Femenino' => 'Femenino'], null, ['class' => 'form-control']) !!}</div>
                 <div class="form-group">{!! Form::text('direccion' , null , ['class' => 'form-control']) !!}</div>
 
             </div>

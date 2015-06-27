@@ -122,7 +122,7 @@
                 <div class="celda1 form-group"><input class="form-control" id="segunapel" type="text" name="segundo_apellido" pattern="[A-Za-z]+" placeholder="Segundo Apellido *" required/></div>
             </div>
             <div class="form-inline form-group" >
-                <div class="celda1 form-group"><select class="form-control" id="sex2" type="text" name="sexo" required><option>Sexo *</option><option value="M">Masculino</option><option value="F">Femenino</option></select></div>
+                <div class="celda1 form-group"><select class="form-control" id="sex2" type="text" name="sexo" required><option>Sexo *</option><option value="Masculino">Masculino</option><option value="Femenino">Femenino</option></select></div>
                 <div class="celda1 form-group"><input class="form-control" id="Dir2" type="text" name="direccion" pattern="[[A-Za-z0-9]+" placeholder="Direccion *" required /><input type="hidden" name="_token" value="{{ csrf_token() }}"></div>
             </div>
                 <div class="form-inline form-group" >

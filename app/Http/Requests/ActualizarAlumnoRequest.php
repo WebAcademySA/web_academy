@@ -22,7 +22,6 @@ class ActualizarAlumnoRequest extends Request {
 	public function rules()
 	{
 		return [
-            'id' => 'required|numeric',
             'primer_nombre' => 'required',
             'segundo_nombre' => 'required',
             'primer_apellido' => 'required',

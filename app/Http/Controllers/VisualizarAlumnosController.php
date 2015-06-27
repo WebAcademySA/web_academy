@@ -2,12 +2,11 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\ActualizarAlumnoRequest;
 use App\Alumno;
 
 use Illuminate\Http\Request;
 
-class Actualizar_AlumnoController extends Controller {
+class VisualizarAlumnosController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -16,7 +15,9 @@ class Actualizar_AlumnoController extends Controller {
 	 */
 	public function index()
 	{
-		return view('actualizar_alumno');
+        $alumno = Alumno::paginate(5);
+        $alumno->setPath('visualizar_alumno');
+		return view('visualizar_alumnos', compact('alumno'));
 	}
 
 	/**
@@ -58,8 +59,7 @@ class Actualizar_AlumnoController extends Controller {
 	 */
 	public function edit($id)
 	{
-		$alumno = Alumno::find($id);
-        return view('actualizar_alumno', compact('alumno'));
+		//
 	}
 
 	/**
@@ -68,19 +68,9 @@ class Actualizar_AlumnoController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id, ActualizarAlumnoRequest $request)
+	public function update($id)
 	{
-        \DB::table('alumnos')->where('id',$id)->update([
-            'primer_nombre' => $request->primer_nombre,
-            'segundo_nombre' => $request->segundo_nombre,
-            'primer_apellido'  =>	$request->primer_apellido,
-            'segundo_apellido'  =>	$request->segundo_apellido,
-            'direccion' => $request->direccion,
-            'telefono' => $request->telefono,
-            'sexo' => $request->sexo,
-
-        ]);
-        return redirect('visualizar_alumnos');
+		//
 	}
 
 	/**
