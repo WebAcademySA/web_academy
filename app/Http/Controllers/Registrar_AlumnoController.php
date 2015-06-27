@@ -11,7 +11,6 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Redirect;
 
-//use Illuminate\Support\Facades\Request;
 
 class Registrar_AlumnoController extends Controller {
 
@@ -61,7 +60,7 @@ class Registrar_AlumnoController extends Controller {
 
         \DB::table('alumnos')->insert(array(
             array(
-                'nid' => $request->nid,
+                'id' => $request->id,
                 'primer_nombre' => $request->primer_nombre,
                 'segundo_nombre' => $request->segundo_nombre,
                 'primer_apellido'  =>	$request->primer_apellido,
@@ -76,11 +75,13 @@ class Registrar_AlumnoController extends Controller {
         \DB::table('matriculas')->insert(array(
             array(
                 'idcursofor' => $id,
-                'idalumnofor' => $request->nid,
+                'idalumnofor' => $request->id,
             )
         ));
 
 
+
+        //$mensaje='Alumno Registrado con exito';
         return redirect()->route('registrar_alumno.index')->with('notice','Alumno Creado con Exito');
         /*dd($request->all());
         $alumno = new Alumno($request->all());

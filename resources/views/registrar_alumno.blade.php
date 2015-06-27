@@ -110,7 +110,7 @@
 	<div col-md-6>
     	<form  class="regalum" name="regalumno" method="post" action="{{ route('registrar_alumno.store') }}">
             <div class="form-inline form-group" >
-                <div class="celda1 form-group"><input class="form-control" id="Noid2" type="text" name="nid" pattern="[0-9]{1,16}" placeholder="No. Identificacion *" required/></div>
+                <div class="celda1 form-group"><input class="form-control" id="Noid2" type="text" name="id" pattern="[0-9]{1,16}" placeholder="No. Identificacion *" required/></div>
                 <div class="celda1 form-group"><input class="form-control" id="Tele2" type="text" name="telefono" pattern="[0-9]{1,16}" placeholder="Telefono " /></div>
             </div>
             <div class="form-inline form-group">

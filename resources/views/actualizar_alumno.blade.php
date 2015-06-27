@@ -21,7 +21,7 @@
       <span class="icon-bar"></span>
     </button>
   </div>
- 
+
   <!-- Agrupar los enlaces de navegación, los formularios y cualquier
        otro elemento que se pueda ocultar al minimizar la barra -->
   <div class="collapse navbar-collapse navbar-ex1-collapse alinav">
@@ -83,45 +83,34 @@
 </nav>
 
 <!--Titulos-->
-	<div class="container row"><div class="col-md-6"><h3 class="til2">Actualizar Alumno</h3></div><div class="col-md-6"><h3 class="til2">Ingrese la nueva informacion</h3></div></div><div class="col-md-12"><hr/></div>
- 
-<!--Formularios-->
-<div class="container row">
-<!--Formulario Buscar-->
-	<div col-md-6>
-    	<form  class="regalum" name="regalumno" method="post" action="">
-    <div class="form-inline form-group">
-        <div class="celda1 form-group"><select class="form-control" id="idalum" type="text3" name="idalumno" pattern="[0-9]{1,16}" required><option>No. Alumno *</option><option value="AL1">AL01</option><option value="AL2">AL02</option><option value="AL3">AL03</option></select></div>
-    </div>
-    	<div><input class="btn btn-primary guardar7" type="submit" name="buscar" value="Buscar"/></div>
-		</form>
-    </div>
-    
+	<div class="container row"><div class="col-md-12"><h3 class="til2">Actualizar Alumno</h3></div><hr/></div>
 <!--Formulario ingresar datos-->
 
     	<!--Formulario alumno-->
-	<div col-md-6>
-    	<form  class="actualum" name="regalumno" method="post" action="">
-	<div class="form-inline form-group" >
-    	<div class="celda1 form-group"><input class="form-control" id="Noid2" type="text" name="idasigna2" pattern="[0-9]{1,16}" placeholder="No. Identificacion *" required/></div>
-        <div class="celda1 form-group"><input class="form-control" id="Tele2" type="text" name="telfono2" pattern="[0-9]{1,16}" placeholder="Telefono " /></div>
-    </div>
-    <div class="form-inline form-group">
-    	<div class="celda1 form-group"><input class="form-control" id="Nomb2" type="text" name="nombre2" pattern="[0-9]{1,16}" placeholder="Nombres *" required/></div>
-        <div class="celda1 form-group"><input class="form-control" id="Email2" type="email" name="email2" pattern="[0-9]{1,16}" placeholder="E-mail " /></div>
+    <div class="container row">
+        <!--Formulario alumno-->
+        {!! Form::model($alumno , ['route' => ['actualizar_alumno.update'], 'method' => 'PATCH']) !!}
+            <div class="celda1 form-group">
+                {!! Form::text('id' , null , ['class' => 'form-inline form-group', 'hidden']) !!}
+                {!! Form::text('telefono' , null , ['class' => 'form-inline form-group']) !!}
+            </div>
+            <div class="celda1 form-group">
+                {!! Form::text('primer_nombre' , null , ['class' => 'form-inline form-group']) !!}
+                {!! Form::text('segundo_nombre' , null , ['class' => 'form-inline form-group']) !!}
+            </div>
+            <div class="celda1 form-group">
+                {!! Form::text('primer_apellido' , null , ['class' => 'form-inline form-group']) !!}
+                {!! Form::text('segundo_apellido' , null , ['class' => 'form-inline form-group']) !!}
+
+            </div>
+            <div class="celda1 form-group">
+                {!! Form::text('sexo' , null , ['class' => 'form-inline form-group']) !!}
+                {!! Form::text('direccion' , null , ['class' => 'form-inline form-group']) !!}
+
+            </div>
+                {!! Form::submit('Actualizar', ['class' => 'btn btn-primary']) !!}
+            {!! Form::close() !!}
         </div>
-    <div class="form-inline form-group">
-    	<div class="celda1 form-group"><input class="form-control" id="Apel2" type="text" name="apellido2" pattern="[0-9]{1,16}" placeholder="Apellidos *" required/></div>
-        <div class="celda1 form-group"><select class="form-control" id="Grad" type="text2" name="grado" pattern="[0-9]{1,16}" required><option>Grado *</option><option>--Primaria--</option><option value="1">Primero</option><option value="2">Segundo</option><option value="3">Tercero</option><option value="4">Cuarto</option><option value="5">Quinto</option><option>--Secundaria--</option><option value="6">Sexto</option><option value="7">Septimo</option><option value="8">Octavo</option><option value="9">Noveno</option><option value="10">Decimo</option><option value="11">Undecimo</option></select></div>
-    </div>
-    <div class="form-inline form-group" >
-    	<div class="celda1 form-group"><select class="form-control" id="sex2" type="text" name="sexo2" pattern="[0-9]{1,16}" required><option>Sexo *</option><option value="M">Masculino</option><option value="F">Femenino</option></select></div>
-        <div class="celda1 form-group"><input class="form-control" id="Dir2" type="text" name="direc2" pattern="[0-9]{1,16}" placeholder="Direccion *" required /></div>
-    </div>
-    	<div class="celda1 form-group"><input class="btn btn-primary guardar8" type="submit" name="guardar" value="Guardar"/></div>
-		</form>
-	</div>
-</div>
 
 @endsection
 <!--<body>

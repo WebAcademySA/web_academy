@@ -2,6 +2,8 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ActualizarAlumnoRequest;
+use App\Alumno;
 
 use Illuminate\Http\Request;
 
@@ -56,7 +58,8 @@ class Actualizar_AlumnoController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		$alumno = Alumno::find($id);
+        return view('actualizar_alumno', compact('alumno'));
 	}
 
 	/**
@@ -65,9 +68,13 @@ class Actualizar_AlumnoController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, ActualizarAlumnoRequest $request)
 	{
-		//
+		$alumno = Alumno::find($id);
+
+        $alumno->update($request->all());
+
+        return redirect('actualizar_alumno');
 	}
 
 	/**

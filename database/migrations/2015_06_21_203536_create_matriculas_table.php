@@ -22,7 +22,7 @@ class CreateMatriculasTable extends Migration {
             $table->rememberToken();
 
             $table->foreign('idcursofor')->references('idcurso')->on('cursos')->onDelete('cascade');
-            $table->foreign('idalumnofor')->references('nid')->on('alumnos')->onDelete('cascade');
+            $table->foreign('idalumnofor')->references('id')->on('alumnos')->onDelete('cascade');
 
 		});
 	}

@@ -6,7 +6,7 @@ class Alumno extends Model {
 
     protected $table = 'alumnos';
 
-    protected $primaryKey = 'nid';
+    protected $primaryKey = 'id';
 
     /**
      * The attributes that are mass assignable.
@@ -14,7 +14,7 @@ class Alumno extends Model {
      * @var array
      */
 
-    protected $fillable = ['nid','primer_nombre','segundo_nombre','primer_apellido','segundo_apellido','telefono','sexo','direccion'];
+    protected $fillable = ['id','primer_nombre','segundo_nombre','primer_apellido','segundo_apellido','telefono','sexo','direccion'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -24,10 +24,10 @@ class Alumno extends Model {
     protected $hidden = ['remember_token'];
 
     public function matricula(){
-        return $this->hasMany('App\Matricula','idalumnofor','nid');
+        return $this->hasMany('App\Matricula','idalumnofor','id');
     }
 
     public function notas(){
-        return $this->hasMany('App\Nota','idasigfor','nid');
+        return $this->hasMany('App\Nota','idasigfor','id');
     }
 }

@@ -23,7 +23,7 @@ class CreateMatriculaRequest extends Request {
 	{
 		return [
             'idcursofor' => 'required|exists:cursos,grado',
-            'idalumnofor' => 'required|exists:alumnos,nid'
+            'idalumnofor' => 'required|exists:alumnos,id'
 		];
 	}
 

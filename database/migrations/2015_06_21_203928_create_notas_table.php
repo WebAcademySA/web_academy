@@ -26,7 +26,7 @@ class CreateNotasTable extends Migration {
             $table->timestamps();
 
             $table->foreign('idasigfor')->references('idasignatura')->on('asignaturas')->onDelete('cascade');
-            $table->foreign('idalumfor')->references('nid')->on('alumnos')->onDelete('cascade');
+            $table->foreign('idalumfor')->references('id')->on('alumnos')->onDelete('cascade');
 		});
 	}
 

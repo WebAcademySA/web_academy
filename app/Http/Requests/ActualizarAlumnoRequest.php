@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class CreateAlumnoRequest extends Request {
+class ActualizarAlumnoRequest extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -22,12 +22,12 @@ class CreateAlumnoRequest extends Request {
 	public function rules()
 	{
 		return [
-            'id' => 'required|unique:alumnos,id',
+            'id' => 'required|numeric',
             'primer_nombre' => 'required',
             'segundo_nombre' => 'required',
             'primer_apellido' => 'required',
             'segundo_apellido' => 'required',
-            'telefono' => 'required',
+            'telefono' => 'required|numeric',
             'sexo' => 'required',
             'direccion' => 'required'
 		];
