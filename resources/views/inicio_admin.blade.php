@@ -69,7 +69,7 @@
         <ul class="dropdown-menu">
           <div op1><li><a href="{{ route('registrar_alumno.index') }}"><div class="text2">Registrar</div></a></li></div>
           <li class="divider"></li>
-          <div op1><li><a href="#"><div class="text2">Actualizar</div></a></li></div>
+          <div op1><li><a href="{{ route('visualizar_alumno.index') }}"><div class="text2">Actualizar</div></a></li></div>
           <li class="divider"></li>
           <div op1><li><a href="#"><div class="text2">Consultar</div></a></li></div>
         </ul>

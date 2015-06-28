@@ -1,9 +1,11 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\Alumno;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\VisualizarAlumnoRequest;
 
 class Consultar_AlumnoController extends Controller {
 
@@ -12,9 +14,11 @@ class Consultar_AlumnoController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(VisualizarAlumnoRequest $request)
 	{
-		return view('consultar_alumno');
+        $alumnoconsul = Alumno::identi($request->get('id'))->estado($request->get('estado'))->paginate(5);
+        $alumnoconsul->setPath('consultar_alumno');
+        return view('consultar_alumno', compact('alumnoconsul'));
 	}
 
 	/**

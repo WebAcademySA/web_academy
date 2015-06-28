@@ -80,7 +80,7 @@ class Actualizar_AlumnoController extends Controller {
             'sexo' => $request->sexo,
 
         ]);
-        return redirect('visualizar_alumnos');
+        return redirect('visualizar_alumno');
 	}
 
 	/**

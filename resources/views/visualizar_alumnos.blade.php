@@ -77,7 +77,26 @@
 
     <!--Titulos-->
     <div class="container row"><div class="col-md-12"><h3 class="til2">Lista de Alumnos</h3></div></div>
+    {!! Form::open(['route' => 'visualizar_alumno.index' , 'method' => 'GET' , 'class' => 'navbar-form navbar-left pull-right' , 'role' => 'search']) !!}
+    <div class="form-group">
+    @if($errors->any())
+        <div class="alert alert-danger" role="alert">
+            <p>Por favor corriga los siguientes Errores</p>
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
 
+                @endforeach
+            </ul>
+        </div>
+    @endif
+        </div>
+        <div class="form-group">
+        {!! Form::text('id' , null , ['class' => 'form-control' , 'placeholder' => 'Identificación del Alumno']) !!}
+        {!! Form::select('estado', ['l' => 'Estado' , '1' => 'Activo', '0' => 'inactivo'] , null , ['class' => 'form-control']) !!}
+        </div>
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    {!! Form::close() !!}
         <table class="table table-striped table-bordered table-hover">
             <thead>
             <tr>
@@ -101,13 +120,18 @@
                     <td>{{ $alumn->primer_apellido }}</td>
                     <td>{{ $alumn->segundo_apellido }}</td>
                     <td>{{ $alumn->telefono }}</td>
-                    <td>{{ $alumn->estado }}</td>
+                    @if(($alumn->estado) == 1)
+                        <td>Activo</td>
+                    @endif
+                    @if(($alumn->estado) == 0)
+                        <td>Inactivo</td>
+                    @endif
                     <td> <a href="/web_academy/public/actualizar_alumno/{{$alumn->id}}/edit" class="btn btn-primary btn-sm">Actualizar</a> </td>
                 </tr>
             @endforeach
             </tbody>
         </table>
-        {!! $alumno->render() !!}
+        {!! $alumno->appends(Request::only(['id', 'estado']))->render() !!}
 
 
 @endsection

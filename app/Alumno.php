@@ -1,6 +1,7 @@
 <?php namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Alumno extends Model {
 
@@ -29,5 +30,15 @@ class Alumno extends Model {
 
     public function notas(){
         return $this->hasMany('App\Nota','idasigfor','id');
+    }
+    public function scopeIdenti($query, $id){
+        if(trim($id) != ""){
+            $query->where('id', $id );
+        }
+    }
+    public function scopeEstado($query, $estado){
+        if($estado != "") {
+            $query->where('estado', $estado);
+        }
     }
 }

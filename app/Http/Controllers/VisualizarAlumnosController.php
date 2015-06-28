@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Alumno;
 
+use App\Http\Requests\VisualizarAlumnoRequest;
 use Illuminate\Http\Request;
 
 class VisualizarAlumnosController extends Controller {
@@ -13,9 +14,10 @@ class VisualizarAlumnosController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(VisualizarAlumnoRequest $request)
 	{
-        $alumno = Alumno::paginate(5);
+        //dd($request->get('primer_apellido'));
+        $alumno = Alumno::identi($request->get('id'))->estado($request->get('estado'))->paginate(5);
         $alumno->setPath('visualizar_alumno');
 		return view('visualizar_alumnos', compact('alumno'));
 	}
