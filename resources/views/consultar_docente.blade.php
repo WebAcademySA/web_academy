@@ -1,135 +1,135 @@
-<!--<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Documento sin título</title>
-</head>-->
-
 @extends('app2')
 
 @section('content')
-	<nav class="navbar navbar-default nav_barra" role="navigation">
-  <!-- El logotipo y el icono que despliega el menú se agrupan
-       para mostrarlos mejor en los dispositivos móviles -->
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse"
-            data-target=".navbar-ex1-collapse">
-      <span class="sr-only">Desplegar navegación</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-  </div>
- 
-  <!-- Agrupar los enlaces de navegación, los formularios y cualquier
-       otro elemento que se pueda ocultar al minimizar la barra -->
-  <div class="collapse navbar-collapse navbar-ex1-collapse alinav">
-    <ul class="nav navbar-nav">
-      <li><a href="#"><div class="text">Inicio</div></a></li>
-      <div class="drop1"><li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
-          Asignatura <b class="caret"></b></div>
-        </a>
-        <ul class="dropdown-menu">
-          <div op1><li><a href="registrar_asignatura"><div class="text2">Registrar</div></a></li></div>
-          <li class="divider"></li>
-          <div op1><li><a href="actualizar_asignatura"><div class="text2">Actualizar</div></a></li></div>
-          <li class="divider"></li>
-          <div op1><li><a href="consultar_asignatura"><div class="text2">Consultar</div></a></li></div>
-        </ul>
-      </li></div>
-      <div class="drop2"><li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
-          Docente <b class="caret"></b></div>
-        </a>
-        <ul class="dropdown-menu">
-          <div op1><li><a href="registrar_docente"><div class="text2">Registrar</div></a></li></div>
-          <li class="divider"></li>
-          <div op1><li><a href="actualizar_docente"><div class="text2">Actualizar</div></a></li></div>
-          <li class="divider"></li>
-          <div op1><li><a href="consultar_docente"><div class="text2">Consultar</div></a></li></div>
-        </ul>
-      </li></div>
-      <div class="drop3"><li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
-          Alumno <b class="caret"></b></div>
-        </a>
-        <ul class="dropdown-menu">
-          <div op1><li><a href="registrar_alumno"><div class="text2">Registrar</div></a></li></div>
-          <li class="divider"></li>
-          <div op1><li><a href="actualizar_alumno"><div class="text2">Actualizar</div></a></li></div>
-          <li class="divider"></li>
-          <div op1><li><a href="consultar_alumno"><div class="text2">Consultar</div></a></li></div>
-        </ul>
-      </li></div>
-      <div class="drop4"><li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
-          Curso <b class="caret"></b></div>
-        </a>
-        <ul class="dropdown-menu">
-          <div op1><li><a href="registrar_curso"><div class="text2">Registrar Curso</div></a></li></div>
-          <div class="linea"><li class="divider"></li></div>
-          <div op1><li><a href="registrar_horario"><div class="text2">Crear Horario</div></a></li></div>
-          <li class="divider"></li>
-          <div op1><li><a href="consultar_horario"><div class="text2">Consultar Horario</div></a></li></div>
-          <li class="divider"></li>
-          <div op1><li><a href="consultar_curso"><div class="text2">Consultar Curso</div></a></li></div>
-        </ul>
-      </li></div>
-       <li class="drop5"><a href="#"><div class="text">Cerrar Sesion</div></a></li></div>
-    </ul>
-  </div>
-</nav>
 
-<!--Titulos-->
-	<div class="container row"><div class="col-md-6"><h3 class="til2">Ingrese ID del docente</h3></div><div class="col-md-6"><h3 class="til2">Informacion del docente</h3></div></div><div class="col-md-12"><hr/></div>
+    <nav class="navbar navbar-default nav_barra" role="navigation">
+        <!-- El logotipo y el icono que despliega el menú se agrupan
+             para mostrarlos mejor en los dispositivos móviles -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Desplegar navegación</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
 
-<div class="container row">
-	<div class="col-md-6">
-    	<form  class="regalum" name="regalumno" method="post" action="">
-    <div class="form-inline form-group">
-        <div class="celda1 form-group"><select class="form-control" id="iddoc" type="text3" name="iddocente" pattern="[0-9]{1,16}" required><option>ID docente *</option><option value="D1">D01</option><option value="D2">D02</option><option value="D3">D03</option></select></div>
+        <!-- Agrupar los enlaces de navegación, los formularios y cualquier
+             otro elemento que se pueda ocultar al minimizar la barra -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse alinav">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ route('inicio_admin.index') }}"><div class="text">Inicio</div></a></li>
+                <div class="drop1"><li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
+                                Asignatura <b class="caret"></b></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <div op1><li><a href="{{ route('registrar_asignatura.index') }}"><div class="text2">Registrar</div></a></li></div>
+                            <li class="divider"></li>
+                            <div op1><li><a href="{{ route('visualizar_asignatura.index') }}"><div class="text2">Actualizar</div></a></li></div>
+                            <li class="divider"></li>
+                            <div op1><li><a href="{{ route('consultar_asignatura.index') }}"><div class="text2">Consultar</div></a></li></div>
+
+                        </ul>
+                    </li></div>
+                <div class="drop2"><li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
+                                Docente <b class="caret"></b></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <div op1><li><a href="{{ route('registrar_docente.index') }}"><div class="text2">Registrar</div></a></li></div>
+                            <li class="divider"></li>
+                            <div op1><li><a href="{{ route('visualizar_docente.index') }}"><div class="text2">Actualizar</div></a></li></div>
+                            <li class="divider"></li>
+                            <div op1><li><a href="{{ route('consultar_docente.index') }}"><div class="text2">Consultar</div></a></li></div>
+                        </ul>
+                    </li></div>
+                <div class="drop3"><li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
+                                Alumno <b class="caret"></b></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <div op1><li><a href="{{ route('registrar_alumno.index') }}"><div class="text2">Registrar</div></a></li></div>
+                            <li class="divider"></li>
+                            <div op1><li><a href="{{ route('visualizar_alumno.index') }}"><div class="text2">Actualizar</div></a></li></div>
+                            <li class="divider"></li>
+                            <div op1><li><a href="{{ route('consultar_alumno.index') }}"><div class="text2">Consultar</div></a></li></div>
+                        </ul>
+                    </li></div>
+                <div class="drop4"><li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
+                                Curso <b class="caret"></b></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <div op1><li><a href="{{ route('imparte_docente.index') }}"><div class="text2">Asignar Docente</div></a></li></div>
+                            <li class="divider"></li>
+                            <div op1><li><a href="{{ route('visualizar_subirnotas.index') }}"><div class="text2">Subir Notas</div></a></li></div>
+                        </ul>
+                    </li></div>
+                <li class="drop5"><a href="{{ url('/auth/logout') }}"><div class="text">Cerrar Sesion</div></a></li></div>
+        </ul>
+        </div>
+    </nav>
+    <!--Titulos-->
+    <div class="container row"><div class="col-md-12"><h3 class="til2">Lista de Docentes</h3></div></div>
+    {!! Form::open(['route' => 'consultar_docente.index' , 'method' => 'GET' , 'class' => 'navbar-form navbar-left pull-right' , 'role' => 'search']) !!}
+    <div class="form-group">
+        @if($errors->any())
+            <div class="alert alert-danger" role="alert">
+                <p>Por favor corriga los siguientes Errores</p>
+                <ul>
+                    @foreach($errors->all() as $error)
+                        <li>{{ $error }}</li>
+
+                    @endforeach
+                </ul>
+            </div>
+        @endif
     </div>
-    	<div><input class="btn btn-primary guardar9" type="submit" name="buscar" value="Buscar"/></div>
-		</form>
+    <div class="form-group">
+        {!! Form::text('iddocente' , null , ['class' => 'form-control' , 'placeholder' => 'Id. del Docente']) !!}
+        {!! Form::select('estado', ['' => 'Estado' , '1' => 'Activo', '0' => 'inactivo'] , null , ['class' => 'form-control']) !!}
     </div>
-<!--tabla-->
-    <div class="col-md-6">
-    	<div class="row row2">
-        	<div class="col-md-4 col-md-offset-2"><strong>No. de identificacion:</strong></div>
-            <div class="col-md-3"></div>
-            <div class="col-md-2"><strong>E-mail:</strong></div>
-            <div class="col-md-1"></div>
-        </div>
-        <div class="row row2">
-        	<div class="col-md-4 col-md-offset-2"><strong>Nombres:</strong></div>
-            <div class="col-md-3"></div>
-            <div class="col-md-2"><strong>Sexo:</strong></div>
-            <div class="col-md-1"></div>
-        </div>
-        <div class="row row2">
-        	<div class="col-md-4 col-md-offset-2"><strong>Apellidos:</strong></div>
-            <div class="col-md-3"></div>
-            <div class="col-md-2"><strong>Telefono:</strong></div>
-            <div class="col-md-1"></div>
-        </div>
-        <div class="row row2">
-        	<div class="col-md-4 col-md-offset-2"><strong>Direccion:</strong></div>
-            <div class="col-md-3"></div>
-            <div class="col-md-2"><strong>Nivel:</strong></div>
-            <div class="col-md-1"></div>
-        </div>
-        <div class="row row2">
-        	<div class="col-md-4 col-md-offset-2"><strong>Titulo:</strong></div>
-            <div class="col-md-3"></div>
-        </div>
-        <div class="row row2">
-        	<div class="col-md-2 col-md-offset-5"><button class="btn btn-primary boton2" type="submit">Visualizar</button></div>
-        </div>
-    </div>
-    
-</div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+    {!! Form::close() !!}
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Identificacion</th>
+            <th>Primer Nombre</th>
+            <th>Segundo Nombre</th>
+            <th>Primer Apellido</th>
+            <th>Segundo Apellido</th>
+            <th>Telefono</th>
+            <th>Direccion</th>
+            <th>Nivel</th>
+            <th>Estado</th>
+        </tr>
+
+        </thead>
+        <tbody>
+        @foreach($docente as $docen)
+            <tr>
+                <td>{{ $docen->iddocente }}</td>
+                <td>{{ $docen->primer_nombre }}</td>
+                <td>{{ $docen->segundo_nombre }}</td>
+                <td>{{ $docen->primer_apellido }}</td>
+                <td>{{ $docen->segundo_apellido }}</td>
+                <td>{{ $docen->telefono }}</td>
+                <td>{{ $docen->direccion }}</td>
+                <td>{{ $docen->nivel }}</td>
+                @if(($docen->estado) == 1)
+                    <td>Activo</td>
+                @endif
+                @if(($docen->estado) == 0)
+                    <td>Inactivo</td>
+                @endif
+            </tr>
+        @endforeach
+        </tbody>
+    </table>
+    {!! $docente->appends(Request::only(['iddocente', 'estado']))->render() !!}
+
+
 @endsection
-<!--<body>
-</body>
-</html>-->

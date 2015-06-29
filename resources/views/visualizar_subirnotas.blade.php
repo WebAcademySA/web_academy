@@ -1,10 +1,3 @@
-<!--<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Documento sin título</title>
-</head>-->
-
 @extends('app2')
 
 @section('content')
@@ -78,30 +71,81 @@
         </ul>
         </div>
     </nav>
+    <!--Titulos-->
+    <div class="container row"><div class="col-md-12"><h3 class="til2">Lista de Alumnos</h3></div></div>
+    {!! Form::open(['route' => 'visualizar_subirnotas.index' , 'method' => 'GET' , 'class' => 'navbar-form navbar-left pull-right' , 'role' => 'search']) !!}
+    <div class="form-group">
+        @if($errors->any())
+            <div class="alert alert-danger" role="alert">
+                <p>Por favor corriga los siguientes Errores</p>
+                <ul>
+                    @foreach($errors->all() as $error)
+                        <li>{{ $error }}</li>
 
-<!--Titulos-->
-	<div class="container row"><div><h3 class="til2">Actualizar Asignatura</h3></div><hr/></div>
- 
-<!--Formularios-->
-<div class="container row">
-<!--Formulario alumno-->
-    <!--Formulario alumno-->
-    {!! Form::model($asignatura , ['route' => ['actualizar_asignatura.update' , $asignatura->idasignatura] , 'method' => 'PUT' , 'class' => 'regalum']) !!}
-    <div class="form-inline form-group">
-        <div class="form-group">{!! Form::text('idasignatura' , null , ['class' => 'form-control' , 'disabled']) !!}</div>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
     </div>
-    <div class="form-inline form-group">
-        <div class="form-group">{!! Form::text('nombreasig' , null , ['class' => 'form-control']) !!}</div>
+    <div class="form-group">
+        @if(Session::has('notice'))
+            <div class="alert alert-success" role="alert">
+                <p>{{ Session::get('notice') }}</p>
+            </div>
+        @endif
+
+        {!! Form::text('nombreasig' , null , ['class' => 'form-control' , 'placeholder' => 'Nombre de la Asignatura']) !!}
+        {!! Form::select('grado', ['' => 'Grado' , '1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5', '6' => '6', '7' => '7', '8' => '8', '9' => '9', '10' => '10', '11' => '11'] , null , ['class' => 'form-control']) !!}
+        {!! Form::select('grupo', ['' => 'Grupo' , '1' => '1', '2' => '2', '3' => '3', '4' => '4'] , null , ['class' => 'form-control']) !!}
     </div>
-    <div class="form-inline form-group">
-        <div class="form-group">{!! Form::select('estadoasig', ['1' => 'Activo', '0' => 'Inactivo'], null, ['class' => 'form-control']) !!}</div>
-    </div>
-    {!! Form::submit('Actualizar', ['class' => 'btn btn-primary guardar3']) !!}
+    <button type="submit" class="btn btn-primary">Buscar</button>
     {!! Form::close() !!}
-</div>
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Identificacion</th>
+            <th>Primer Apellido</th>
+            <th>Segundo Apellido</th>
+            <th>Primer Nombre</th>
+            <th>Segundo Nombre</th>
+            <th>Asignatura</th>
+            <th>Grado</th>
+            <th>Grupo</th>
+            <th>Estado</th>
+            <th>Accion</th>
+        </tr>
+
+        </thead>
+        <tbody>
+        @foreach($notas as $nota)
+            <tr>
+                <td>{{ $nota->id }}</td>
+                <td>{{ $nota->primer_apellido }}</td>
+                <td>{{ $nota->segundo_apellido }}</td>
+                <td>{{ $nota->primer_nombre }}</td>
+                <td>{{ $nota->segundo_nombre }}</td>
+                <td>{{ $nota->nombreasig }}</td>
+                <td>{{ $nota->grado }}</td>
+                <td>{{ $nota->grupo }}</td>
+                @if(($nota->estado) == 1)
+                    <td>Activo</td>
+                @endif
+                @if(($nota->estado) == 0)
+                    <td>Inactivo</td>
+                @endif
+
+                <td>
+                    {!! Form::open(['route' => 'subir_notas_docente.edit' , 'method' => 'GET' , 'class' => 'navbar-form navbar-left pull-right' , 'role' => 'search']) !!}
+                    {!! Form::hidden('idasigfor' , $nota->idasignatura , ['class' => 'form-control']) !!}
+                    {!! Form::hidden('idalumfor' , $nota->id , ['class' => 'form-control']) !!}
+                    <button type="submit" class="btn btn-primary btn-sm">Subir</button>
+                    {!! Form::close() !!}
+                </td>
+            </tr>
+        @endforeach
+        </tbody>
+    </table>
+    {!! $notas->appends(Request::only(['idasignatura', 'grado', 'grupo']))->render() !!}
+
 
 @endsection
-
-<!--<body>
-</body>
-</html>-->

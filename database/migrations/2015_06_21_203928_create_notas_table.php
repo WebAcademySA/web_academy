@@ -14,8 +14,7 @@ class CreateNotasTable extends Migration {
 	{
 		Schema::create('notas', function(Blueprint $table)
 		{
-            $table->integer('idnotas');
-            $table->primary('idnotas');
+            $table->increments('idnotas');
             $table->integer('idasigfor');
             $table->integer('idalumfor');
             $table->float('periodo1')->nullable();

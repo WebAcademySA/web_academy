@@ -2,6 +2,8 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ActualizarDocenteRequest;
+use App\Docente;
 
 use Illuminate\Http\Request;
 
@@ -56,7 +58,8 @@ class Actualizar_DocenteController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+        $docente = Docente::find($id);
+        return view('actualizar_docente', compact('docente'));
 	}
 
 	/**
@@ -65,9 +68,25 @@ class Actualizar_DocenteController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, ActualizarDocenteRequest $request)
 	{
-		//
+        //dd($request->all());
+        \DB::table('docentes')->where('iddocente',$id)->update([
+            'primer_nombre' => $request->primer_nombre,
+            'segundo_nombre' => $request->segundo_nombre,
+            'primer_apellido'  =>	$request->primer_apellido,
+            'segundo_apellido'  =>	$request->segundo_apellido,
+            'titulo' => $request->titulo,
+            'nivel' => $request->nivel,
+            'email' => $request->email,
+            'direccion' => $request->direccion,
+            'telefono' => $request->telefono,
+            'sexo' => $request->sexo,
+            'estado' => $request->estado
+
+        ]);
+        return redirect()->route('visualizar_docente.index')->with('notice','Alumno Editado con Exito');
+        //return redirect('visualizar_docente');
 	}
 
 	/**

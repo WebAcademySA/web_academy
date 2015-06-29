@@ -22,7 +22,7 @@ class CreateDocentesTable extends Migration {
             $table->string('segundo_apellido', 20);
             $table->string('titulo', 20);
             $table->string('nivel', 20);
-            $table->string('sexo', 1);
+            $table->string('sexo');
             $table->string('email', 40);
             $table->integer('telefono');
             $table->string('direccion', 30);

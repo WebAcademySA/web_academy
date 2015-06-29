@@ -2,21 +2,23 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\ActualizarAlumnoRequest;
-use App\Alumno;
+use App\Docente;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\VisualizarDocenteRequest;
 
-class Actualizar_AlumnoController extends Controller {
+class VisualizarDocenteController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(VisualizarDocenteRequest $request)
 	{
-		return view('actualizar_alumno');
+        $docente = Docente::ident($request->get('iddocente'))->estado($request->get('estado'))->paginate(5);
+        $docente->setPath('visualizar_docente');
+        return view('visualizar_docente', compact('docente'));
 	}
 
 	/**
@@ -58,8 +60,7 @@ class Actualizar_AlumnoController extends Controller {
 	 */
 	public function edit($id)
 	{
-		$alumno = Alumno::find($id);
-        return view('actualizar_alumno', compact('alumno'));
+		//
 	}
 
 	/**
@@ -68,21 +69,9 @@ class Actualizar_AlumnoController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id, ActualizarAlumnoRequest $request)
+	public function update($id)
 	{
-        \DB::table('alumnos')->where('id',$id)->update([
-            'primer_nombre' => $request->primer_nombre,
-            'segundo_nombre' => $request->segundo_nombre,
-            'primer_apellido'  =>	$request->primer_apellido,
-            'segundo_apellido'  =>	$request->segundo_apellido,
-            'direccion' => $request->direccion,
-            'telefono' => $request->telefono,
-            'sexo' => $request->sexo,
-            'estado' => $request->estado
-
-        ]);
-        return redirect()->route('visualizar_alumno.index')->with('notice','Alumno Editado con Exito');
-        //return redirect('visualizar_alumno');
+		//
 	}
 
 	/**

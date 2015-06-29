@@ -2,6 +2,8 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Asignatura;
+use App\Http\Requests\ActualizarAsignaturaRequest;
 
 use Illuminate\Http\Request;
 
@@ -56,7 +58,8 @@ class Actualizar_AsignaturaController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+        $asignatura = Asignatura::find($id);
+        return view('actualizar_asignatura', compact('asignatura'));
 	}
 
 	/**
@@ -65,9 +68,16 @@ class Actualizar_AsignaturaController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, ActualizarAsignaturaRequest $request)
 	{
-		//
+        \DB::table('asignaturas')->where('idasignatura',$id)->update([
+            'nombreasig' => $request->nombreasig,
+            'estadoasig' => $request->estadoasig
+
+        ]);
+        //dd($request->nombreasig, $request->estadoasig);
+        return redirect()->route('visualizar_asignatura.index')->with('notice','Asignatura Editada con Exito');
+        //return redirect('visualizar_asignatura');
 	}
 
 	/**

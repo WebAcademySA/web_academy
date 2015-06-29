@@ -1,10 +1,3 @@
-<!--<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Documento sin título</title>
-</head>-->
-
 @extends('app2')
 
 @section('content')
@@ -79,29 +72,72 @@
         </div>
     </nav>
 
-<!--Titulos-->
-	<div class="container row"><div><h3 class="til2">Actualizar Asignatura</h3></div><hr/></div>
- 
-<!--Formularios-->
-<div class="container row">
-<!--Formulario alumno-->
-    <!--Formulario alumno-->
-    {!! Form::model($asignatura , ['route' => ['actualizar_asignatura.update' , $asignatura->idasignatura] , 'method' => 'PUT' , 'class' => 'regalum']) !!}
-    <div class="form-inline form-group">
-        <div class="form-group">{!! Form::text('idasignatura' , null , ['class' => 'form-control' , 'disabled']) !!}</div>
+    <!--Titulos-->
+    <div class="container row"><div class="col-md-12"><h3 class="til2">Lista de Alumnos</h3></div></div>
+    {!! Form::open(['route' => 'visualizar_docente.index' , 'method' => 'GET' , 'class' => 'navbar-form navbar-left pull-right' , 'role' => 'search']) !!}
+    <div class="form-group">
+        @if($errors->any())
+            <div class="alert alert-danger" role="alert">
+                <p>Por favor corriga los siguientes Errores</p>
+                <ul>
+                    @foreach($errors->all() as $error)
+                        <li>{{ $error }}</li>
+
+                    @endforeach
+                </ul>
+            </div>
+        @endif
     </div>
-    <div class="form-inline form-group">
-        <div class="form-group">{!! Form::text('nombreasig' , null , ['class' => 'form-control']) !!}</div>
+    <div class="form-group">
+        @if(Session::has('notice'))
+            <div class="alert alert-success" role="alert">
+                <p>{{ Session::get('notice') }}</p>
+            </div>
+        @endif
+        {!! Form::text('iddocente' , null , ['class' => 'form-control' , 'placeholder' => 'Id. del Docente']) !!}
+        {!! Form::select('estado', ['' => 'Estado' , '1' => 'Activo', '0' => 'inactivo'] , null , ['class' => 'form-control']) !!}
     </div>
-    <div class="form-inline form-group">
-        <div class="form-group">{!! Form::select('estadoasig', ['1' => 'Activo', '0' => 'Inactivo'], null, ['class' => 'form-control']) !!}</div>
-    </div>
-    {!! Form::submit('Actualizar', ['class' => 'btn btn-primary guardar3']) !!}
+    <button type="submit" class="btn btn-primary">Buscar</button>
     {!! Form::close() !!}
-</div>
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Identificacion</th>
+            <th>Primer Nombre</th>
+            <th>Segundo Nombre</th>
+            <th>Primer Apellido</th>
+            <th>Segundo Apellido</th>
+            <th>Telefono</th>
+            <th>Direccion</th>
+            <th>Nivel</th>
+            <th>Estado</th>
+            <th>Accion</th>
+        </tr>
+
+        </thead>
+        <tbody>
+        @foreach($docente as $docen)
+            <tr>
+                <td>{{ $docen->iddocente }}</td>
+                <td>{{ $docen->primer_nombre }}</td>
+                <td>{{ $docen->segundo_nombre }}</td>
+                <td>{{ $docen->primer_apellido }}</td>
+                <td>{{ $docen->segundo_apellido }}</td>
+                <td>{{ $docen->telefono }}</td>
+                <td>{{ $docen->direccion }}</td>
+                <td>{{ $docen->nivel }}</td>
+                @if(($docen->estado) == 1)
+                    <td>Activo</td>
+                @endif
+                @if(($docen->estado) == 0)
+                    <td>Inactivo</td>
+                @endif
+                <td> <a href="/web_academy/public/actualizar_docente/{{$docen->iddocente}}/edit" class="btn btn-primary btn-sm">Actualizar</a> </td>
+            </tr>
+        @endforeach
+        </tbody>
+    </table>
+    {!! $docente->appends(Request::only(['iddocente', 'estado']))->render() !!}
+
 
 @endsection
-
-<!--<body>
-</body>
-</html>-->

@@ -2,6 +2,8 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Asignatura;
+use App\Http\Requests\VisualizarAsignaturaRequest;
 
 use Illuminate\Http\Request;
 
@@ -12,9 +14,11 @@ class Consultar_AsignaturaController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(VisualizarAsignaturaRequest $request)
 	{
-		return view('consultar_asignatura');
+        $asignaturaconsul = Asignatura::select('asignaturas.*', 'inscritos.idcurinscritofor', 'inscritos.idasiginscritofor', 'inscritos.añoinscrito', 'cursos.idcurso', 'cursos.grado','cursos.grupo')->join('inscritos', 'asignaturas.idasignatura', '=', 'inscritos.idasiginscritofor')->join('cursos', 'cursos.idcurso', '=', 'inscritos.idcurinscritofor')->ident($request->get('idasignatura'))->estado($request->get('estadoasig'))->paginate(5);
+        $asignaturaconsul->setPath('consultar_asignatura');
+        return view('consultar_asignatura', compact('asignaturaconsul'));
 	}
 
 	/**

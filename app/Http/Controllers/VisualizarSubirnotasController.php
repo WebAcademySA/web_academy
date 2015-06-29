@@ -2,21 +2,24 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\ActualizarAlumnoRequest;
 use App\Alumno;
+use App\Http\Requests\VisualizarSubirnotasRequest;
 
 use Illuminate\Http\Request;
 
-class Actualizar_AlumnoController extends Controller {
+class VisualizarSubirnotasController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(VisualizarSubirnotasRequest $request)
 	{
-		return view('actualizar_alumno');
+        $notas = Alumno::select('alumnos.*', 'asignaturas.idasignatura', 'asignaturas.nombreasig', 'cursos.grado', 'cursos.grupo')->join('matriculas', 'matriculas.idalumnofor', '=', 'alumnos.id')->join('cursos', 'matriculas.idcursofor', '=', 'cursos.idcurso')->join('inscritos', 'cursos.idcurso', '=', 'inscritos.idcurinscritofor')->join('asignaturas', 'asignaturas.idasignatura', '=', 'inscritos.idasiginscritofor')->identinota($request->get('nombreasig'))->gradonota($request->get('grado'))->gruponota($request->get('grupo'))->paginate(5);
+        //dd($notas);
+        $notas->setPath('visualizar_subirnotas');
+        return view('visualizar_subirnotas', compact('notas'));
 	}
 
 	/**
@@ -58,8 +61,7 @@ class Actualizar_AlumnoController extends Controller {
 	 */
 	public function edit($id)
 	{
-		$alumno = Alumno::find($id);
-        return view('actualizar_alumno', compact('alumno'));
+		//
 	}
 
 	/**
@@ -68,21 +70,9 @@ class Actualizar_AlumnoController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id, ActualizarAlumnoRequest $request)
+	public function update($id)
 	{
-        \DB::table('alumnos')->where('id',$id)->update([
-            'primer_nombre' => $request->primer_nombre,
-            'segundo_nombre' => $request->segundo_nombre,
-            'primer_apellido'  =>	$request->primer_apellido,
-            'segundo_apellido'  =>	$request->segundo_apellido,
-            'direccion' => $request->direccion,
-            'telefono' => $request->telefono,
-            'sexo' => $request->sexo,
-            'estado' => $request->estado
-
-        ]);
-        return redirect()->route('visualizar_alumno.index')->with('notice','Alumno Editado con Exito');
-        //return redirect('visualizar_alumno');
+		//
 	}
 
 	/**

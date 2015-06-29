@@ -24,4 +24,15 @@ class Asignatura extends Model {
         return $this->hasMany('App\Inscrito','idasiginscritofor','idasignatura');
     }
 
+    public function scopeIdent($query, $id){
+        if(trim($id) != ""){
+            $query->where('idasignatura', $id);
+        }
+    }
+    public function scopeEstado($query, $estado){
+        if($estado != "") {
+            $query->where('estadoasig', $estado);
+        }
+    }
+
 }

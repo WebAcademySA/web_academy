@@ -34,9 +34,9 @@
                         <ul class="dropdown-menu">
                             <div op1><li><a href="{{ route('registrar_asignatura.index') }}"><div class="text2">Registrar</div></a></li></div>
                             <li class="divider"></li>
-                            <div op1><li><a href="#"><div class="text2">Actualizar</div></a></li></div>
+                            <div op1><li><a href="{{ route('visualizar_asignatura.index') }}"><div class="text2">Actualizar</div></a></li></div>
                             <li class="divider"></li>
-                            <div op1><li><a href="#"><div class="text2">Consultar</div></a></li></div>
+                            <div op1><li><a href="{{ route('consultar_asignatura.index') }}"><div class="text2">Consultar</div></a></li></div>
 
                         </ul>
                     </li></div>
@@ -47,9 +47,9 @@
                         <ul class="dropdown-menu">
                             <div op1><li><a href="{{ route('registrar_docente.index') }}"><div class="text2">Registrar</div></a></li></div>
                             <li class="divider"></li>
-                            <div op1><li><a href="#"><div class="text2">Actualizar</div></a></li></div>
+                            <div op1><li><a href="{{ route('visualizar_docente.index') }}"><div class="text2">Actualizar</div></a></li></div>
                             <li class="divider"></li>
-                            <div op1><li><a href="#"><div class="text2">Consultar</div></a></li></div>
+                            <div op1><li><a href="{{ route('consultar_docente.index') }}"><div class="text2">Consultar</div></a></li></div>
                         </ul>
                     </li></div>
                 <div class="drop3"><li class="dropdown">
@@ -59,9 +59,9 @@
                         <ul class="dropdown-menu">
                             <div op1><li><a href="{{ route('registrar_alumno.index') }}"><div class="text2">Registrar</div></a></li></div>
                             <li class="divider"></li>
-                            <div op1><li><a href="#"><div class="text2">Actualizar</div></a></li></div>
+                            <div op1><li><a href="{{ route('visualizar_alumno.index') }}"><div class="text2">Actualizar</div></a></li></div>
                             <li class="divider"></li>
-                            <div op1><li><a href="#"><div class="text2">Consultar</div></a></li></div>
+                            <div op1><li><a href="{{ route('consultar_alumno.index') }}"><div class="text2">Consultar</div></a></li></div>
                         </ul>
                     </li></div>
                 <div class="drop4"><li class="dropdown">
@@ -69,22 +69,18 @@
                                 Curso <b class="caret"></b></div>
                         </a>
                         <ul class="dropdown-menu">
-                            <div op1><li><a href=""><div class="text2">Registrar Curso</div></a></li></div>
-                            <div class="linea"><li class="divider"></li></div>
-                            <div op1><li><a href=""><div class="text2">Matricular Alumno</div></a></li></div>
-                            <li class="divider"></li>
                             <div op1><li><a href="{{ route('imparte_docente.index') }}"><div class="text2">Asignar Docente</div></a></li></div>
                             <li class="divider"></li>
-                            <div op1><li><a href=""><div class="text2">Inscribir Clase</div></a></li></div>
+                            <div op1><li><a href="{{ route('visualizar_subirnotas.index') }}"><div class="text2">Subir Notas</div></a></li></div>
                         </ul>
                     </li></div>
-                <li class="drop5"><a href="#"><div class="text">Cerrar Sesion</div></a></li></div>
+                <li class="drop5"><a href="{{ url('/auth/logout') }}"><div class="text">Cerrar Sesion</div></a></li></div>
         </ul>
         </div>
     </nav>
 
 
-<h3 class="til1">Registrar docente</h3>
+<h3 class="til1">Registrar Docente</h3>
 @if($errors->any())
     <div class="alert alert-danger" role="alert">
         <p>Por favor corriga los siguientes Errores</p>
@@ -106,7 +102,7 @@
 <form  class="regdocen" name="regdoc" method="post" action="{{ route('registrar_docente.store') }}">
 	<div class="form-inline form-group" >
     	<div class="celda1 form-group"><input class="form-control" id="Noid" type="text" name="iddocente" pattern="[0-9]{1,16}" placeholder="No. Identificacion *" required/></div>
-        <div class="celda1 form-group"><input class="form-control" id="Dir" type="text" name="direccion" pattern="[A-Za-z]+" placeholder="Direccion *" required/></div>
+        <div class="celda1 form-group"><input class="form-control" id="Dir" type="text" name="direccion" pattern="[A-Za-z0-9]+" placeholder="Direccion *" required/></div>
     </div>
     <div class="form-inline form-group">
     	<div class="celda1 form-group"><input class="form-control" id="Nomb" type="text" name="primer_nombre" pattern="[A-Za-z]+" placeholder="Primer Nombre *" required/></div>
@@ -122,7 +118,7 @@
         </div>
      <div class="form-inline form-group">
     	<div class="celda1 form-group"><input class="form-control" id="niv" type="text" name="nivel" pattern="[A-Za-z0-9]+" placeholder="Nivel *" required/></div>
-      <div class="celda1 form-group"><select class="form-control" id="sex" type="text" name="sexo" pattern="[A-Za-z]+" placeholder="Sexo *" required><option>Sexo *</option><option value="M">Masculino</option><option value="F">Femenino</option></select></div><input type="hidden" name="_token" value="{{ csrf_token() }}"></div>
+      <div class="celda1 form-group"><select class="form-control" id="sex" type="text" name="sexo" pattern="[A-Za-z]+" placeholder="Sexo *" required><option>Sexo *</option><option value="Masculino">Masculino</option><option value="Femenino">Femenino</option></select></div><input type="hidden" name="_token" value="{{ csrf_token() }}"></div>
         </div>
     <div class="form-inline form-group">
         <div class="celda1 form-group"><input class="form-control" id="niv" type="text" name="telefono" pattern="[0-9]+" placeholder="Telefono *" required/></div>

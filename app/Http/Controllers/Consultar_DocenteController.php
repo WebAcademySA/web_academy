@@ -2,6 +2,8 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\VisualizarDocenteRequest;
+use App\Docente;
 
 use Illuminate\Http\Request;
 
@@ -12,9 +14,11 @@ class Consultar_DocenteController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(VisualizarDocenteRequest $request)
 	{
-		return view('consultar_docente');
+        $docente = Docente::ident($request->get('iddocente'))->estado($request->get('estado'))->paginate(5);
+        $docente->setPath('consultar_docente');
+        return view('consultar_docente', compact('docente'));
 	}
 
 	/**

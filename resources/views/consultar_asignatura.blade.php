@@ -9,110 +9,128 @@
 
 @section('content')
 
-<nav class="navbar navbar-default nav_barra" role="navigation">
-  <!-- El logotipo y el icono que despliega el menú se agrupan
-       para mostrarlos mejor en los dispositivos móviles -->
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse"
-            data-target=".navbar-ex1-collapse">
-      <span class="sr-only">Desplegar navegación</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-  </div>
- 
-  <!-- Agrupar los enlaces de navegación, los formularios y cualquier
-       otro elemento que se pueda ocultar al minimizar la barra -->
-  <div class="collapse navbar-collapse navbar-ex1-collapse alinav">
-    <ul class="nav navbar-nav">
-      <li><a href="#"><div class="text">Inicio</div></a></li>
-      <div class="drop1"><li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
-          Asignatura <b class="caret"></b></div>
-        </a>
-        <ul class="dropdown-menu">
-          <div op1><li><a href="registrar_asignatura"><div class="text2">Registrar</div></a></li></div>
-          <li class="divider"></li>
-          <div op1><li><a href="actualizar_asignatura"><div class="text2">Actualizar</div></a></li></div>
-          <li class="divider"></li>
-          <div op1><li><a href="consultar_asignatura"><div class="text2">Consultar</div></a></li></div>
+    <nav class="navbar navbar-default nav_barra" role="navigation">
+        <!-- El logotipo y el icono que despliega el menú se agrupan
+             para mostrarlos mejor en los dispositivos móviles -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Desplegar navegación</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <!-- Agrupar los enlaces de navegación, los formularios y cualquier
+             otro elemento que se pueda ocultar al minimizar la barra -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse alinav">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ route('inicio_admin.index') }}"><div class="text">Inicio</div></a></li>
+                <div class="drop1"><li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
+                                Asignatura <b class="caret"></b></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <div op1><li><a href="{{ route('registrar_asignatura.index') }}"><div class="text2">Registrar</div></a></li></div>
+                            <li class="divider"></li>
+                            <div op1><li><a href="{{ route('visualizar_asignatura.index') }}"><div class="text2">Actualizar</div></a></li></div>
+                            <li class="divider"></li>
+                            <div op1><li><a href="{{ route('consultar_asignatura.index') }}"><div class="text2">Consultar</div></a></li></div>
+
+                        </ul>
+                    </li></div>
+                <div class="drop2"><li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
+                                Docente <b class="caret"></b></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <div op1><li><a href="{{ route('registrar_docente.index') }}"><div class="text2">Registrar</div></a></li></div>
+                            <li class="divider"></li>
+                            <div op1><li><a href="{{ route('visualizar_docente.index') }}"><div class="text2">Actualizar</div></a></li></div>
+                            <li class="divider"></li>
+                            <div op1><li><a href="{{ route('consultar_docente.index') }}"><div class="text2">Consultar</div></a></li></div>
+                        </ul>
+                    </li></div>
+                <div class="drop3"><li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
+                                Alumno <b class="caret"></b></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <div op1><li><a href="{{ route('registrar_alumno.index') }}"><div class="text2">Registrar</div></a></li></div>
+                            <li class="divider"></li>
+                            <div op1><li><a href="{{ route('visualizar_alumno.index') }}"><div class="text2">Actualizar</div></a></li></div>
+                            <li class="divider"></li>
+                            <div op1><li><a href="{{ route('consultar_alumno.index') }}"><div class="text2">Consultar</div></a></li></div>
+                        </ul>
+                    </li></div>
+                <div class="drop4"><li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
+                                Curso <b class="caret"></b></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <div op1><li><a href="{{ route('imparte_docente.index') }}"><div class="text2">Asignar Docente</div></a></li></div>
+                            <li class="divider"></li>
+                            <div op1><li><a href="{{ route('visualizar_subirnotas.index') }}"><div class="text2">Subir Notas</div></a></li></div>
+                        </ul>
+                    </li></div>
+                <li class="drop5"><a href="{{ url('/auth/logout') }}"><div class="text">Cerrar Sesion</div></a></li></div>
         </ul>
-      </li></div>
-      <div class="drop2"><li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
-          Docente <b class="caret"></b></div>
-        </a>
-        <ul class="dropdown-menu">
-          <div op1><li><a href="registrar_docente"><div class="text2">Registrar</div></a></li></div>
-          <li class="divider"></li>
-          <div op1><li><a href="actualizar_docente"><div class="text2">Actualizar</div></a></li></div>
-          <li class="divider"></li>
-          <div op1><li><a href="consultar_docente"><div class="text2">Consultar</div></a></li></div>
-        </ul>
-      </li></div>
-      <div class="drop3"><li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
-          Alumno <b class="caret"></b></div>
-        </a>
-        <ul class="dropdown-menu">
-          <div op1><li><a href="registrar_alumnno"><div class="text2">Registrar</div></a></li></div>
-          <li class="divider"></li>
-          <div op1><li><a href="actualizar_alumno"><div class="text2">Actualizar</div></a></li></div>
-          <li class="divider"></li>
-          <div op1><li><a href="consultar_alumno"><div class="text2">Consultar</div></a></li></div>
-        </ul>
-      </li></div>
-      <div class="drop4"><li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
-          Curso <b class="caret"></b></div>
-        </a>
-        <ul class="dropdown-menu">
-          <div op1><li><a href="registrar_curso"><div class="text2">Registrar Curso</div></a></li></div>
-          <div class="linea"><li class="divider"></li></div>
-          <div op1><li><a href="registrar_horario"><div class="text2">Crear Horario</div></a></li></div>
-          <li class="divider"></li>
-          <div op1><li><a href="consultar_horario"><div class="text2">Consultar Horario</div></a></li></div>
-          <li class="divider"></li>
-          <div op1><li><a href="consultar_curso"><div class="text2">Consultar Curso</div></a></li></div>
-        </ul>
-      </li></div>
-       <li class="drop5"><a href="#"><div class="text">Cerrar Sesion</div></a></li></div>
-    </ul>
-  </div>
-</nav>
+        </div>
+    </nav>
 
 <!--Titulos-->
-	<div class="container row"><div class="col-md-6"><h3 class="til2">Ingrese ID de busqueda</h3></div><div class="col-md-6"><h3 class="til2">Informacion de la asignatura</h3></div></div><div class="col-md-12"><hr/></div>
+<div class="container row"><div class="col-md-12"><h3 class="til2">Lista de Asignaturas</h3></div></div>
+{!! Form::open(['route' => 'consultar_asignatura.index' , 'method' => 'GET' , 'class' => 'navbar-form navbar-left pull-right' , 'role' => 'search']) !!}
+<div class="form-group">
+    @if($errors->any())
+        <div class="alert alert-danger" role="alert">
+            <p>Por favor corriga los siguientes Errores</p>
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
 
-<div class="container row">
-	<div col-md-6>
-    	<form  class="regalum" name="regalumno" method="post" action="">
-    <div class="form-inline form-group">
-        <div class="celda1 form-group"><select class="form-control" id="idasig" type="text" name="idasig" pattern="[0-9]{1,16}" required><option>ID asignatura *</option><option value="A1">A01</option><option value="A2">A02</option><option value="A3">A03</option></select></div>
-    </div>
-    	<div><input class="btn btn-primary guardar5" type="submit" name="buscar" value="Buscar"/></div>
-		</form>
-    </div>
-<!--tabla-->
-    <div col-md-6>
-    	<table class="table table-bordered table-hover borde tabla1">
-        	<tr class="info">
-            	<th>ID asignatura</th>
-                <th>Nombre asignatura</th>
-                <th>Grado</th>
-                <th>Estado</th>
-            </tr>
-            <tr>
-            	<td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>            
-        </table>
-        <button class="btn btn-primary boton1" type="submit">Visualizar</button>
-    </div>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 </div>
+<div class="form-group">
+    {!! Form::text('idasignatura' , null , ['class' => 'form-control' , 'placeholder' => 'Id. de la Asignatura']) !!}
+    {!! Form::select('estadoasig', ['' => 'Estado' , '1' => 'Activo', '0' => 'inactivo'] , null , ['class' => 'form-control']) !!}
+</div>
+<button type="submit" class="btn btn-primary">Buscar</button>
+{!! Form::close() !!}
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+    <tr>
+        <th>Codigo</th>
+        <th>Nombre</th>
+        <th>Grado</th>
+        <th>Grupo</th>
+        <th>Estado</th>
+    </tr>
+
+    </thead>
+    <tbody>
+    @foreach($asignaturaconsul as $asigna)
+        <tr>
+            <td>{{ $asigna->idasignatura }}</td>
+            <td>{{ $asigna->nombreasig }}</td>
+            <td>{{ $asigna->grado }}</td>
+            <td>{{ $asigna->grupo }}</td>
+            @if(($asigna->estadoasig) == 1)
+                <td>Activo</td>
+            @endif
+            @if(($asigna->estadoasig) == 0)
+                <td>Inactivo</td>
+            @endif
+        </tr>
+    @endforeach
+    </tbody>
+</table>
+{!! $asignaturaconsul->appends(Request::only(['idasignatura', 'estado']))->render() !!}
+
 
 @endsection
 <!--<body>

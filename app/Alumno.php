@@ -41,4 +41,20 @@ class Alumno extends Model {
             $query->where('estado', $estado);
         }
     }
+
+    public function scopeIdentinota($query, $idn){
+        if(trim($idn) != ""){
+            $query->where('nombreasig', $idn );
+        }
+    }
+    public function scopeGradonota($query, $grado){
+        if($grado != "") {
+            $query->where('grado', $grado);
+        }
+    }
+    public function scopeGruponota($query, $grupo){
+        if($grupo != "") {
+            $query->where('grupo', $grupo);
+        }
+    }
 }

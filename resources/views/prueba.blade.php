@@ -10,7 +10,7 @@
                 'segundo_apellido' => 'Montealegre',
                 'titulo' => 'Ingeniero',
                 'nivel' => 10,
-                'sexo' => 'M',
+                'sexo' => 'Masculino',
                 'email' => 'alex@gmail.com',
                 'telefono' => 1234521,
                 'direccion' => 'monteria',

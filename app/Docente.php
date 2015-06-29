@@ -32,5 +32,15 @@ class Docente extends Model {
     public function imparte(){
         return $this->hasMany('App\Imparte', 'iddoceimpartefor', 'iddocente');
     }
+    public function scopeIdent($query, $iddocente){
+        if(trim($iddocente) != ""){
+            $query->where('iddocente', $iddocente);
+        }
+    }
+    public function scopeEstado($query, $estado){
+        if($estado != "") {
+            $query->where('estado', $estado);
+        }
+    }
 
 }
