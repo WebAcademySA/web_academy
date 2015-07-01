@@ -66,7 +66,7 @@
                     </li></div>
                 <div class="drop4"><li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
-                                Curso <b class="caret"></b></div>
+                                Asignar <b class="caret"></b></div>
                         </a>
                         <ul class="dropdown-menu">
                             <div op1><li><a href="{{ route('imparte_docente.index') }}"><div class="text2">Asignar Docente</div></a></li></div>
@@ -83,7 +83,7 @@
 <h3 class="til1">Registrar Asignatura</h3>
 <hr/>
 @if($errors->any())
-    <div class="alert alert-danger" role="alert">
+    <div class="alert alert-danger alerta2" role="alert">
         <p>Por favor corriga los siguientes Errores</p>
         <ul>
             @foreach($errors->all() as $error)
@@ -94,7 +94,7 @@
     </div>
 @endif
 @if(Session::has('notice'))
-    <div class="alert alert-success" role="alert">
+    <div class="alert alert-success alerta" role="alert">
         <p>{{ Session::get('notice') }}</p>
     </div>
 @endif
@@ -103,7 +103,7 @@
         <div class="celda form-group"><input class="form-control" id="Nasig" type="text" name="nombreasig" pattern="[A-Za-z]+" placeholder="Nombre Asignatura *" required/></div><input type="hidden" name="_token" value="{{ csrf_token() }}"></div>
         <div class="celda form-group"><select class="form-control" id="sex2" type="text" name="grado" required><option>Grado *</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option></select></div>
         <div class="celda form-group"><input class="form-control" id="IDasig" type="text" name="año" pattern="[0-9]{4}" placeholder="Año *" required/></div>
-        <button class="btn btn-primary iniciar guardar" type="submit"/>Guardar</button>
+        <button class="btn btn-primary iniciar guardarasig" type="submit"/>Guardar</button>
 	</form>
 
 @endsection

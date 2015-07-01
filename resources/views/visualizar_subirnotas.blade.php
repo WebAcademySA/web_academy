@@ -59,7 +59,7 @@
                     </li></div>
                 <div class="drop4"><li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
-                                Curso <b class="caret"></b></div>
+                                Asignar <b class="caret"></b></div>
                         </a>
                         <ul class="dropdown-menu">
                             <div op1><li><a href="{{ route('imparte_docente.index') }}"><div class="text2">Asignar Docente</div></a></li></div>
@@ -72,66 +72,64 @@
         </div>
     </nav>
     <!--Titulos-->
-    <div class="container row"><div class="col-md-12"><h3 class="til2">Lista de Alumnos</h3></div></div>
+    <div class="container row"><div class="col-md-12"><h3 class="til2">Subir Notas</h3></div></div>
     {!! Form::open(['route' => 'visualizar_subirnotas.index' , 'method' => 'GET' , 'class' => 'navbar-form navbar-left pull-right' , 'role' => 'search']) !!}
     <div class="form-group">
         @if($errors->any())
-            <div class="alert alert-danger" role="alert">
+            <div class="alert alert-danger alerta3" role="alert">
                 <p>Por favor corriga los siguientes Errores</p>
                 <ul>
                     @foreach($errors->all() as $error)
                         <li>{{ $error }}</li>
-
                     @endforeach
                 </ul>
             </div>
         @endif
-    </div>
-    <div class="form-group">
         @if(Session::has('notice'))
-            <div class="alert alert-success" role="alert">
+            <div class="alert alert-success alerta3" role="alert">
                 <p>{{ Session::get('notice') }}</p>
             </div>
         @endif
-
+    </div>
+    <div class="form-group barrabusq4">
         {!! Form::text('nombreasig' , null , ['class' => 'form-control' , 'placeholder' => 'Nombre de la Asignatura']) !!}
         {!! Form::select('grado', ['' => 'Grado' , '1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5', '6' => '6', '7' => '7', '8' => '8', '9' => '9', '10' => '10', '11' => '11'] , null , ['class' => 'form-control']) !!}
         {!! Form::select('grupo', ['' => 'Grupo' , '1' => '1', '2' => '2', '3' => '3', '4' => '4'] , null , ['class' => 'form-control']) !!}
     </div>
-    <button type="submit" class="btn btn-primary">Buscar</button>
+    <button type="submit" class="btn btn-primary botonbuscar4">Buscar</button>
     {!! Form::close() !!}
-    <table class="table table-striped table-bordered table-hover">
+    <table class="table table-striped table-bordered table-hover tabla4">
         <thead>
-        <tr>
-            <th>Identificacion</th>
-            <th>Primer Apellido</th>
-            <th>Segundo Apellido</th>
-            <th>Primer Nombre</th>
-            <th>Segundo Nombre</th>
-            <th>Asignatura</th>
-            <th>Grado</th>
-            <th>Grupo</th>
-            <th>Estado</th>
-            <th>Accion</th>
+        <tr class="info">
+            <th><div class="celd">Identificacion</div></th>
+            <th><div class="celd">Primer Apellido</div></th>
+            <th><div class="celd">Segundo Apellido</div></th>
+            <th><div class="celd">Primer Nombre</div></th>
+            <th><div class="celd">Segundo Nombre</div></th>
+            <th><div class="celd">Asignatura</div></th>
+            <th><div class="celd">Grado</div></th>
+            <th><div class="celd">Grupo</div></th>
+            <th><div class="celd">Estado</div></th>
+            <th><div class="celd">Accion</div></th>
         </tr>
 
         </thead>
         <tbody>
         @foreach($notas as $nota)
             <tr>
-                <td>{{ $nota->id }}</td>
-                <td>{{ $nota->primer_apellido }}</td>
-                <td>{{ $nota->segundo_apellido }}</td>
-                <td>{{ $nota->primer_nombre }}</td>
-                <td>{{ $nota->segundo_nombre }}</td>
-                <td>{{ $nota->nombreasig }}</td>
-                <td>{{ $nota->grado }}</td>
-                <td>{{ $nota->grupo }}</td>
+                <td><div class="celd">{{ $nota->id }}</div></td>
+                <td><div class="celd">{{ $nota->primer_apellido }}</div></td>
+                <td><div class="celd">{{ $nota->segundo_apellido }}</div></td>
+                <td><div class="celd">{{ $nota->primer_nombre }}</div></td>
+                <td><div class="celd">{{ $nota->segundo_nombre }}</div></td>
+                <td><div class="celd">{{ $nota->nombreasig }}</div></td>
+                <td><div class="celd">{{ $nota->grado }}</div></td>
+                <td><div class="celd">{{ $nota->grupo }}</td>
                 @if(($nota->estado) == 1)
-                    <td>Activo</td>
+                    <td><div class="celd">Activo</div></td>
                 @endif
                 @if(($nota->estado) == 0)
-                    <td>Inactivo</td>
+                    <td><div class="celd">Inactivo</div></td>
                 @endif
 
                 <td>
@@ -145,7 +143,7 @@
         @endforeach
         </tbody>
     </table>
-    {!! $notas->appends(Request::only(['idasignatura', 'grado', 'grupo']))->render() !!}
+    <div class="paginacion6">{!! $notas->appends(Request::only(['idasignatura', 'grado', 'grupo']))->render() !!}</div>
 
 
 @endsection

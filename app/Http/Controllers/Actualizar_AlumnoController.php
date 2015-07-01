@@ -78,11 +78,9 @@ class Actualizar_AlumnoController extends Controller {
             'direccion' => $request->direccion,
             'telefono' => $request->telefono,
             'sexo' => $request->sexo,
-            'estado' => $request->estado
 
         ]);
-        return redirect()->route('visualizar_alumno.index')->with('notice','Alumno Editado con Exito');
-        //return redirect('visualizar_alumno');
+        return redirect('visualizar_alumno');
 	}
 
 	/**

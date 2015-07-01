@@ -59,7 +59,7 @@
                     </li></div>
                 <div class="drop4"><li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
-                                Curso <b class="caret"></b></div>
+                                Asignar <b class="caret"></b></div>
                         </a>
                         <ul class="dropdown-menu">
                             <div op1><li><a href="{{ route('imparte_docente.index') }}"><div class="text2">Asignar Docente</div></a></li></div>
@@ -72,11 +72,11 @@
         </div>
     </nav>
     <!--Titulos-->
-    <div class="container row"><div class="col-md-12"><h3 class="til2">Lista de Alumnos</h3></div></div>
+    <div class="container row"><div class="col-md-12"><h3 class="til2">Consultar Alumnos</h3></div></div>
     {!! Form::open(['route' => 'consultar_alumno.index' , 'method' => 'GET' , 'class' => 'navbar-form navbar-left pull-right' , 'role' => 'search']) !!}
     <div class="form-group">
         @if($errors->any())
-            <div class="alert alert-danger" role="alert">
+            <div class="alert alert-danger alerta3" role="alert">
                 <p>Por favor corriga los siguientes Errores</p>
                 <ul>
                     @foreach($errors->all() as $error)
@@ -87,15 +87,15 @@
             </div>
         @endif
     </div>
-    <div class="form-group">
+    <div class="form-group barrabusq">
         {!! Form::text('id' , null , ['class' => 'form-control' , 'placeholder' => 'Id. del Alumno']) !!}
         {!! Form::select('estado', ['' => 'Estado' , '1' => 'Activo', '0' => 'inactivo'] , null , ['class' => 'form-control']) !!}
     </div>
-    <button type="submit" class="btn btn-primary">Buscar</button>
+    <button type="submit" class="btn btn-primary botonbuscar">Buscar</button>
     {!! Form::close() !!}
-    <table class="table table-striped table-bordered table-hover">
+    <table class="table table-striped table-bordered table-hover tabla1">
         <thead>
-        <tr>
+        <tr class="info">
             <th>Identificacion</th>
             <th>Primer Nombre</th>
             <th>Segundo Nombre</th>
@@ -109,23 +109,23 @@
         <tbody>
         @foreach($alumnoconsul as $alumnocon)
             <tr>
-                <td>{{ $alumnocon->id }}</td>
-                <td>{{ $alumnocon->primer_nombre }}</td>
-                <td>{{ $alumnocon->segundo_nombre }}</td>
-                <td>{{ $alumnocon->primer_apellido }}</td>
-                <td>{{ $alumnocon->segundo_apellido }}</td>
-                <td>{{ $alumnocon->telefono }}</td>
+                <td class="celd">{{ $alumnocon->id }}</td>
+                <td class="celd">{{ $alumnocon->primer_nombre }}</td>
+                <td class="celd">{{ $alumnocon->segundo_nombre }}</td>
+                <td class="celd">{{ $alumnocon->primer_apellido }}</td>
+                <td class="celd">{{ $alumnocon->segundo_apellido }}</td>
+                <td class="celd">{{ $alumnocon->telefono }}</td>
                 @if(($alumnocon->estado) == 1)
-                    <td>Activo</td>
+                    <td class="celd">Activo</td>
                 @endif
                 @if(($alumnocon->estado) == 0)
-                    <td>Inactivo</td>
+                    <td class="celd">Inactivo</td>
                 @endif
             </tr>
         @endforeach
         </tbody>
     </table>
-    {!! $alumnoconsul->appends(Request::only(['id', 'estado']))->render() !!}
+    <div class="paginacion4">{!! $alumnoconsul->appends(Request::only(['id', 'estado']))->render() !!}</div>
 
 
 @endsection

@@ -59,7 +59,7 @@
                     </li></div>
                 <div class="drop4"><li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
-                                Curso <b class="caret"></b></div>
+                                Asignar <b class="caret"></b></div>
                         </a>
                         <ul class="dropdown-menu">
                             <div op1><li><a href="{{ route('imparte_docente.index') }}"><div class="text2">Asignar Docente</div></a></li></div>
@@ -73,67 +73,66 @@
     </nav>
 
     <!--Titulos-->
-    <div class="container row"><div class="col-md-12"><h3 class="til2">Lista de Alumnos</h3></div></div>
+    <div class="container row"><div class="col-md-12"><h3 class="til2">Actualizar Alumnos</h3></div></div>
     {!! Form::open(['route' => 'visualizar_alumno.index' , 'method' => 'GET' , 'class' => 'navbar-form navbar-left pull-right' , 'role' => 'search']) !!}
     <div class="form-group">
         @if(Session::has('notice'))
-            <div class="alert alert-success" role="alert">
+            <div class="alert alert-success alerta" role="alert">
                 <p>{{ Session::get('notice') }}</p>
             </div>
         @endif
     @if($errors->any())
-        <div class="alert alert-danger" role="alert">
+        <div class="alert alert-danger alerta3" role="alert">
             <p>Por favor corriga los siguientes Errores</p>
             <ul>
                 @foreach($errors->all() as $error)
                     <li>{{ $error }}</li>
-
                 @endforeach
             </ul>
         </div>
     @endif
         </div>
-        <div class="form-group">
+        <div class="form-group barrabusq">
         {!! Form::text('id' , null , ['class' => 'form-control' , 'placeholder' => 'Id. del Alumno']) !!}
         {!! Form::select('estado', ['' => 'Estado' , '1' => 'Activo', '0' => 'inactivo'] , null , ['class' => 'form-control']) !!}
         </div>
-        <button type="submit" class="btn btn-primary">Buscar</button>
+        <button type="submit" class="btn btn-primary botonbuscar">Buscar</button>
     {!! Form::close() !!}
-        <table class="table table-striped table-bordered table-hover">
+        <table class="table table-striped table-bordered table-hover tabla1">
             <thead>
             <tr>
-                <th>Identificacion</th>
-                <th>Primer Nombre</th>
-                <th>Segundo Nombre</th>
-                <th>Primer Apellido</th>
-                <th>Segundo Apellido</th>
-                <th>Telefono</th>
-                <th>Estado</th>
-                <th>Accion</th>
+                <th class="info">Identificacion</th>
+                <th class="info">Primer Nombre</th>
+                <th class="info">Segundo Nombre</th>
+                <th class="info">Primer Apellido</th>
+                <th class="info">Segundo Apellido</th>
+                <th class="info">Telefono</th>
+                <th class="info">Estado</th>
+                <th class="info">Accion</th>
             </tr>
 
             </thead>
             <tbody>
             @foreach($alumno as $alumn)
                 <tr>
-                    <td>{{ $alumn->id }}</td>
-                    <td>{{ $alumn->primer_nombre }}</td>
-                    <td>{{ $alumn->segundo_nombre }}</td>
-                    <td>{{ $alumn->primer_apellido }}</td>
-                    <td>{{ $alumn->segundo_apellido }}</td>
-                    <td>{{ $alumn->telefono }}</td>
+                    <td><div class="celd">{{ $alumn->id }}</div></td>
+                    <td><div class="celd">{{ $alumn->primer_nombre }}</div></td>
+                    <td><div class="celd">{{ $alumn->segundo_nombre }}</div></td>
+                    <td><div class="celd">{{ $alumn->primer_apellido }}</div></td>
+                    <td><div class="celd">{{ $alumn->segundo_apellido }}</div></td>
+                    <td><div class="celd">{{ $alumn->telefono }}</div></td>
                     @if(($alumn->estado) == 1)
-                        <td>Activo</td>
+                        <td class="celd">Activo</td>
                     @endif
                     @if(($alumn->estado) == 0)
-                        <td>Inactivo</td>
+                        <td class="celd">Inactivo</td>
                     @endif
                     <td> <a href="/web_academy/public/actualizar_alumno/{{$alumn->id}}/edit" class="btn btn-primary btn-sm">Actualizar</a> </td>
                 </tr>
             @endforeach
             </tbody>
         </table>
-        {!! $alumno->appends(Request::only(['id', 'estado']))->render() !!}
+       <div class="paginacion2">{!! $alumno->appends(Request::only(['id', 'estado']))->render() !!}</div>
 
 
 @endsection

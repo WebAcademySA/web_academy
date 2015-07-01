@@ -59,7 +59,7 @@
                     </li></div>
                 <div class="drop4"><li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
-                                Curso <b class="caret"></b></div>
+                                Asignar <b class="caret"></b></div>
                         </a>
                         <ul class="dropdown-menu">
                             <div op1><li><a href="{{ route('imparte_docente.index') }}"><div class="text2">Asignar Docente</div></a></li></div>
@@ -72,11 +72,11 @@
         </div>
     </nav>
     <!--Titulos-->
-    <div class="container row"><div class="col-md-12"><h3 class="til2">Lista de Asignatura</h3></div></div>
+    <div class="container row"><div class="col-md-12"><h3 class="til2">Actualizar Asignatura</h3></div></div>
     {!! Form::open(['route' => 'visualizar_asignatura.index' , 'method' => 'GET' , 'class' => 'navbar-form navbar-left pull-right' , 'role' => 'search']) !!}
     <div class="form-group">
         @if($errors->any())
-            <div class="alert alert-danger" role="alert">
+            <div class="alert alert-danger alerta5" role="alert">
                 <p>Por favor corriga los siguientes Errores</p>
                 <ul>
                     @foreach($errors->all() as $error)
@@ -86,49 +86,50 @@
                 </ul>
             </div>
         @endif
-    </div>
-    <div class="form-group">
         @if(Session::has('notice'))
-            <div class="alert alert-success" role="alert">
+            <div class="alert alert-success alerta6" role="alert">
                 <p>{{ Session::get('notice') }}</p>
             </div>
         @endif
+    </div>
+
+    <div class="form-group barrabusq2">
         {!! Form::text('idasignatura' , null , ['class' => 'form-control' , 'placeholder' => 'Id. de la Asignatura']) !!}
         {!! Form::select('estadoasig', ['' => 'Estado' , '1' => 'Activo', '0' => 'inactivo'] , null , ['class' => 'form-control']) !!}
     </div>
-    <button type="submit" class="btn btn-primary">Buscar</button>
+    <button type="submit" class="btn btn-primary botonbuscar2">Buscar</button>
     {!! Form::close() !!}
-    <table class="table table-striped table-bordered table-hover">
+    <table class="table table-striped table-bordered table-hover tabla2">
         <thead>
-        <tr>
-            <th>Codigo</th>
-            <th>Nombre</th>
-            <th>Grado</th>
-            <th>Grupo</th>
-            <th>Estado</th>
-            <th>Accion</th>
+        <tr class="info">
+            <th><div class="celd">Codigo</div></th>
+            <th><div class="celd">Nombre</div></th>
+            <th><div class="celd">Grado</div></th>
+            <th><div class="celd">Grupo</div></th>
+            <th><div class="celd">Estado</div></th>
+            <th><div class="celd">Accion</div></th>
         </tr>
 
         </thead>
         <tbody>
         @foreach($asignatura as $asig)
             <tr>
-                <td>{{ $asig->idasignatura }}</td>
-                <td>{{ $asig->nombreasig }}</td>
-                <td>{{ $asig->grado }}</td>
-                <td>{{ $asig->grupo }}</td>
+                <td><div class="celd">{{ $asig->idasignatura }}</div></td>
+                <td><div class="celd">{{ $asig->nombreasig }}</div></td>
+                <td><div class="celd">{{ $asig->grado }}</div></td>
+                <td><div class="celd">{{ $asig->grupo }}</div></td>
                 @if(($asig->estadoasig) == 1)
-                    <td>Activo</td>
+                    <td><div class="celd">Activo</div></td>
                 @endif
                 @if(($asig->estadoasig) == 0)
-                    <td>Inactivo</td>
+                    <td><div class="celd">Inactivo</div></td>
                 @endif
-                <td> <a href="/web_academy/public/actualizar_asignatura/{{$asig->idasignatura}}/edit" class="btn btn-primary btn-sm">Actualizar</a> </td>
+                <td><div class="celd"><a href="/web_academy/public/actualizar_asignatura/{{$asig->idasignatura}}/edit" class="btn btn-primary btn-sm">Actualizar</a></div></td>
             </tr>
         @endforeach
         </tbody>
     </table>
-    {!! $asignatura->appends(Request::only(['idasignatura', 'estado']))->render() !!}
+    <div class="paginacion2">{!! $asignatura->appends(Request::only(['idasignatura', 'estado']))->render() !!}</div>
 
 
 @endsection

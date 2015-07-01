@@ -59,7 +59,7 @@
                     </li></div>
                 <div class="drop4"><li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
-                                Curso <b class="caret"></b></div>
+                                Asignar <b class="caret"></b></div>
                         </a>
                         <ul class="dropdown-menu">
                             <div op1><li><a href="{{ route('imparte_docente.index') }}"><div class="text2">Asignar Docente</div></a></li></div>
@@ -76,7 +76,7 @@
     {!! Form::open(['route' => 'consultar_docente.index' , 'method' => 'GET' , 'class' => 'navbar-form navbar-left pull-right' , 'role' => 'search']) !!}
     <div class="form-group">
         @if($errors->any())
-            <div class="alert alert-danger" role="alert">
+            <div class="alert alert-danger alerta9" role="alert">
                 <p>Por favor corriga los siguientes Errores</p>
                 <ul>
                     @foreach($errors->all() as $error)
@@ -87,49 +87,49 @@
             </div>
         @endif
     </div>
-    <div class="form-group">
+    <div class="form-group barrabusq3">
         {!! Form::text('iddocente' , null , ['class' => 'form-control' , 'placeholder' => 'Id. del Docente']) !!}
         {!! Form::select('estado', ['' => 'Estado' , '1' => 'Activo', '0' => 'inactivo'] , null , ['class' => 'form-control']) !!}
     </div>
-    <button type="submit" class="btn btn-primary">Buscar</button>
+    <button type="submit" class="btn btn-primary botonbuscar3">Buscar</button>
     {!! Form::close() !!}
-    <table class="table table-striped table-bordered table-hover">
+    <table class="table table-striped table-bordered table-hover tabla3">
         <thead>
-        <tr>
-            <th>Identificacion</th>
-            <th>Primer Nombre</th>
-            <th>Segundo Nombre</th>
-            <th>Primer Apellido</th>
-            <th>Segundo Apellido</th>
-            <th>Telefono</th>
-            <th>Direccion</th>
-            <th>Nivel</th>
-            <th>Estado</th>
+        <tr class="info">
+            <th><div class="celd">Identificacion</div></th>
+            <th><div class="celd">Primer Nombre</div></th>
+            <th><div class="celd">Segundo Nombre</div></th>
+            <th><div class="celd">Primer Apellido</div></th>
+            <th><div class="celd">Segundo Apellido</div></th>
+            <th><div class="celd">Telefono</div></th>
+            <th><div class="celd">Direccion</div></th>
+            <th><div class="celd">Nivel</div></th>
+            <th><div class="celd">Estado</div></th>
         </tr>
 
         </thead>
         <tbody>
         @foreach($docente as $docen)
             <tr>
-                <td>{{ $docen->iddocente }}</td>
-                <td>{{ $docen->primer_nombre }}</td>
-                <td>{{ $docen->segundo_nombre }}</td>
-                <td>{{ $docen->primer_apellido }}</td>
-                <td>{{ $docen->segundo_apellido }}</td>
-                <td>{{ $docen->telefono }}</td>
-                <td>{{ $docen->direccion }}</td>
-                <td>{{ $docen->nivel }}</td>
+                <td><div class="celd">{{ $docen->iddocente }}</div></td>
+                <td><div class="celd">{{ $docen->primer_nombre }}</div></td>
+                <td><div class="celd">{{ $docen->segundo_nombre }}</div></td>
+                <td><div class="celd">{{ $docen->primer_apellido }}</div></td>
+                <td><div class="celd">{{ $docen->segundo_apellido }}</div></td>
+                <td><div class="celd">{{ $docen->telefono }}</div></td>
+                <td><div class="celd">{{ $docen->direccion }}</div></td>
+                <td><div class="celd">{{ $docen->nivel }}</div></td>
                 @if(($docen->estado) == 1)
-                    <td>Activo</td>
+                    <td><div class="celd">Activo</div></td>
                 @endif
                 @if(($docen->estado) == 0)
-                    <td>Inactivo</td>
+                    <td><div class="celd">Inactivo</div></td>
                 @endif
             </tr>
         @endforeach
         </tbody>
     </table>
-    {!! $docente->appends(Request::only(['iddocente', 'estado']))->render() !!}
+    <div class="paginacion5">{!! $docente->appends(Request::only(['iddocente', 'estado']))->render() !!}</div>
 
 
 @endsection

@@ -66,7 +66,7 @@
                     </li></div>
                 <div class="drop4"><li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
-                                Curso <b class="caret"></b></div>
+                                Asignar <b class="caret"></b></div>
                         </a>
                         <ul class="dropdown-menu">
                             <div op1><li><a href="{{ route('imparte_docente.index') }}"><div class="text2">Asignar Docente</div></a></li></div>
@@ -82,7 +82,7 @@
 
 <h3 class="til1">Registrar Docente</h3>
 @if($errors->any())
-    <div class="alert alert-danger" role="alert">
+    <div class="alert alert-danger alerta7" role="alert">
         <p>Por favor corriga los siguientes Errores</p>
         <ul>
             @foreach($errors->all() as $error)
@@ -93,12 +93,11 @@
     </div>
 @endif
 @if(Session::has('notice'))
-    <div class="alert alert-success" role="alert">
+    <div class="alert alert-success alerta8" role="alert">
         <p>{{ Session::get('notice') }}</p>
     </div>
 @endif
 
-<hr/>
 <form  class="regdocen" name="regdoc" method="post" action="{{ route('registrar_docente.store') }}">
 	<div class="form-inline form-group" >
     	<div class="celda1 form-group"><input class="form-control" id="Noid" type="text" name="iddocente" pattern="[0-9]{1,16}" placeholder="No. Identificacion *" required/></div>
@@ -122,9 +121,9 @@
         </div>
     <div class="form-inline form-group">
         <div class="celda1 form-group"><input class="form-control" id="niv" type="text" name="telefono" pattern="[0-9]+" placeholder="Telefono *" required/></div>
-
-    </div>
         <button class="btn btn-primary guardar2" type="submit"/>Guardar</button>
+    </div>
+        
 
 </form>
 @endsection

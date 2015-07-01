@@ -66,7 +66,7 @@
                     </li></div>
                 <div class="drop4"><li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
-                                Curso <b class="caret"></b></div>
+                                Asignar <b class="caret"></b></div>
                         </a>
                         <ul class="dropdown-menu">
                             <div op1><li><a href="{{ route('imparte_docente.index') }}"><div class="text2">Asignar Docente</div></a></li></div>
@@ -80,56 +80,55 @@
     </nav>
 
 <!--Titulos-->
-<div class="container row"><div class="col-md-12"><h3 class="til2">Lista de Asignaturas</h3></div></div>
+<div class="container row"><div class="col-md-12"><h3 class="til2">Consultar Asignaturas</h3></div></div>
 {!! Form::open(['route' => 'consultar_asignatura.index' , 'method' => 'GET' , 'class' => 'navbar-form navbar-left pull-right' , 'role' => 'search']) !!}
 <div class="form-group">
     @if($errors->any())
-        <div class="alert alert-danger" role="alert">
+        <div class="alert alert-danger alerta5" role="alert">
             <p>Por favor corriga los siguientes Errores</p>
             <ul>
                 @foreach($errors->all() as $error)
                     <li>{{ $error }}</li>
-
                 @endforeach
             </ul>
         </div>
     @endif
 </div>
-<div class="form-group">
+<div class="form-group barrabusq2">
     {!! Form::text('idasignatura' , null , ['class' => 'form-control' , 'placeholder' => 'Id. de la Asignatura']) !!}
     {!! Form::select('estadoasig', ['' => 'Estado' , '1' => 'Activo', '0' => 'inactivo'] , null , ['class' => 'form-control']) !!}
 </div>
-<button type="submit" class="btn btn-primary">Buscar</button>
+<button type="submit" class="btn btn-primary botonbuscar2">Buscar</button>
 {!! Form::close() !!}
-<table class="table table-striped table-bordered table-hover">
+<table class="table table-striped table-bordered table-hover tabla2">
     <thead>
-    <tr>
-        <th>Codigo</th>
-        <th>Nombre</th>
-        <th>Grado</th>
-        <th>Grupo</th>
-        <th>Estado</th>
+    <tr class="info">
+        <th><div class="celd">Codigo</div></th>
+        <th><div class="celd">Nombre</div></th>
+        <th><div class="celd">Grado</div></th>
+        <th><div class="celd">Grupo</div></th>
+        <th><div class="celd">Estado</div></th>
     </tr>
 
     </thead>
     <tbody>
     @foreach($asignaturaconsul as $asigna)
         <tr>
-            <td>{{ $asigna->idasignatura }}</td>
-            <td>{{ $asigna->nombreasig }}</td>
-            <td>{{ $asigna->grado }}</td>
-            <td>{{ $asigna->grupo }}</td>
+            <td><div class="celd">{{ $asigna->idasignatura }}</div></td>
+            <td><div class="celd">{{ $asigna->nombreasig }}</div></td>
+            <td><div class="celd">{{ $asigna->grado }}</div></td>
+            <td><div class="celd">{{ $asigna->grupo }}</div></td>
             @if(($asigna->estadoasig) == 1)
-                <td>Activo</td>
+                <td><div class="celd">Activo</div></td>
             @endif
             @if(($asigna->estadoasig) == 0)
-                <td>Inactivo</td>
+                <td><div class="celd">Inactivo</div></td>
             @endif
         </tr>
     @endforeach
     </tbody>
 </table>
-{!! $asignaturaconsul->appends(Request::only(['idasignatura', 'estado']))->render() !!}
+<div class="paginacion2">{!! $asignaturaconsul->appends(Request::only(['idasignatura', 'estado']))->render() !!}</div>
 
 
 @endsection

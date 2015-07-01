@@ -66,7 +66,7 @@
                     </li></div>
                 <div class="drop4"><li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
-                                Curso <b class="caret"></b></div>
+                                Asignar <b class="caret"></b></div>
                         </a>
                         <ul class="dropdown-menu">
                             <div op1><li><a href="{{ route('imparte_docente.index') }}"><div class="text2">Asignar Docente</div></a></li></div>
@@ -83,7 +83,7 @@
 <div class="container row"><div><h3 class="til2">Registrar Alumno</h3></div></div><div class="col-md-12"><hr/></div>
 
         @if($errors->any())
-            <div class="alert alert-danger" role="alert">
+            <div class="alert alert-danger alerta4" role="alert">
             <p>Por favor corriga los siguientes Errores</p>
             <ul>
             @foreach($errors->all() as $error)
@@ -94,7 +94,7 @@
             </div>
         @endif
         @if(Session::has('notice'))
-            <div class="alert alert-success" role="alert">
+            <div class="alert alert-success alerta" role="alert">
                 <p>{{ Session::get('notice') }}</p>
             </div>
         @endif
@@ -106,54 +106,27 @@
 	<div col-md-6>
     	<form  class="regalum" name="regalumno" method="post" action="{{ route('registrar_alumno.store') }}">
             <div class="form-inline form-group" >
-                <div class="celda1 form-group"><input class="form-control" id="Noid2" type="text" name="id" pattern="[0-9]{1,16}" placeholder="No. Identificacion *" required/></div>
-                <div class="celda1 form-group"><input class="form-control" id="Tele2" type="text" name="telefono" pattern="[0-9]{1,16}" placeholder="Telefono " /></div>
+                <div class=" form-group"><input class="form-control" id="Noid2" type="text" name="id" pattern="[0-9]{1,16}" placeholder="No. Identificacion *" required/></div>
+                <div class=" form-group"><input class="form-control" id="Tele2" type="text" name="telefono" pattern="[0-9]{1,16}" placeholder="Telefono " /></div>
             </div>
             <div class="form-inline form-group">
-                <div class="celda1 form-group"><input class="form-control" id="Nomb2" type="text" name="primer_nombre" pattern="[A-Za-z]+" placeholder="Primer Nombre *" required/></div>
-                <div class="celda1 form-group"><input class="form-control" id="Nombseg" type="text" name="segundo_nombre" pattern="[A-Za-z]+" placeholder="Segundo Nombre *" /></div>
+                <div class=" form-group"><input class="form-control" id="Nomb2" type="text" name="primer_nombre" pattern="[A-Za-z]+" placeholder="Primer Nombre *" required/></div>
+                <div class=" form-group"><input class="form-control" id="Nombseg" type="text" name="segundo_nombre" pattern="[A-Za-z]+" placeholder="Segundo Nombre *" /></div>
             </div>
             <div class="form-inline form-group">
-                <div class="celda1 form-group"><input class="form-control" id="primapel" type="text" name="primer_apellido" pattern="[A-Za-z]+" placeholder="Primer Apellido *" required/></div>
-                <div class="celda1 form-group"><input class="form-control" id="segunapel" type="text" name="segundo_apellido" pattern="[A-Za-z]+" placeholder="Segundo Apellido *" required/></div>
+                <div class=" form-group"><input class="form-control" id="primapel" type="text" name="primer_apellido" pattern="[A-Za-z]+" placeholder="Primer Apellido *" required/></div>
+                <div class=" form-group"><input class="form-control" id="segunapel" type="text" name="segundo_apellido" pattern="[A-Za-z]+" placeholder="Segundo Apellido *" required/></div>
             </div>
             <div class="form-inline form-group" >
-                <div class="celda1 form-group"><select class="form-control" id="sex2" type="text" name="sexo" required><option>Sexo *</option><option value="Masculino">Masculino</option><option value="Femenino">Femenino</option></select></div>
-                <div class="celda1 form-group"><input class="form-control" id="Dir2" type="text" name="direccion" pattern="[[A-Za-z0-9]+" placeholder="Direccion *" required /><input type="hidden" name="_token" value="{{ csrf_token() }}"></div>
+                <div class=" form-group"><select class="form-control" id="sex2" type="text" name="sexo" required><option>Sexo *</option><option value="Masculino">Masculino</option><option value="Femenino">Femenino</option></select></div>
+                <div class=" form-group"><input class="form-control" id="Dir2" type="text" name="direccion" pattern="[[A-Za-z0-9]+" placeholder="Direccion *" required /><input type="hidden" name="_token" value="{{ csrf_token() }}"></div>
             </div>
                 <div class="form-inline form-group" >
-                <div class="celda1 form-group"><select class="form-control" id="sex2" type="text" name="grado" required><option>Grado *</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option></select></div>
-                <div class="celda1 form-group"><select class="form-control" id="sex2" type="text" name="grupo" required><option>Grupo *</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></div>
+                <div class=" form-group"><select class="form-control" id="sex2" type="text" name="grado" required><option>Grado *</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option></select></div>
+                <div class=" form-group"><select class="form-control" id="sex2" type="text" name="grupo" required><option>Grupo *</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></div>
                 </div>
             <button class="btn btn-primary guardar3" type="submit"/>Guardar</button>
 		</form>
     </div>
-    
-<!--Formulario acudiente-->
-	<!--<div col-md-6>
-    	<form  class="regalum2" name="regalumno" method="post" action="">
-	<div class="form-inline form-group" >
-    	<div class="celda1 form-group"><input class="form-control" id="Noid3" type="text" name="idasigna" pattern="[0-9]{1,16}" placeholder="No. Identificacion *" required/></div>
-        <div class="celda1 form-group"><input class="form-control" id="Dir3" type="text" name="direc3" pattern="[0-9]{1,16}" placeholder="Direccion *" required /></div>
-    </div>
-    <div class="form-inline form-group">
-    	<div class="celda1 form-group"><input class="form-control" id="Nomb3" type="text" name="nombre3" pattern="[0-9]{1,16}" placeholder="Nombres *" required/></div>
-        <div class="celda1 form-group"><input class="form-control" id="Tele2" type="text" name="telfono2" pattern="[0-9]{1,16}" placeholder="Telefono " /></div>
-        </div>
-    <div class="form-inline form-group">
-    	<div class="celda1 form-group"><input class="form-control" id="Apel2" type="text" name="apellido2" pattern="[0-9]{1,16}" placeholder="Apellidos *" required/></div>
-        <div class="celda1 form-group"><input class="form-control" id="Email2" type="email" name="email2" pattern="[0-9]{1,16}" placeholder="E-mail " /></div>
-    </div>
-    <div class="form-inline form-group" >
-    	<div class="celda1 form-group"><select class="form-control" id="sex3" type="text" name="sexo3" pattern="[0-9]{1,16}" required><option>Sexo *</option><option value="M">Masculino</option><option value="F">Femenino</option></select></div>
-        <div class="celda1 form-group"><input class="form-control" id="Dir2" type="text" name="direc2" pattern="[0-9]{1,16}" placeholder="Parentesco *" required /></div>
-    </div>
-		</form>
-        <div><input class="btn btn-primary guardar3" type="submit" name="guardar" value="Guardar"/></div>
-	</div>-->
 </div>
 @endsection
-
-<!--<body>
-</body>
-</html>-->

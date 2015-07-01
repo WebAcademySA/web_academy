@@ -92,7 +92,7 @@ header .escudo2{
 footer {
 	background:#3369e8;
 	color:#000000;
-	margin-top:71px;
+	margin-top:81px;
 	margin-bottom:-10px;
 	overflow:hidden;
 }
@@ -251,7 +251,7 @@ footer h6 {
 }
 
 .regisasig{
-	margin-bottom:127px;
+	margin-top: 30px;
 }
 
 .regdocen{
@@ -260,14 +260,38 @@ footer h6 {
 	margin-top: -7px;
 }
 
+.subirnotas{
+	margin-left:230px;
+	margin-top: 10px;
+}
+
 .regalum{
 	margin-left:480px;
-	margin-bottom:79px;
+	margin-bottom:10px;
+	margin-top: 30px;
 }
 
 .regalum2{
 	margin-left:702px;
 	margin-top:-285px;
+}
+
+.regalum4{
+	margin-left:540px;
+	margin-bottom:10px;
+	margin-top: 31px;
+}
+
+.regalum3{
+	margin-left:350px;
+	margin-bottom:10px;
+	margin-top: 31px;
+}
+
+.regalum5{
+	margin-left:350px;
+	margin-bottom:10px;
+	margin-top: 5px;
 }
 
 .actuasig{
@@ -298,7 +322,7 @@ footer h6 {
 }
 
 hr {
-	margin-top:-10px;
+	margin-top:-20px;
 }
 
 .til1 {
@@ -309,20 +333,39 @@ hr {
 	margin-bottom:20px;
 }
 
+.tilimparte {
+	color:#48ccbf;
+	margin-left:445px;
+	font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
+	font-size:36px;
+	margin-bottom:20px;
+}
+
 .til2 {
 	color:#48ccbf;
 	margin-left:550px;
 	font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
 	font-size:36px;
-	margin-top:-5px;
+	margin-top:-15px;
+	margin-bottom: 20px;
 }
+
+.tilnotas {
+	color:#48ccbf;
+	margin-left:400px;
+	font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
+	font-size:36px;
+	margin-top:-5px;
+	margin-bottom: 20px;
+}
+
 
 .til3{
 	color:#48ccbf;
 	margin-left:250px;
 	font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
 	font-size:36px;
-	margin-top:-5px;
+	margin-top:-1px;
 }
 
 .til4{
@@ -331,6 +374,15 @@ hr {
 	font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
 	font-size:28px;
 	margin-top:-5px;
+}
+
+.til5 {
+	color:#48ccbf;
+	margin-left:550px;
+	font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
+	font-size:36px;
+	margin-top:-15px;
+	margin-bottom: 10px;
 }
 
 input[type=text]{
@@ -378,10 +430,24 @@ input[type=email]{
 	font-size:20px;
 	background:#4787ed;
 	margin-left:630px;
-	margin-top:25px;
+	margin-top:7px;
+	margin-bottom: -1px;
 }
 
 .guardar:hover{
+	background:#1122cc;
+}
+
+.guardarasig{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:20px;
+	background:#4787ed;
+	margin-left:630px;
+	margin-top:7px;
+	margin-bottom: 35px;
+}
+
+.guardarasig:hover{
 	background:#1122cc;
 }
 
@@ -389,7 +455,8 @@ input[type=email]{
 	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
 	font-size:20px;
 	background:#4787ed;
-	margin-left:165px;
+	margin-left:110px;
+	margin-bottom: 11px;
 }
 
 .guardar2:hover{
@@ -401,11 +468,47 @@ input[type=email]{
 	font-size:20px;
 	background:#4787ed;
 	margin-left:160px;
-	margin-top:5px;
-	margin-bottom:-40px;
+	margin-top:-20px;
+	margin-bottom:-30px;
+}
+.guardar3:hover{
+	background:#1122cc;
 }
 
-.guardar3:hover{
+.guardarnotas{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:20px;
+	background:#4787ed;
+	margin-left:420px;
+	margin-top:12px;
+
+}
+.guardarnotas:hover{
+	background:#1122cc;
+}
+
+.guardaractualizar2{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:20px;
+	background:#4787ed;
+	margin-left:270px;
+	margin-top:-20px;
+	margin-bottom:-30px;
+}
+.guardaractualizar2:hover{
+	background:#1122cc;
+}
+
+.guardaractualizar{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:20px;
+	background:#4787ed;
+	margin-left:95px;
+	margin-top:-4px;
+	margin-bottom:70px;
+}
+
+.guardaractualizar:hover{
 	background:#1122cc;
 }
 
@@ -497,6 +600,10 @@ input[type=email]{
 	padding:0px 450px;
 }
 
+.celda2 {
+	padding:0px 320px;
+}
+
 .borde>tbody>tr>td, .borde>tbody>tr>th {
 	border:1px solid #000000;
 	font-size:20px;
@@ -578,102 +685,328 @@ input[type=email]{
 	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
 	font-size:20px;
 }
-/*
-.barranav {
-	margin-top:-13px;
+
+.alerta {
+	width: 15%;
+	margin-left: 570px;
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight:bold;
+	padding: 5px 10px 0px 10px;
+	margin-bottom: -20px;
+	margin-top: -9px;
+}
+
+.alertaimparte {
+	width: 15%;
+	margin-left: 570px;
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight:bold;
+	padding: 5px 10px 0px 10px;
+	margin-bottom: 10px;
+	margin-top: -9px;
+}
+
+.alerta2 {
+	width: 23%;
+	margin-left: 520px;
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight:bold;
+	padding: 5px 10px 0px 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.alerta7 {
+	width: 23%;
+	margin-left: 520px;
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight:bold;
+	padding: 5px 10px 0px 10px;
+	margin-top: -5px;
+	margin-bottom: 10px;
+}
+
+.alerta8 {
+	width: 16%;
+	margin-left: 560px;
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight:bold;
+	padding: 5px 10px 0px 10px;
+	margin-top: -5px;
+	margin-bottom: 10px;
+}
+
+.alerta3 {
+	width: 57%;
+	margin-left: 200px;
+	margin-right: 250px;
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight:bold;
+	padding: 5px 10px 0px 10px;
+	margin-top: -30px;
+	margin-bottom: 5px
+}
+
+.alerta5 {
+	width: 48%;
+	margin-left: 200px;
+	margin-right: 130px;
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight:bold;
+	padding: 5px 10px 0px 10px;
+	margin-top: -10px;
+	margin-bottom: -5px
+}
+
+.alerta9 {
+	width: 38%;
+	margin-left: 200px;
+	margin-right: 300px;
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight:bold;
+	padding: 5px 10px 0px 10px;
+	margin-top: -10px;
+	margin-bottom: -5px
+}
+
+.alerta6 {
+	width: 33%;
+	margin-left:320px;
+	margin-right: 100px;
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight:bold;
+	padding: 5px 10px 0px 10px;
+	margin-top: -10px;
+	margin-bottom: -5px
+}
+
+.alerta4 {
+	width: 23%;
+	margin-left: 520px;
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight:bold;
+	margin-top: 5px;
+	margin-bottom: -80px;
+}
+
+.tabla1 {
+	width: 70%;
+	margin-left: 200px;
+	margin-top: 20px;
+	margin-bottom: -67px;
+}
+
+.tabla2 {
+	width: 58%;
+	margin-left: 250px;
+	margin-top: 20px;
+	margin-bottom: -67px;
+}
+
+.tabla3 {
+	width: 78%;
+	margin-left: 160px;
+	margin-top: 20px;
+	margin-bottom: -67px;
+}
+
+.tabla4 {
+	width: 80%;
+	margin-left: 160px;
+	margin-top: 20px;
+	margin-bottom: -67px;
 }
 
 
-.aside2 {
-    background:#f2f2f2;
-    margin-left:630px;
-    margin-top:-355px;
-    border-radius:8px;
-    padding: 0px 0px 127px 0px;
+.paginacion1 {
+	margin-top: 50px;
+	margin-left: 200px;
+	margin-bottom: -100px;
 }
 
-.iconos {
-    margin-left:100px;
+.paginacion4 {
+	margin-top: 50px;
+	margin-left: 200px;
+	margin-bottom: -66px;
 }
 
-.tilaside {
-    color:#000000;
-    font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
-    font-size:26px;
-    font-weight:bold;
-    padding:0px 170px;
+.paginacion2 {
+	margin-top: 50px;
+	margin-left: 250px;
+	margin-bottom: -66px;
 }
 
-.texto {
-    color:#000000;
-    font-family:"Bariol Regular", "Bariol Bold", "Bariol Light", "Bariol Thin";
-    font-size:24px;
-    padding:0px 30px;
-    text-align:justify;
-    margin-bottom:45px;
+.paginacion3 {
+	margin-top: 50px;
+	margin-left: 160px;
+	margin-bottom: -100px;
 }
 
-.slides {
-    width:55%;
-    margin-top:-10px;
-    margin-left:20px;
+.paginacion5 {
+	margin-top: 50px;
+	margin-left: 160px;
+	margin-bottom: -10px;
 }
 
-.slides2 {
-    width:60%;
-    margin-top:10px;
+.paginacion6 {
+	margin-top: 50px;
+	margin-left: 160px;
+	margin-bottom: -10px;
 }
 
-.slides img {
-    width:100%;
+.celd{
+	padding: 0px 0px -20px 0px;
+	text-align: center;
 }
 
-.slidesjs-pagination {
-    background:#424242;
-    list-style:none;
-    overflow:hidden;
+.barrabusq{
+	margin-right: 10px;
+	margin-top: -35px;
 }
 
-.slidesjs-pagination li {
-    float:left;
+.barrabusq4{
+	margin-right: 10px;
+	margin-top: -35px;
 }
 
-.slidesjs-pagination li a {
-    display:block;
-    padding:10px 20px;
-    color:#FFFFFF;
-    text-decoration:none;
+.barrabusq2{
+	margin-right: 10px;
+	margin-top: -35px;
 }
 
-.slidesjs-pagination li a:hover {
-    background:#000000;
+.barrabusq3{
+	margin-right: 10px;
+	margin-top: -35px;
 }
 
-.slides .active{
-    background:#000000;
+.botonbuscar {
+	margin-right: 190px;
+	margin-top: -35px;
 }
 
-.slidesjs-navigation {
-    background:#000000;
-    color:#FFFFFF;
-    text-decoration:none;
-    display:inline-block;
-    padding:13.2px 20px;
-    float:right;
+.botonbuscar4 {
+	margin-right: 95px;
+	margin-top: -35px;
 }
 
-.slidesjs-navigation:hover {
-    text-decoration:none;
-    color:#FFFFFF;
+.botonbuscar2 {
+	margin-right: 301px;
+	margin-top: -35px;
 }
 
-.slidesjs-navigation:link {
-    text-decoration:none;
-    color:#FFFFFF;
+.botonbuscar3 {
+	margin-right: 120px;
+	margin-top: -35px;
 }
 
-.slidesjs-navigation:visited {
-    text-decoration:none;
-    color:#FFFFFF;
+.labels{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight: bold;
+	margin-left: 60px;
 }
-*/
+
+.labels1{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight: bold;
+	margin-left: 149px;
+}
+
+.labels2{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight: bold;
+	margin-left: -24px;
+}
+
+.labels3{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight: bold;
+	margin-left: 6px;
+}
+
+.labelsid{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight: bold;
+	margin-left: 6px;
+}
+
+	.labelsid2{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight: bold;
+	margin-left: -32px;
+}
+	.labelsid3{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight: bold;
+	margin-left: 47px;
+}
+
+.labelsex{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight: bold;
+	margin-left: 40px;
+}
+
+.labelestado{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight: bold;
+	margin-left: 28px;
+}
+
+.labeltel{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight: bold;
+	margin-left: 15px;
+}
+
+.labeltil{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight: bold;
+	margin-left: 36px;
+}
+
+.labelsemail{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight: bold;
+	margin-left: 83px;
+}
+
+.labelsex2{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight: bold;
+	margin-left: 87px;
+}
+
+.labelsestado2{
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight: bold;
+	margin-left: 75px;
+}
+
+.inputs{
+	margin-left: 1px;
+}
+

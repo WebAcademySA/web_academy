@@ -66,7 +66,7 @@
                     </li></div>
                 <div class="drop4"><li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
-                                Curso <b class="caret"></b></div>
+                                Asignar <b class="caret"></b></div>
                         </a>
                         <ul class="dropdown-menu">
                             <div op1><li><a href="{{ route('imparte_docente.index') }}"><div class="text2">Asignar Docente</div></a></li></div>
@@ -80,23 +80,23 @@
     </nav>
 
 <!--Titulos-->
-	<div class="container row"><div><h3 class="til2">Actualizar Asignatura</h3></div><hr/></div>
+	<div class="container row"><div><h3 class="til2">Actualizar Asignatura</h3></div></div>
  
 <!--Formularios-->
 <div class="container row">
 <!--Formulario alumno-->
     <!--Formulario alumno-->
-    {!! Form::model($asignatura , ['route' => ['actualizar_asignatura.update' , $asignatura->idasignatura] , 'method' => 'PUT' , 'class' => 'regalum']) !!}
+    {!! Form::model($asignatura , ['route' => ['actualizar_asignatura.update' , $asignatura->idasignatura] , 'method' => 'PUT' , 'class' => 'regalum4']) !!}
     <div class="form-inline form-group">
-        <div class="form-group">{!! Form::text('idasignatura' , null , ['class' => 'form-control' , 'disabled']) !!}</div>
+        <div class="form-group"><label class="labelsid">ID Asignatura:&nbsp</label>{!! Form::text('idasignatura' , null , ['class' => 'form-control' , 'disabled']) !!}</div>
     </div>
     <div class="form-inline form-group">
-        <div class="form-group">{!! Form::text('nombreasig' , null , ['class' => 'form-control']) !!}</div>
+        <div class="form-group"><label class="labelsid2">Nombre Asignatura:&nbsp</label>{!! Form::text('nombreasig' , null , ['class' => 'form-control']) !!}</div>
     </div>
     <div class="form-inline form-group">
-        <div class="form-group">{!! Form::select('estadoasig', ['1' => 'Activo', '0' => 'Inactivo'], null, ['class' => 'form-control']) !!}</div>
+        <div class="form-group"><label class="labelsid3">Estado:&nbsp</label>{!! Form::select('estadoasig', ['1' => 'Activo', '0' => 'Inactivo'], null, ['class' => 'form-control']) !!}</div>
     </div>
-    {!! Form::submit('Actualizar', ['class' => 'btn btn-primary guardar3']) !!}
+    {!! Form::submit('Actualizar', ['class' => 'btn btn-primary guardaractualizar']) !!}
     {!! Form::close() !!}
 </div>
 

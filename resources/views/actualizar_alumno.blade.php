@@ -66,7 +66,7 @@
                     </li></div>
                 <div class="drop4"><li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
-                                Curso <b class="caret"></b></div>
+                                Asignar <b class="caret"></b></div>
                         </a>
                         <ul class="dropdown-menu">
                             <div op1><li><a href="{{ route('imparte_docente.index') }}"><div class="text2">Asignar Docente</div></a></li></div>
@@ -86,30 +86,29 @@
     	<!--Formulario alumno-->
     <div class="container row">
         <!--Formulario alumno-->
-        {!! Form::model($alumno , ['route' => ['actualizar_alumno.update' , $alumno->id] , 'method' => 'PUT' , 'class' => 'regalum']) !!}
+        {!! Form::model($alumno , ['route' => ['actualizar_alumno.update' , $alumno->id] , 'method' => 'PUT' , 'class' => 'regalum3']) !!}
             <div class="form-inline form-group">
-                <div class="form-group">{!! Form::text('id' , null , ['class' => 'form-control', 'disabled']) !!}</div>
-                <div class="form-group">{!! Form::text('telefono' , null , ['class' => 'form-control']) !!}</div>
+                <div class="form-group"><label class="labelsid">ID Alumno:&nbsp</label>{!! Form::text('id' , null , ['class' => 'form-control inputs', 'disabled']) !!}</div>
+                <div class="form-group"><label class="labels">Telefono:&nbsp</label>{!! Form::text('telefono' , null , ['class' => 'form-control inputs']) !!}</div>
             </div>
             <div class="form-inline form-group">
-                <div class="form-group">{!! Form::text('primer_nombre' , null , ['class' => 'form-control']) !!}</div>
-                <div class="form-group">{!! Form::text('segundo_nombre' , null , ['class' => 'form-control']) !!}</div>
+                <div class="form-group"><label class="labels2">Primer Nombre:&nbsp</label>{!! Form::text('primer_nombre' , null , ['class' => 'form-control inputs']) !!}</div>
+                <div class="form-group"><label class="labels3">Segundo Nombre:&nbsp</label>{!! Form::text('segundo_nombre' , null , ['class' => 'form-control inputs']) !!}</div>
             </div>
             <div class="form-inline form-group">
-                <div class="form-group">{!! Form::text('primer_apellido' , null , ['class' => 'form-control']) !!}</div>
-                <div class="form-group">{!! Form::text('segundo_apellido' , null , ['class' => 'form-control']) !!}</div>
+                <div class="form-group"><label class="labels2">Primer Apellido:&nbsp</label>{!! Form::text('primer_apellido' , null , ['class' => 'form-control inputs']) !!}</div>
+                <div class="form-group"><label class="labels3">Segundo Apellido:&nbsp</label>{!! Form::text('segundo_apellido' , null , ['class' => 'form-control inputs']) !!}</div>
 
             </div>
             <div class="form-inline form-group">
-                <div class="form-group">{!! Form::select('sexo', ['Masculino' => 'Masculino', 'Femenino' => 'Femenino'], null, ['class' => 'form-control']) !!}</div>
-                <div class="form-group">{!! Form::text('direccion' , null , ['class' => 'form-control']) !!}</div>
+                <div class="form-group"><label class="labelsex">Sexo:&nbsp</label>{!! Form::select('sexo', ['Masculino' => 'Masculino', 'Femenino' => 'Femenino'], null, ['class' => 'form-control inputs']) !!}</div>
+                <div class="form-group"><label class="labels1">Direccion:&nbsp</label>{!! Form::text('direccion' , null , ['class' => 'form-control inputs']) !!}</div>
 
             </div>
             <div class="form-inline form-group">
-                <div class="form-group">{!! Form::select('estado', ['1' => 'Activo', '0' => 'Inactivo'], null, ['class' => 'form-control']) !!}</div>
-
+                <div class="form-group"><label class="labelestado">Estado:&nbsp</label>{!! Form::select('estado', ['1' => 'Activo', '0' => 'Inactivo'], null, ['class' => 'form-control inputs']) !!}</div>
             </div>
-                {!! Form::submit('Actualizar', ['class' => 'btn btn-primary guardar3']) !!}
+                {!! Form::submit('Actualizar', ['class' => 'btn btn-primary guardaractualizar2']) !!}
             {!! Form::close() !!}
         </div>
 

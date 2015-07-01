@@ -76,7 +76,7 @@
       </li></div>
       <div class="drop4"><li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
-          Curso <b class="caret"></b></div>
+          Asignar <b class="caret"></b></div>
         </a>
         <ul class="dropdown-menu">
           <div op1><li><a href="{{ route('imparte_docente.index') }}"><div class="text2">Asignar Docente</div></a></li></div>

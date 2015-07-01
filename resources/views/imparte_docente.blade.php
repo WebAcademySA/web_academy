@@ -66,7 +66,7 @@
                     </li></div>
                 <div class="drop4"><li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
-                                Curso <b class="caret"></b></div>
+                                Asignar <b class="caret"></b></div>
                         </a>
                         <ul class="dropdown-menu">
                             <div op1><li><a href="{{ route('imparte_docente.index') }}"><div class="text2">Asignar Docente</div></a></li></div>
@@ -78,7 +78,7 @@
         </ul>
         </div>
     </nav>
-    <h3 class="til1">Establecer Asignatura al Docente</h3>
+    <h3 class="tilimparte">Establecer Asignatura al Docente</h3>
     <hr/>
     @if($errors->any())
         <div class="alert alert-danger" role="alert">
@@ -92,7 +92,7 @@
         </div>
     @endif
     @if(Session::has('notice'))
-        <div class="alert alert-success" role="alert">
+        <div class="alert alert-success alertaimparte" role="alert">
             <p>{{ Session::get('notice') }}</p>
         </div>
     @endif

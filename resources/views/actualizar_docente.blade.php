@@ -66,7 +66,7 @@
                     </li></div>
                 <div class="drop4"><li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="text">
-                                Curso <b class="caret"></b></div>
+                                Asignar <b class="caret"></b></div>
                         </a>
                         <ul class="dropdown-menu">
                             <div op1><li><a href="{{ route('imparte_docente.index') }}"><div class="text2">Asignar Docente</div></a></li></div>
@@ -80,38 +80,38 @@
     </nav>
 
 <!--Titulos-->
-	<div class="container row"><div class="col-md-6"><h3 class="til2">Actualizar Docente</h3></div></div>
+	<div class="container row"><h3 class="til5">Actualizar Docente</h3></div>
  
 <!--Formularios-->
 <div class="container row">
 
 <!--Formulario ingresar datos-->
-    {!! Form::model($docente , ['route' => ['actualizar_docente.update' , $docente->iddocente] , 'method' => 'PUT' , 'class' => 'regalum']) !!}
+    {!! Form::model($docente , ['route' => ['actualizar_docente.update' , $docente->iddocente] , 'method' => 'PUT' , 'class' => 'regalum5']) !!}
 	<div class="form-inline form-group" >
-    	<div class="form-group">{!! Form::text('iddocente' , null , ['class' => 'form-control', 'disabled']) !!}</div>
-        <div class="form-group">{!! Form::text('direccion' , null , ['class' => 'form-control']) !!}</div>
+    	<div class="form-group"><label class="labelsid">ID Docente:&nbsp</label>{!! Form::text('iddocente' , null , ['class' => 'form-control inputs', 'disabled']) !!}</div>
+        <div class="form-group"><label class="labels">Direccion:&nbsp</label>{!! Form::text('direccion' , null , ['class' => 'form-control inputs']) !!}</div>
     </div>
     <div class="form-inline form-group">
-    	<div class="form-group">{!! Form::text('primer_nombre' , null , ['class' => 'form-control']) !!}</div>
-        <div class="form-group">{!! Form::text('segundo_nombre' , null , ['class' => 'form-control']) !!}</div>
+    	<div class="form-group"><label class="labels2">Primer Nombre:&nbsp</label>{!! Form::text('primer_nombre' , null , ['class' => 'form-control inputs']) !!}</div>
+        <div class="form-group"><label class="labels3">Segundo Nombre:&nbsp</label>{!! Form::text('segundo_nombre' , null , ['class' => 'form-control inputs']) !!}</div>
         </div>
     <div class="form-inline form-group">
-    	<div class="form-group">{!! Form::text('primer_apellido' , null , ['class' => 'form-control']) !!}</div>
-        <div class="form-group">{!! Form::text('segundo_apellido' , null , ['class' => 'form-control']) !!}</div>
+    	<div class="form-group"><label class="labels2">Primer Apellido:&nbsp</label>{!! Form::text('primer_apellido' , null , ['class' => 'form-control inputs']) !!}</div>
+        <div class="form-group"><label class="labels3">Segundo Apellido:&nbsp</label>{!! Form::text('segundo_apellido' , null , ['class' => 'form-control inputs']) !!}</div>
     </div>
     <div class="form-inline form-group">
-    	<div class="form-group">{!! Form::text('titulo' , null , ['class' => 'form-control']) !!}</div>
-        <div class="form-group">{!! Form::text('email' , null , ['class' => 'form-control']) !!}</div>
+    	<div class="form-group"><label class="labeltil">Titulo:&nbsp</label>{!! Form::text('titulo' , null , ['class' => 'form-control inputs']) !!}</div>
+        <div class="form-group"><label class="labelsemail">Email:&nbsp</label>{!! Form::text('email' , null , ['class' => 'form-control inputs']) !!}</div>
         </div>
     <div class="form-inline form-group">
-    	<div class="form-group">{!! Form::text('nivel' , null , ['class' => 'form-control']) !!}</div>
-        <div class="form-group">{!! Form::select('sexo', ['Masculino' => 'Masculino', 'Femenino' => 'Femenino'], null, ['class' => 'form-control']) !!}</div>
+    	<div class="form-group"><label class="labelsex">Nivel:&nbsp</label>{!! Form::text('nivel' , null , ['class' => 'form-control inputs']) !!}</div>
+        <div class="form-group"><label class="labelsex2">Sexo:&nbsp</label>{!! Form::select('sexo', ['Masculino' => 'Masculino', 'Femenino' => 'Femenino'], null, ['class' => 'form-control inputs']) !!}</div>
     </div>
     <div class="form-inline form-group">
-        <div class="form-group">{!! Form::text('telefono' , null , ['class' => 'form-control']) !!}</div>
-        <div class="form-group">{!! Form::select('estado', ['1' => 'Activo', '0' => 'Inactivo'], null, ['class' => 'form-control']) !!}</div>
+        <div class="form-group"><label class="labeltel">Telefono:&nbsp</label>{!! Form::text('telefono' , null , ['class' => 'form-control inputs']) !!}</div>
+        <div class="form-group"><label class="labelsestado2">Estado:&nbsp</label>{!! Form::select('estado', ['1' => 'Activo', '0' => 'Inactivo'], null, ['class' => 'form-control inputs']) !!}</div>
     </div>
-      {!! Form::submit('Actualizar', ['class' => 'btn btn-primary guardar3']) !!}
+      {!! Form::submit('Actualizar', ['class' => 'btn btn-primary guardaractualizar2']) !!}
     {!! Form::close() !!}
 </div>
 
