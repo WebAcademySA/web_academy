@@ -57,4 +57,9 @@ class Alumno extends Model {
             $query->where('grupo', $grupo);
         }
     }
+    public function scopeAnio($query, $anio){
+        if($anio != ""){
+            $query->where('añoinscrito', $anio);
+        }
+    }
 }

@@ -38,9 +38,8 @@ class Subir_Notas_DocenteController extends Controller {
 	public function store(SubirnotasGuardarRequest $request)
     {
         $ident = 0;
-        $conten = Nota::all()->count();
+        $conten = Nota::where('idasigfor', $request->idasigfor)->where('idalumfor', $request->idalumfor)->count();
 
-        //dd($request->idasigfor, $request->idalumfor);
         if ($conten == 0) {
             \DB::table('notas')->insert(array(
                 array(
