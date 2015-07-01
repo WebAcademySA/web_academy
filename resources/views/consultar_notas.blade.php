@@ -74,7 +74,7 @@
     <!--Titulos-->
     <div class="container row"><div class="col-md-12"><h3 class="til2">Consultar Notas</h3></div></div>
 
-    <table class="table table-striped table-bordered table-hover tabla4">
+    <table class="table table-striped table-bordered table-hover tablanotas">
         <thead>
         <tr class="info">
             <th><div class="celd">Id. de la Asignatura</div></th>

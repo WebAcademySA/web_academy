@@ -76,7 +76,7 @@
     {!! Form::open(['route' => 'consultar_alumno.index' , 'method' => 'GET' , 'class' => 'navbar-form navbar-left pull-right' , 'role' => 'search']) !!}
     <div class="form-group">
         @if(Session::has('notice'))
-            <div class="alert alert-info alerta" role="alert">
+            <div class="alert alert-info alertaconsultaralum" role="alert">
                 <p>{{ Session::get('notice') }}</p>
             </div>
         @endif

@@ -753,6 +753,18 @@ input[type=email]{
 	margin-bottom: 5px
 }
 
+.alertaconsultaralum {
+	width: 31%;
+	margin-left: 200px;
+	margin-right: 250px;
+	font-family:"Bariol Regular", "Bariol Light", "Bariol Thin";
+	font-size:16px;
+	font-weight:bold;
+	padding: 5px 10px 0px 10px;
+	margin-top: -30px;
+	margin-bottom: 5px
+}
+
 .alerta5 {
 	width: 48%;
 	margin-left: 200px;
@@ -813,6 +825,13 @@ input[type=email]{
 	margin-bottom: -67px;
 }
 
+.tablanotas {
+	width: 58%;
+	margin-left: 250px;
+	margin-top: 20px;
+	margin-bottom: 291px;
+}
+
 .tabla3 {
 	width: 78%;
 	margin-left: 160px;
@@ -849,6 +868,12 @@ input[type=email]{
 .paginacion3 {
 	margin-top: 50px;
 	margin-left: 160px;
+	margin-bottom: -100px;
+}
+
+.paginacionvisualumno {
+	margin-top: 50px;
+	margin-left: 200px;
 	margin-bottom: -100px;
 }
 

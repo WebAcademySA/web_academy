@@ -132,7 +132,7 @@
             @endforeach
             </tbody>
         </table>
-       <div class="paginacion2">{!! $alumno->appends(Request::only(['id', 'estado']))->render() !!}</div>
+       <div class="paginacionvisualumno">{!! $alumno->appends(Request::only(['id', 'estado']))->render() !!}</div>
 
 
 @endsection

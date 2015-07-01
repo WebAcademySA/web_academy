@@ -12,7 +12,7 @@ class AlumnoTableSeeder extends Seeder {
 
     public function run()
     {
-        $faker = Faker::create();
+        /*$faker = Faker::create();
 
         $count = 0;
 
@@ -33,9 +33,9 @@ class AlumnoTableSeeder extends Seeder {
                 'grado' => $faker->numberBetween($min = 1, $max = 11),
                 'grupo' => $faker->numberBetween($min = 1, $max = 4),
                 'aula' => $faker->numberBetween($min = 100, $max = 300)
-            )); */
+            )); 
 
-        }
+        }*/
 
         DB::table('docentes')->insert($iddocen = array(
             'iddocente' => 12345,
